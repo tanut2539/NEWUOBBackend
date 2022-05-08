@@ -1,0 +1,305 @@
+﻿ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - UOB.PVD.CMS</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="~/assets/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link href="~/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <!-- iCheck -->
+    <link href="~/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css" rel="stylesheet" />
+    <!-- Theme style -->
+    <link href="~/assets/dist/css/adminlte.min.css" rel="stylesheet" />
+    <!-- overlayScrollbars -->
+    <link href="~/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/summernote/summernote-bs4.min.css" rel="stylesheet" />
+    <link href="~/css/custom.css" rel="stylesheet" />
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+
+            <img class="animation__shake" src="@Url.Content("~/assets/image/uob_web_logo.JPG")" style="width:200px;height:auto;" alt="Logo">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+
+                <!-- Notifications Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+
+                        <img src="@Url.Content("~/assets/image/user.png")" width="30" height="30" class=" img-circle  " style="opacity: .8;margin-right:10px;margin-top:-1px">
+                        <span>
+                            @{ Context.Request.Cookies.TryGetValue("name", out string value);
+                                <text>@value</text>
+                            }
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+
+                        <div class="dropdown-divider"></div>
+
+                        <div class="dropdown-divider"></div>
+                        <a href="@Url.Action("logout", "Account")" class="dropdown-item dropdown-footer">ออกจากระบบ</a>
+                    </div>
+                </li>
+            </ul>
+
+
+        </nav>
+
+
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a class="brand-link ">
+                <img src="@Url.Content("~/assets/image/uob_web_logo.JPG")" alt="AdminLTE Logo" class="brand-image elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">&nbsp;</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+
+                        <li class="nav-header">CMS PVD</li>
+
+                        <li class="nav-item @if (ViewBag.screen.StartsWith("IC.")) {<text>menu-is-opening menu-open</text> }" style="margin-left:20px;">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    UOB Investor Choice
+                                    <i class="right fas fa-angle-left" style="margin-right:15px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="@Url.Action("InCountryList", "InvestorChoice")" class="nav-link  @if (ViewBag.screen == "IC.InCountry") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>การลงทุนในประเทศ</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="@Url.Action("OutCountryList", "InvestorChoice")" class="nav-link  @if (ViewBag.screen == "IC.OutCountry") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>การลงทุนต่างประเทศ</p>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="@Url.Action("ManageChart", "InvestorChoice")" class="nav-link  @if (ViewBag.screen == "IC.ManageChart") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>จัดการข้อมูล Chart</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item  @if (ViewBag.screen.StartsWith("MF.")) {<text>menu-is-opening menu-open</text> } " style="margin-left:20px;">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    UOB Master Fund
+                                    <i class="right fas fa-angle-left" style="margin-right:15px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview ">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("InCountryList", "MasterFund")" class="nav-link @if (ViewBag.screen == "MF.InCountry") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>การลงทุนในประเทศ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("OutCountryList", "MasterFund")" class="nav-link @if (ViewBag.screen == "MF.OutCountry") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>การลงทุนต่างประเทศ</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item @if (ViewBag.screen.StartsWith("SMK")) {<text>menu-is-opening menu-open</text> }  " style="margin-left:20px;">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    SMK
+                                    <i class="right fas fa-angle-left" style="margin-right:15px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("smk1", "Smk")" class="nav-link @if (ViewBag.screen == "SMK1") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>SMK 1</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("smk2", "Smk")" class="nav-link @if (ViewBag.screen == "SMK2") {<text>active</text> }">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>SMK 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <li class="nav-header">CMS ESG</li>
+
+                        <li class="nav-item  @if (ViewBag.screen == "banner" || ViewBag.screen == "article" || ViewBag.screen == "fund") {<text>menu-is-opening menu-open</text> } " style="margin-left:20px;">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    เมนูหลัก
+                                    <i class="right fas fa-angle-left" style="margin-right:15px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+
+                                <li class="nav-item">
+                                    <a href="@Url.Action("list", "Banner")" class="nav-link @if (ViewBag.screen == "banner") {<text>active</text> } ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>  Banner</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="@Url.Action("list", "Article")" class="nav-link @if (ViewBag.screen == "article") {<text>active</text> } ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> บทความ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item   ">
+                                    <a href="@Url.Action("list", "Fund")" class="nav-link @if (ViewBag.screen == "fund") {<text>active</text> } ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> กองทุน</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-header">CMS Event</li>
+
+                        <li class="nav-item  @if (ViewBag.screen == "banner" || ViewBag.screen == "article" || ViewBag.screen == "fund") {<text>menu-is-opening menu-open</text> } " style="margin-left:20px;">
+                            <a href="#" class="nav-link">
+
+                                <p>
+                                    เมนูหลัก
+                                    <i class="right fas fa-angle-left" style="margin-right:15px;"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="@Url.Action("calendar", "Evt")" class="nav-link @if (ViewBag.screen == "banner") {<text>active</text> } ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>  Banner</p>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </div><!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="~/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+
+
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Sparkline -->
+    <script src="~/assets/plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="~/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="~/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="~/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="~/assets/plugins/moment/moment.min.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="~/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="~/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/assets/dist/js/adminlte.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/assets/dist/js/demo.js"></script>
+
+    <script src="~/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="~/assets/plugins/sweetalert2/sweetalert2.js"></script>
+
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/select2/js/select2.full.min.js"></script>
+    <script src="~/assets/plugins/summernote/summernote-bs4.min.js"></script>
+    <script src="~/assets/plugins/jquery-number/jquery.number.js"></script>
+    <script src="~/helper/jquery.blockUI.js"></script>
+    <script src="~/helper/helper.js"></script>
+    <script src="~/assets/tinymce/tinymce.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

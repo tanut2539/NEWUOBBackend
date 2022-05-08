@@ -1,0 +1,166 @@
+﻿@using UOB.ESG.FRONT.Resources
+@{
+    var controllerName = string.Empty;
+    object controllerObj;
+    var actionName = string.Empty;
+    object actionObj;
+
+    if (ViewContext.RouteData.Values.TryGetValue("controller", out controllerObj))
+    {
+        controllerName = controllerObj.ToString();
+    }
+
+    if (ViewContext.RouteData.Values.TryGetValue("action", out actionObj))
+    {
+        actionName = actionObj.ToString();
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10,9" />
+    <link href="~/assets/css/bootstrap/bootstrap.min.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+    <link href="~/assets/plugins/swiper/swiper-bundle.min.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+    <link href="~/assets/plugins/videojs/css/video-js.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+    <link href="~/assets/plugins/videojs/css/forest.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+    <link href="~/assets//plugins/chocolat/chocolat.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+    <link href="~/assets/css/theme.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uob" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="url รูปภาพ" />
+    <meta property="og:site_name" content="https://uob" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:domain" content="https://uob" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="https://uob" />
+
+    <meta name="twitter:image" content="url รูปภาพ" />
+    <meta itemprop="name" content="" />
+    <meta itemprop="description" content="" />
+    <meta itemprop="image" content="url รูปภาพ" />
+</head>
+<body id="app">
+    <div class="navigation">
+        <div class="d-flex flex-row h-100 align-items-center">
+            <div class="me-auto navigation-logo">
+                <img src="../assets/images/uob-logo-am.svg" alt="" />
+            </div>
+            <div class="ms-auto navigation-swtich">
+                @{
+                    if (ViewBag.language == "th-TH")
+                    {
+
+                        <div class="switch-button th">
+                            <input class="switch-button-checkbox" type="checkbox" checked></input>
+                            <label class="switch-button-label" for=""><span class="switch-button-label-span">EN</span></label>
+
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div class="switch-button en">
+                            <input class="switch-button-checkbox" type="checkbox"></input>
+                            <label class="switch-button-label" for=""><span class="switch-button-label-span text-white">EN</span></label>
+
+                        </div>
+
+                    }
+                }
+
+            </div>
+        </div>
+    </div>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    <div class="footer">
+        <p> @Html.Raw(Message.footer_condition)</p>
+        <div class="footer-bottom">
+            <div class="d-flex flex-column flex-md-row h-100 align-items-center copyright">
+                <div class="me-auto">
+                    &copy; 2021 UOB Asset Management (Thailand) Co., Ltd. All Right Reserved.
+                </div>
+                <div class="ms-auto">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 col-md-6">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 col-md-5">
+                                    <h5 class="text-blue">สมัครรับข่าวสาร</h5>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <input type="text" class="form-control" placeholder="อีเมลของคุณ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 col-md-6">
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="col-12">
+                                            <h3 class="text-blue">
+                                                งานบริการนักลงทุน
+                                            </h3>
+                                        </div>
+                                        <div class="col-12">
+                                            <h5>
+                                                02 786 2222
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="dropdown">
+                                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                            แผนผังเว็บไซต์
+                                        </a>
+
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="~/assets/js/bootstrap/bootstrap.bundle.min.js?time=@DateTime.Now.ToString("yyyyMMddHHmmss")"></script>
+    <script src="~/assets/plugins/swiper/swiper-bundle.min.js"></script>
+
+    <script src="~/assets/plugins/chocolat/jquery.chocolat.js?time=@DateTime.Now.ToString("yyyyMMddHHmmss")"></script>
+    <script src="~/assets/plugins/videojs/js/video.min.js?time=@DateTime.Now.ToString("yyyyMMddHHmmss")"></script>
+
+    <script src="~/assets/js/main.js?time=@DateTime.Now.ToString("yyyyMMddHHmmss")"></script>
+    <script src="~/js/site.js?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" asp-append-version="true"></script>
+    <script src="~/assets/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+    $(".switch-button-checkbox").click(function () {
+        window.location.href = '@Url.Action("Changelanguage", "Home")?controllerName=@controllerName&actionName=@actionName&id=@ViewBag.current_id';
+    });
+    </script>
+</body>
+</html>

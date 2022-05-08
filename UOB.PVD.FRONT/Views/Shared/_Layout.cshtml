@@ -1,0 +1,187 @@
+﻿@using UOB.PVD.FRONT.Resources
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Begin Title -->
+    <title>UOB Asset Management</title>
+    <meta name="description" content="UOB Asset Management Thailand" />
+    <meta name="keywords" content="UOB Asset Management Thailand" />
+    <!-- Begin Title -->
+    <!-- Begin Meta -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Cache-Control"
+          content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=10,9" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,user-scalable=0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- End Meta -->
+    <!-- Begin Javascript -->
+    <script src="~/assets/js/tailwindcss.js"></script>
+
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <!-- End Javascript -->
+    <!-- Begin CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+          defer />
+    <link rel="stylesheet"
+          href="./assets/css/flowbite.min.css"
+          defer />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          defer />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+          defer />
+    <link rel="preload" href="./assets/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- End CSS -->
+</head>
+<body>
+    <div class="aspect-auto">
+        <!-- Begin Banner Carousel -->
+        <div class="uob-carousel-container">
+            <h1>@Messages.banner_title</h1>
+        </div>
+        <!-- End Banner Carousel -->
+        <!-- Begin Menu Items -->
+        <div class="uob-menu-items">
+            <div class="h-full container mx-auto px-4">
+                <div class="h-full flex flex-row">
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-1"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_1</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-2"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_2</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-3"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_3</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-4"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_4</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-5"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_5</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-6"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_6</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-7"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_7</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-8"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_8</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="basis-1/5">
+                        <a class="menu-item flex flex-col flex-nowrap justify-center items-center"
+                           href="#"
+                           target="_self">
+                            <div class="item-icon icon-9"></div>
+                            <div class="item-title">
+                                <h3>@Messages.menu_item_9</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Menu Items -->
+        <!-- Begin A-Zone -->
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="container">
+
+    </div>
+    <!-- End Tabs -->
+    <!-- Begin Footer -->
+    <div class="footer">
+        <div class="footer-top">
+            <p>คำเตือน การลงทุนมีความเสี่ยง ผู้ลงทุนควรทำความเข้าใจลักษณะกองทุน นโยบายกองทุน เงื่อนไขผลตอบแทน ความเสี่ยง และผลการดำเนินงานของกองทุนก่อนตัดสินใจลงทุน ผลการดำเนินงานในอดีต/ผลการเปรียบเทียบผลการดำเนินงานที่เกี่ยวข้องกับผลิตภัณฑ์ในตลาดทุน มิได้เป็นสิ่งยืนยันถึงผลการดำเนินงานในอนาคต การลงทุนมีความเสี่ยง จากอัตราแลกเปลี่ยนที่อาจเกิดขึ้นจากการลงทุนในต่างประเทศ ถึงแม้ว่ากองทุนอาจป้องกันความเสี่ยงตามดุลยพินิจของผู้จัดการกองทุนรวม แต่เนื่องจากกองทุนไม่ได้ป้องกัน ความเสี่ยงทั้งจำนวน ผู้ลงทุนอาจขาดทุนหรือได้กำไรจากอัตราแลกเปลี่ยนหรือได้รับเงินคืนต่ำกว่าการลงทุนเริ่มแรกได้</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2021 UOB Asset Management (Thailand) Co., Ltd. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!-- Begin Javascript -->
+    <script async
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script defer src="~/js/flowbite.bundle.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script defer src="./assets/js/main.js"></script>
+    <!-- End Javascript -->
+    <!-- End Javascript -->
+
+
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

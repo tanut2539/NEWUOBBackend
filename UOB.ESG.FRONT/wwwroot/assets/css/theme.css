@@ -1,0 +1,3936 @@
+@import url('../fonts/fonts.css');
+
+body {
+    background-color: var(--secondary-color-7);
+    font-family: 'font_medium_65regular';
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--secondary-color-5);
+}
+
+    body#app {
+        background-image: url('../images/footer_bg.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 20% 96%;
+    }
+
+.container-fluid.fw {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Navigation */
+.navigation {
+    position: relative;
+    height: 80px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 10px #999;
+    z-index: 9;
+}
+
+.navigation-logo {
+    margin-left: 30px;
+}
+
+.navigation-swtich {
+    margin-right: 30px;
+}
+
+.switch-button {
+    background: rgba(255, 255, 255, 0.56);
+    border-radius: 30px;
+    overflow: hidden;
+    width: 80px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #155FFF;
+    position: relative;
+    padding-right: 40px;
+    position: relative;
+    border: 1px solid #808080;
+}
+
+    .switch-button:before {
+        content: "TH";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 3;
+        pointer-events: none;
+        color: #555555;
+    }
+
+    .switch-button.th:before {
+        color: #fff;
+    }
+
+.switch-button-checkbox {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+}
+
+    .switch-button-checkbox:checked + .switch-button-label:before {
+        transform: translateX(40px);
+        transition: transform 300ms linear;
+    }
+
+    .switch-button-checkbox + .switch-button-label {
+        position: relative;
+        padding: 5px 0;
+        display: block;
+        user-select: none;
+        pointer-events: none;
+    }
+
+        .switch-button-checkbox + .switch-button-label:before {
+            content: "";
+            background: #002469;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 30px;
+            transform: translateX(0);
+            transition: transform 300ms;
+        }
+
+        .switch-button-checkbox + .switch-button-label .switch-button-label-span {
+            position: relative;
+        }
+
+.switch-button-label {
+    color: #555555;
+}
+
+/* Banner */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-banner-desktop .swiper-slide {
+    position: relative;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.swiper-slide .title {
+    position: absolute;
+    top: 60px;
+    left: 140px;
+    font-family: 'font_medium_65regular';
+    font-weight: 800;
+    color: var(--primary-color-1);
+}
+
+.swiper-slide .subtitle {
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondary-color-5);
+}
+
+.swiper-pagination-bullet {
+    background: var(--swiper-pagination-bullet-inactive-color, #fff);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--swiper-pagination-color, var(--primary-color-1))
+}
+
+.swiper-banner-mobile {
+    display: none;
+}
+
+/* Menu */
+
+.carousel-menu {
+    background-color: #DDDDDD;
+}
+
+    .carousel-menu .item-menu {
+        padding: 1rem;
+        text-decoration: none;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+    }
+
+        .carousel-menu .item-menu:hover {
+            background-color: #D1D1D1;
+            text-decoration: none;
+        }
+
+        .carousel-menu .item-menu .item-description {
+            color: var(--primary-color-1);
+            margin-top: 20px;
+            font-family: 'font_medium_65regular';
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .carousel-menu .item-menu:hover {
+            background-color: var(--primary-color-1);
+        }
+
+            .carousel-menu .item-menu:hover .item-description {
+                color: var(--secondary-color-6);
+            }
+
+/* Section */
+
+#section-1.sustainable {
+    padding: 2.5rem;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20% -180px;
+}
+
+.sustainable-spacing .title {
+    position: relative;
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-transform: uppercase;
+}
+
+    .sustainable-spacing .title:before {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color-2);
+        width: 10px;
+        height: 40%;
+        top: 5px;
+        left: -25px;
+    }
+
+.sustainable-spacing .description {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--secondary-color-5);
+}
+
+.sustainable-spacing {
+    margin-top: 3rem;
+    margin-right: 3rem;
+    margin-left: auto;
+}
+
+.sustainable-menu .item-menu {
+    padding: 1rem;
+    margin-top: 20rem;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-radius: 16px;
+}
+
+    .sustainable-menu .item-menu:hover {
+        box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+        text-decoration: none;
+    }
+
+    .sustainable-menu .item-menu .item-icon {
+        width: 60px;
+        height: 60px;
+        background-color: var(--primary-color-1);
+        border-radius: 50%;
+    }
+
+        .sustainable-menu .item-menu .item-icon > img {
+            width: 32px;
+            height: 32px;
+        }
+
+    .sustainable-menu .item-menu .item-title {
+        font-family: 'font_medium_65regular';
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--primary-color-1);
+        margin-top: 20px;
+    }
+
+    .sustainable-menu .item-menu .item-description {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--secondary-color-5);
+    }
+
+/* Commitment */
+
+.commitment {
+    margin-top: 0;
+    padding: 2.5rem;
+}
+
+.commitment-spacing .name {
+    position: relative;
+    font-family: 'font_medium_65regular';
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-transform: uppercase;
+}
+
+    .commitment-spacing .name:before {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color-2);
+        width: 10px;
+        height: 35px;
+        top: 5px;
+        left: -25px;
+    }
+
+.commitment-spacing .position {
+    font-family: 'font_medium_65regular';
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-transform: uppercase;
+}
+
+.commitment-spacing h6 {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.commitment-link {
+    font-family: 'font_medium_65regular';
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-decoration: none;
+}
+
+/* Investment approach */
+
+.investment-approach {
+    position: relative;
+    background-color: #A0CC78;
+    margin-top: 2rem;
+    padding: 5.5rem 0;
+}
+
+.investment-spacing .title {
+    position: relative;
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-transform: uppercase;
+}
+
+    .investment-spacing .title:before {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color-2);
+        width: 10px;
+        height: 35px;
+        top: 0;
+        left: -25px;
+    }
+
+.investment-details p {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 5;
+    -moz-line-clamp: 5;
+    -ms-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+    color: var(--secondary-color-7);
+}
+
+.investment-image {
+    position: absolute;
+    top: -160px;
+    right: 40px;
+}
+
+.button-container {
+    position: relative;
+    display: block;
+    left: 5px;
+    width: 200px;
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid var(--primary-color-1);
+}
+
+    .button-container:hover {
+        background-color: var(--primary-color-1);
+        border: 1px solid var(--primary-color-1);
+    }
+
+    .button-container:active {
+        border: none;
+    }
+
+    .button-container a {
+        display: block;
+        height: 60px;
+        width: 199px;
+        background-color: var(--primary-color-1);
+        border: solid var(--primary-color-1);
+        border-width: 0 1px;
+        color: var(--secondary-color-7);
+        font-size: 18px;
+        margin: -37px 0px -25px -37px;
+        padding: 15px;
+        padding-left: 10px;
+        text-decoration: none;
+    }
+
+        .button-container a:hover {
+            background-color: var(--secondary-color-7);
+            border: solid var(--primary-color-1);
+            color: var(--primary-color-1);
+        }
+
+        .button-container a:active {
+            background-color: var(--secondary-color-7);
+            border: solid var(--primary-color-1);
+            color: var(--primary-color-1);
+            transform: translateY(7px) translateX(7px);
+        }
+
+        .button-container a:focus {
+            outline: none;
+        }
+
+/* ESG */
+
+.esg {
+    padding-top: 10rem;
+    padding-right: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    background-position: 0 -20rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.esg-spacing .title {
+    position: relative;
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-transform: uppercase;
+}
+
+    .esg-spacing .title:before {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color-2);
+        width: 10px;
+        height: 35px;
+        top: 0;
+        left: -25px;
+    }
+
+.esg-spacing .details {
+    width: 50%;
+    max-width: 50%;
+}
+
+.esg-card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 580px;
+    background-color: white;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
+    width: 100%;
+    overflow: hidden;
+    transition-duration: 172ms;
+    will-change: transform, box-shadow;
+}
+
+.esg-card-image {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.esg-card-details {
+    padding: 1.5rem;
+    position: relative;
+}
+
+    .esg-card-details h1 {
+        font-family: 'font_medium_65regular';
+        font-size: 32px;
+        font-weight: 800;
+        color: var(--primary-color-1);
+        line-height: 34px;
+    }
+
+.esg-card-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 140px;
+    height: 32px;
+}
+
+    .esg-card-button a {
+        padding: 0 15px;
+        color: var(--secondary-color-7);
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--primary-color-1);
+        border-left: 5px solid var(--primary-color-2);
+    }
+
+        .esg-card-button a:hover {
+            color: var(--secondary-color-7);
+            text-decoration: none;
+            background-color: var(--primary-color-2);
+            border-left: 5px solid var(--primary-color-2);
+        }
+
+        .esg-card-button a:active {
+            color: var(--primary-color-1);
+            background-color: var(--secondary-color-7);
+            border: 2px solid var(--primary-color-1);
+        }
+
+/* sustainability */
+
+.sustainability {
+    margin-top: 0;
+    padding: 2.5rem;
+}
+
+    .sustainability .title {
+        position: relative;
+        font-family: 'font_medium_65regular';
+        font-size: 40px;
+        font-weight: 800;
+        color: var(--primary-color-1);
+        text-transform: uppercase;
+    }
+
+        .sustainability .title:before {
+            content: '';
+            position: absolute;
+            background-color: var(--primary-color-2);
+            width: 10px;
+            height: 35px;
+            top: 0;
+            left: -25px;
+        }
+
+.video-box {
+    position: relative;
+    display: block;
+    left: 5px;
+    width: 100%;
+    padding: 35px;
+    background-color: var(--primary-color-1);
+    height: 25rem;
+}
+
+    .video-box iframe {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: -10px;
+        left: -15px;
+        max-height: 100%;
+        height: 100%;
+    }
+
+/* fund */
+
+.fund {
+    margin-top: 0;
+    padding: 0 2.5rem 2.5rem;
+}
+
+.fund-title {
+    position: relative;
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.fund-card {
+    position: relative;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.fund-card-text {
+    position: absolute;
+    width: 90%;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+}
+
+.fund-card-filter {
+    position: absolute;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.fund-grid.comment .fund-card {
+    height: 400px;
+    box-shadow: none;
+    background-color: var(--secondary-color-7);
+}
+
+    .fund-grid.comment .fund-card .fund-card-text {
+        color: var(--secondary-color-7);
+    }
+
+.row.fund-grid.comment .col-12:hover {
+    box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+    text-decoration: none;
+}
+
+/* appoach */
+
+#appoach-1 {
+    margin: 0;
+    padding: 2.5rem;
+}
+
+    #appoach-1 img {
+        max-width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+.appoach-1-title {
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    margin-bottom: 30px;
+}
+
+.appoach-1-td {
+    font-family: 'font_medium_65regular';
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    margin-bottom: 30px;
+}
+
+.appoach-banner {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    border: none;
+}
+
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button {
+    border: 1px solid rgba(0, 0, 0, .125);
+}
+
+    .accordion-button:not(.collapsed) {
+        background-color: var(--primary-color-1);
+        color: var(--secondary-color-7);
+    }
+
+.article-banner {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.article-header {
+    margin-top: -80px;
+    padding: 2.5rem;
+    background-color: var(--secondary-color-7);
+}
+
+.article-details {
+    padding: 2.5rem;
+}
+
+.article-title {
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    margin-bottom: 30px;
+}
+
+.article-td {
+    font-family: 'font_medium_65regular';
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-color-1);
+    margin-bottom: 30px;
+}
+
+.article-information h3 {
+    margin-bottom: 1.5px;
+}
+
+.article-notice {
+    padding: 2.5rem;
+    margin: 2.5rem;
+    background-color: var(--primary-color-1);
+    color: var(--secondary-color-7);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'font_medium_65regular';
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.article-line {
+    height: 3px !important;
+    background-color: var(--primary-color-1);
+    opacity: 1;
+}
+
+/* ETF */
+.etf-banner {
+    position: relative;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .etf-banner .title {
+        position: absolute;
+        width: 70%;
+        max-width: 70%;
+        top: 80px;
+        left: 140px;
+        font-family: 'font_medium_65regular';
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: var(--secondary-color-7);
+    }
+
+    .etf-banner .subtitle {
+        position: absolute;
+        width: 20%;
+        max-width: 20%;
+        top: 220px;
+        left: 140px;
+        font-size: 2rem;
+        font-weight: 400;
+        color: var(--secondary-color-7);
+    }
+
+.sustainable-menu.etf .item-menu {
+    margin: 0 .5rem;
+    box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.what-etf h6.text-center {
+    margin-bottom: 30px;
+}
+
+.what-etf .name.text-center:before {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-color-2);
+    width: 10px;
+    height: 35px;
+    top: 5px;
+    left: calc(52% - 100px);
+}
+
+.fund-info-card {
+    padding: 25px;
+    border: 2px solid #eaeaea;
+    border-color: #6A92E2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .fund-info-card:hover {
+        background-color: #3679FF;
+        color: #ffffff;
+    }
+
+    .fund-info-card h1 {
+        padding: 5px 25px;
+        font-size: 24px;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #1E58C9;
+        color: #ffffff;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        font-weight: 800;
+    }
+
+    .fund-info-card:hover h1 {
+        background-color: #3679FF;
+        color: #ffffff;
+    }
+
+    .fund-info-card h5 {
+        font-size: 18px;
+    }
+
+.break-point {
+    position: relative;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .break-point .commitment-spacing {
+        position: absolute;
+        left: 120px;
+        top: 100px;
+    }
+
+        .break-point .commitment-spacing .name {
+            font-size: 3.5rem;
+            color: var(--secondary-color-7);
+        }
+
+        .break-point .commitment-spacing h6 {
+            font-size: 2.5rem;
+            color: var(--secondary-color-7);
+            width: 40%;
+            max-width: 40%;
+        }
+
+.etf-video {
+    margin-top: 0;
+    margin-bottom: 5rem;
+}
+
+    .etf-video iframe {
+        width: 100%;
+    }
+
+    .etf-video .margin-top-50 {
+        margin-top: 50px;
+    }
+
+.row.fund-grid.comment {
+    margin-top: 3rem;
+}
+
+.etf-comment {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+    .etf-comment .name.text-center:before {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color-2);
+        width: 10px;
+        height: 35px;
+        top: 5px;
+        left: calc(52% - 120px);
+    }
+
+.contact-card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 2.5rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.footer {
+    background-color: #002469;
+    color: #fff;
+    font-size: 18px;
+}
+
+    .footer p {
+        padding: 2.5rem;
+        text-align: center;
+        color: #ffffff;
+        font-size: 24px;
+    }
+
+    .footer h3, .footer h5 {
+        margin-bottom: 0;
+    }
+
+    .footer .text-blue {
+        color: #009AD9;
+        font-weight: 800;
+    }
+
+.footer-bottom {
+    border-top: 2px solid #335087;
+}
+
+    .footer-bottom .copyright {
+        padding: 1.5rem;
+    }
+
+.footer .btn.btn-secondary.dropdown-toggle {
+    background-color: #002469;
+}
+
+.esg-card-details h3 {
+    overflow: hidden;
+    height: 60px;
+}
+
+.esg-card-details a, .esg-card-details span, .esg-card-details p, .esg-card-details h2, .esg-card-details h4, .esg-card-details h5, .esg-card-details h6 {
+    font-family: 'font_medium_65regular' !important;
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    color: var(--secondary-color-5) !important;
+}
+
+.esg-card-details img {
+    display: none !important;
+}
+
+.find-out-more-container {
+    position: relative;
+    display: block;
+    left: 5px;
+    width: 200px;
+    margin-top: 30px;
+    padding: 30px;
+    border: 1px solid var(--primary-color-1);
+}
+
+    .find-out-more-container:hover {
+        background-color: var(--primary-color-1);
+        border: 1px solid var(--primary-color-1);
+    }
+
+    .find-out-more-container:active {
+        border: none;
+    }
+
+    .find-out-more-container button {
+        display: block;
+        height: 60px;
+        width: 199px;
+        background-color: var(--primary-color-1);
+        border: solid var(--primary-color-1);
+        border-width: 0 1px;
+        color: var(--secondary-color-7);
+        font-size: 18px;
+        margin: -37px 0px -25px -37px;
+        padding: 15px;
+        padding-left: 10px;
+        text-decoration: none;
+    }
+
+        .find-out-more-container button:hover {
+            background-color: var(--secondary-color-7);
+            border: solid var(--primary-color-1);
+            color: var(--primary-color-1);
+        }
+
+        .find-out-more-container button:active {
+            background-color: var(--secondary-color-7);
+            border: solid var(--primary-color-1);
+            color: var(--primary-color-1);
+            transform: translateY(7px) translateX(7px);
+        }
+
+        .find-out-more-container button:focus {
+            outline: none;
+        }
+
+.commitment-link:hover {
+    cursor: pointer;
+}
+
+.what-etf {
+    margin-top: 3rem;
+    padding: 2.5rem;
+}
+
+.btn-form {
+    background-color: #002469;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+    .btn-form:hover {
+        color: #ffffff;
+    }
+
+/* Global Setup */
+
+:root {
+    --primary-color-1: #002469;
+    --primary-color-2: #E1091D;
+    --secondary-color-1: #045762;
+    --secondary-color-2: #4AA96C;
+    --secondary-color-3: #A0CC78;
+    --secondary-color-4: #BFDCAE;
+    --secondary-color-5: #1C1C1C;
+    --secondary-color-6: #DDDDDD;
+    --secondary-color-7: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'font_medium_65regular';
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'font_medium_65regular';
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'font_medium_65regular';
+    font-size: 24px;
+    font-weight: 400;
+}
+
+img {
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.fund-card-text h1, .fund-card-text p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+.row.fund-grid {
+    position: relative;
+}
+
+.fund-grid-bg {
+    position: absolute;
+    background-image: url('../images/fund-grid-bg.PNG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 112px;
+    height: 156px;
+    top: -120px;
+    left: -60px;
+    z-index: -1;
+}
+
+.gallery.gallery-fw .gallery-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.item-menu a {
+    color: var(--secondary-color-5);
+}
+
+.item-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+}
+
+    .item-icon.icon-1 {
+        background-image: url('../images/icon/1-primary.svg');
+    }
+
+.item-menu:hover .icon-1 {
+    background-image: url('../images/icon/1-hover.svg');
+}
+
+.item-icon.icon-2 {
+    background-image: url('../images/icon/2-primary.svg');
+}
+
+.item-menu:hover .icon-2 {
+    background-image: url('../images/icon/2-hover.svg');
+}
+
+.item-icon.icon-3 {
+    background-image: url('../images/icon/3-primary.svg');
+}
+
+.item-menu:hover .icon-3 {
+    background-image: url('../images/icon/3-hover.svg');
+}
+
+.item-icon.icon-4 {
+    background-image: url('../images/icon/4-primary.svg');
+}
+
+.item-menu:hover .icon-4 {
+    background-image: url('../images/icon/4-hover.svg');
+}
+
+.item-icon.icon-5 {
+    background-image: url('../images/icon/5-primary.svg');
+}
+
+.item-menu:hover .icon-5 {
+    background-image: url('../images/icon/5-hover.svg');
+}
+
+.item-icon.icon-6 {
+    background-image: url('../images/icon/6-primary.svg');
+}
+
+.item-menu:hover .icon-6 {
+    background-image: url('../images/icon/6-hover.svg');
+}
+
+.item-icon.icon-7 {
+    background-image: url('../images/icon/7-primary.svg');
+}
+
+.item-menu:hover .icon-7 {
+    background-image: url('../images/icon/7-hover.svg');
+}
+
+.item-icon.icon-8 {
+    background-image: url('../images/icon/8-primary.svg');
+}
+
+.item-menu:hover .icon-8 {
+    background-image: url('../images/icon/8-hover.svg');
+}
+
+.item-icon.icon-9 {
+    background-image: url('../images/icon/9-primary.svg');
+}
+
+.item-menu:hover .icon-9 {
+    background-image: url('../images/icon/9-hover.svg');
+}
+
+.item-icon.icon-10 {
+    background-image: url('../images/icon/10-primary.svg');
+}
+
+.item-menu:hover .icon-10 {
+    background-image: url('../images/icon/10-hover.svg');
+}
+
+.accordion-button {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.application-download img {
+    width: 100%
+}
+
+@media (max-width: 319.98px) {
+    .investment-details p {
+        line-height: 1 !important;
+        font-size: 18px !important;
+        letter-spacing: 1px;
+        word-break: break-word;
+    }
+
+        .investment-details p br {
+            display: none;
+        }
+
+    .application-download img {
+        display: none;
+    }
+
+    .application-download {
+        height: 160px;
+        background-image: url('../images/Application-UOBAM-Invest-Mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .commitment-brief-history-1 p {
+        font-size: 16px;
+    }
+
+    .commitment-brief-history-2 p {
+        font-size: 16px;
+    }
+
+    section#section-5.sustainability .sustainability .title:before {
+        top: 5px;
+        left: -25px;
+    }
+
+    section#section-5.sustainability .sustainability-spacing {
+        margin-bottom: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .contact-card .commitment-spacing {
+        margin-left: -15px;
+    }
+
+    .carousel-menu {
+        display: none;
+    }
+
+    section#section-1, section#section-2, section#section-3, section#section-4, section#section-5, section#section-6 {
+        padding: 1.5rem 0 !important;
+    }
+
+    #section-1.sustainable {
+        background-size: 100%;
+        background-position: 0 -20px;
+    }
+
+    .sustainable-text.d-flex.flex-column {
+        position: absolute;
+        top: 130px;
+        left: 50px;
+        right: 0;
+        width: 80%;
+    }
+
+        .sustainable-text.d-flex.flex-column .sustainable-spacing {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+
+    .sustainable-menu .d-flex.flex-column.flex-sm-row.justify-content-center {
+        margin-top: 20rem;
+    }
+
+    .sustainable-menu .item-menu {
+        margin: 1rem;
+        box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+    }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-brief-history-1 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+        section#section-2.commitment .col-12.mb-5 {
+            margin-bottom: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.mt-5 {
+            margin-top: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-brief-history-2 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+                margin-bottom: 0 !important;
+            }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 540px;
+    }
+
+        section#section-3.investment-approach .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: max-content;
+            }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-details {
+                position: absolute;
+                top: 110px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: 320px;
+            right: 5px;
+            left: 5px;
+        }
+
+    section#section-4.esg {
+        background-position: -12rem -10rem;
+        background-repeat: no-repeat;
+        background-size: 250%;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 13rem;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+                section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing .details {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 22rem !important;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        section#section-4.esg .esg-card {
+            height: 360px;
+        }
+
+        section#section-4.esg .esg-card-image {
+            height: 120px;
+        }
+
+    section#section-5.sustainability {
+        margin-top: 0;
+    }
+
+    section#section-5 .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5 .col-12.col-md-6 .sustainability-spacing {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5 .video-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 92%;
+        padding: 10px;
+        margin-top: 17rem;
+    }
+
+        section#section-5 .video-box iframe {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            height: 100%;
+        }
+
+    section#section-6.fund {
+        margin-top: 0;
+    }
+
+        section#section-6.fund .col-12 {
+            position: relative;
+        }
+
+            section#section-6.fund .col-12 .fund-title {
+                position: absolute;
+                top: 14rem;
+                left: 30px;
+                right: 0;
+                width: 80%;
+                margin-bottom: 0;
+            }
+
+            section#section-6.fund .col-12 .row.fund-grid {
+                margin-top: 25rem;
+            }
+
+    main.pb-3 {
+        padding-bottom: 0 !important;
+    }
+
+    .title, .name, .esg-card-details h1, .fund-title {
+        line-height: 1 !important;
+        font-size: 24px !important;
+    }
+
+    h3.details, .investment-details p, .commitment-spacing .position, .sustainable-spacing .description {
+        line-height: 1 !important;
+        font-size: 18px !important;
+    }
+
+    div.footer p {
+        padding: 1.5rem;
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    div.footer-bottom .me-auto {
+        display: none;
+    }
+
+    div.footer-bottom .ms-auto h5.text-blue {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    div.footer-bottom .ms-auto h3.text-blue {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    div.footer-bottom .ms-auto .row.justify-content-center.align-items-center .col-12 > h5 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    div.footer-bottom .ms-auto .dropdown {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sustainability-spacing h1.title {
+        font-size: 28px !important;
+    }
+
+    .sustainability-spacing p {
+        font-size: 18px !important;
+    }
+
+    /* ETF */
+    .footer-bottom .ms-auto {
+        margin: 0 !important;
+    }
+
+    div.etf-banner {
+        height: 260px;
+    }
+
+        div.etf-banner h1.title {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 26px !important;
+        }
+
+        div.etf-banner h4.subtitle {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 22px !important;
+        }
+
+    section#section-1.what-etf {
+        margin-top: 0;
+    }
+
+        section#section-1.what-etf .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-1.what-etf .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 40px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+    .col-12.col-md-6.order-2.order-md-1 {
+        top: -10px !important;
+    }
+
+    section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history, section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history.gg-2 {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        right: 0;
+        width: 80%;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    section#section-1.what-etf .sustainable-menu.etf .d-flex.flex-column.flex-sm-row.justify-content-center {
+        margin-top: 15rem;
+    }
+
+    section#section-1.what-etf .row .col-12.mb-5, section#section-1.what-etf .row .col-12.mt-5 {
+        margin: 0 !important;
+    }
+
+    /* section#section-1.what-etf .col-12.col-md-6.order-2 {
+        margin-top: 25rem;
+    } */
+
+    section#section-1.what-etf .col-12.col-md-12 {
+        position: relative;
+    }
+
+        section#section-1.what-etf .col-12.col-md-12 .commitment-spacing {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+            margin-top: 0;
+        }
+
+    /*  section#section-1.what-etf div.gg-2 {
+        margin-top: 12rem;
+        margin-bottom: 0 !important;
+    }
+ */
+    section#section-2.break-point {
+        height: 380px;
+    }
+
+        section#section-2.break-point .commitment-spacing {
+            left: 40px;
+        }
+
+            section#section-2.break-point .commitment-spacing h6 {
+                font-size: 22px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+    section#section-3.etf-video {
+        margin: 0 !important;
+    }
+
+        section#section-3.etf-video .row .col-12.col-md-6.margin-top-50 {
+            margin: 0 !important;
+        }
+
+    section#section-4.etf-comment {
+        margin: 0 !important;
+    }
+
+        section#section-4.etf-comment .row.fund-grid.comment {
+            margin-top: 0;
+        }
+
+    section#section-5.etf-contact .contact-card {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    section#section-5.etf-contact .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5.etf-contact .col-12.col-md-6 .commitment-spacing {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5.etf-contact form {
+        margin-top: 5rem;
+    }
+
+        section#section-5.etf-contact form .form-check {
+            padding: 0;
+        }
+
+    /* Appoach */
+    .appoach-banner {
+        height: 180px;
+    }
+
+    section#appoach-1 {
+        padding: 1.5rem;
+    }
+
+        section#appoach-1 .appoach-1-title {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+    /*ETF*/
+    .footer-bottom .ms-auto {
+        margin: 0 !important;
+    }
+
+    div.etf-banner {
+        height: 260px;
+    }
+
+        div.etf-banner h1.title {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 26px !important;
+        }
+
+        div.etf-banner h4.subtitle {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 22px !important;
+        }
+
+    .col-12.col-md-6.order-1.order-md-2 .d-flex.justify-content-center.align-items-center {
+        margin-top: 0rem;
+    }
+
+    section#section-1.what-etf .col-12.mt-5 .row .col-12.col-md-12 {
+        margin-top: 20rem;
+    }
+
+    .commitment-spacing h6 {
+        font-size: 18px;
+    }
+
+    .etf-video iframe {
+        width: 100%;
+        height: 230px;
+    }
+
+    .gg-2 .row.mb-5 {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 374.98px) {
+    .investment-details p {
+        line-height: 1 !important;
+        font-size: 18px !important;
+        letter-spacing: 1px;
+        word-break: break-word;
+    }
+
+        .investment-details p br {
+            display: none;
+        }
+
+    .application-download img {
+        display: none;
+    }
+
+    .application-download {
+        height: 170px;
+        background-image: url('../images/Application-UOBAM-Invest-Mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .commitment-brief-history-1 p {
+        font-size: 16px;
+    }
+
+    .commitment-brief-history-2 p {
+        font-size: 16px;
+    }
+
+    section#section-5.sustainability .sustainability .title:before {
+        top: 5px;
+        left: -25px;
+    }
+
+    section#section-5.sustainability .sustainability-spacing {
+        margin-bottom: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .contact-card .commitment-spacing {
+        margin-left: -15px;
+    }
+
+    .carousel-menu {
+        display: none;
+    }
+
+    section#section-1, section#section-2, section#section-3, section#section-4, section#section-5, section#section-6 {
+        padding: 1.5rem 0 !important;
+    }
+
+    #section-1.sustainable {
+        background-size: 100%;
+        background-position: 0 -20px;
+    }
+
+    .sustainable-text.d-flex.flex-column {
+        position: absolute;
+        top: 130px;
+        left: 50px;
+        right: 0;
+        width: 80%;
+    }
+
+        .sustainable-text.d-flex.flex-column .sustainable-spacing {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+
+    .sustainable-menu .d-flex.flex-column.flex-sm-row.justify-content-center {
+        margin-top: 20rem;
+    }
+
+    .sustainable-menu .item-menu {
+        margin: 1rem;
+        box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+    }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-brief-history-1 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+        section#section-2.commitment .col-12.mb-5 {
+            margin-bottom: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.mt-5 {
+            margin-top: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-brief-history-2 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+                margin-bottom: 0 !important;
+            }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 540px;
+    }
+
+        section#section-3.investment-approach .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: max-content;
+            }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-details {
+                position: absolute;
+                top: 110px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: 320px;
+            right: 5px;
+            left: 5px;
+        }
+
+    section#section-4.esg {
+        background-position: -15rem -10rem;
+        background-repeat: no-repeat;
+        background-size: 250%;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 15rem;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+                section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing .details {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 18rem !important;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        section#section-4.esg .esg-card {
+            height: 450px;
+        }
+
+        section#section-4.esg .esg-card-image {
+            height: 180px;
+        }
+
+    section#section-5.sustainability {
+        margin-top: 0;
+    }
+
+    section#section-5 .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5 .col-12.col-md-6 .sustainability-spacing {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5 .video-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+        section#section-5 .video-box iframe {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+            height: 100%;
+        }
+
+    section#section-6.fund {
+        margin-top: 0;
+    }
+
+        section#section-6.fund .col-12 {
+            position: relative;
+        }
+
+            section#section-6.fund .col-12 .fund-title {
+                position: absolute;
+                top: .5rem;
+                left: 30px;
+                right: 0;
+                width: 80%;
+                margin-bottom: 0;
+            }
+
+            section#section-6.fund .col-12 .row.fund-grid {
+                margin-top: 15rem;
+            }
+
+    main.pb-3 {
+        padding-bottom: 0 !important;
+    }
+
+    .title, .name, .esg-card-details h1, .fund-title {
+        line-height: 1 !important;
+        font-size: 30px !important;
+    }
+
+    h3.details, .investment-details p, .commitment-spacing .position, .sustainable-spacing .description {
+        line-height: 1 !important;
+        font-size: 18px !important;
+        letter-spacing: 2.5px;
+    }
+
+    div.footer p {
+        padding: 1.5rem;
+        margin: 0;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    div.footer-bottom .me-auto {
+        display: none;
+    }
+
+    div.footer-bottom .ms-auto h5.text-blue {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    div.footer-bottom .ms-auto h3.text-blue {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    div.footer-bottom .ms-auto .row.justify-content-center.align-items-center .col-12 > h5 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    div.footer-bottom .ms-auto .dropdown {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sustainability-spacing h1.title {
+        font-size: 28px !important;
+    }
+
+    .sustainability-spacing p {
+        font-size: 18px !important;
+    }
+
+    /* ETF */
+    .footer-bottom .ms-auto {
+        margin: 0 !important;
+    }
+
+    div.etf-banner {
+        height: 280px;
+    }
+
+        div.etf-banner h1.title {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 28px !important;
+        }
+
+        div.etf-banner h4.subtitle {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 22px !important;
+            top: 150px;
+        }
+
+    section#section-1.what-etf {
+        margin-top: 0;
+    }
+
+        section#section-1.what-etf .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-1.what-etf .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 40px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+    .col-12.col-md-6.order-2.order-md-1 {
+        top: -10px !important;
+    }
+
+    section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history, section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history.gg-2 {
+        position: absolute;
+        top: 80px;
+        left: 50px;
+        right: 0;
+        width: 80%;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    section#section-1.what-etf .sustainable-menu.etf .d-flex.flex-column.flex-sm-row.justify-content-center {
+        margin-top: 15rem;
+    }
+
+    section#section-1.what-etf .row .col-12.mb-5, section#section-1.what-etf .row .col-12.mt-5 {
+        margin: 0 !important;
+    }
+
+    /* section#section-1.what-etf .col-12.col-md-6.order-2 {
+        margin-top: 25rem;
+    } */
+
+    section#section-1.what-etf .col-12.col-md-12 {
+        position: relative;
+    }
+
+        section#section-1.what-etf .col-12.col-md-12 .commitment-spacing {
+            position: absolute;
+            top: -140px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+            margin-top: 0;
+        }
+
+    /* section#section-1.what-etf div.gg-2 {
+        margin-top: 12rem;
+        margin-bottom: 0 !important;
+    } */
+
+    section#section-2.break-point {
+        height: 380px;
+    }
+
+        section#section-2.break-point .commitment-spacing {
+            left: 40px;
+        }
+
+            section#section-2.break-point .commitment-spacing h6 {
+                font-size: 22px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+    section#section-3.etf-video {
+        margin: 0 !important;
+    }
+
+        section#section-3.etf-video .row .col-12.col-md-6.margin-top-50 {
+            margin: 0 !important;
+        }
+
+    section#section-4.etf-comment {
+        margin: 0 !important;
+    }
+
+        section#section-4.etf-comment .row.fund-grid.comment {
+            margin-top: 0;
+        }
+
+    section#section-5.etf-contact .contact-card {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    section#section-5.etf-contact .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5.etf-contact .col-12.col-md-6 .commitment-spacing {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5.etf-contact form {
+        margin-top: 5rem;
+    }
+
+        section#section-5.etf-contact form .form-check {
+            padding: 0;
+        }
+
+    /* Appoach */
+    .appoach-banner {
+        height: 180px;
+    }
+
+    section#appoach-1 {
+        padding: 1.5rem;
+    }
+
+        section#appoach-1 .appoach-1-title {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+    /*ETF*/
+    .col-12.col-md-6.order-1.order-md-2 .d-flex.justify-content-center.align-items-center {
+        margin-top: 3rem;
+    }
+
+    section#section-1.what-etf .col-12.mt-5 .row .col-12.col-md-12 {
+        margin-top: 35rem;
+    }
+
+    .commitment-spacing h6 {
+        font-size: 18px;
+    }
+
+    .etf-video iframe {
+        width: 100%;
+        height: 230px;
+    }
+
+    .gg-2 .row.mb-5 {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .investment-details p {
+        line-height: 1 !important;
+        font-size: 20px !important;
+        letter-spacing: 1px;
+        word-break: break-word;
+    }
+
+        .investment-details p br {
+            display: none;
+        }
+
+    .application-download img {
+        display: none;
+    }
+
+    .application-download {
+        height: 230px;
+        background-image: url('../images/Application-UOBAM-Invest-Mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .commitment-brief-history-1 p {
+        font-size: 16px;
+    }
+
+    .commitment-brief-history-2 p {
+        font-size: 16px;
+    }
+
+    section#section-5.sustainability .sustainability .title:before {
+        top: 5px;
+        left: -25px;
+    }
+
+    section#section-5.sustainability .sustainability-spacing {
+        margin-bottom: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .contact-card .commitment-spacing {
+        margin-left: -15px;
+    }
+
+    .carousel-menu {
+        display: none;
+    }
+
+    section#section-1, section#section-2, section#section-3, section#section-4, section#section-5, section#section-6 {
+        padding: 1.5rem 0 !important;
+    }
+
+    #section-1.sustainable {
+        background-size: 90%;
+        background-position: 35% -35px;
+    }
+
+    .sustainable-text.d-flex.flex-column {
+        position: absolute;
+        top: 160px;
+        left: 50px;
+        right: 0;
+        width: 80%;
+    }
+
+        .sustainable-text.d-flex.flex-column .sustainable-spacing {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+
+    .sustainable-menu .d-flex.flex-column.flex-sm-row.justify-content-center {
+        margin-top: 25rem;
+    }
+
+    .sustainable-menu .item-menu {
+        margin: 1rem;
+        box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+    }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-brief-history-1 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+        section#section-2.commitment .col-12.mb-5 {
+            margin-bottom: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.mt-5 {
+            margin-top: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-brief-history-2 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+                margin-bottom: 0 !important;
+            }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 640px;
+    }
+
+        section#section-3.investment-approach .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-details {
+                position: absolute;
+                top: 110px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: 350px;
+            right: 20px;
+            left: 20px;
+        }
+
+    section#section-4.esg {
+        background-position: -18rem -13rem;
+        background-repeat: no-repeat;
+        background-size: 250%;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 20rem;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+                section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing .details {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 23rem !important;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+    section#section-5.sustainability {
+        margin-top: 0;
+    }
+
+    section#section-5 .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5 .col-12.col-md-6 .sustainability-spacing {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5 .video-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 20rem;
+        padding: 10px;
+        margin-top: 0rem;
+    }
+
+        section#section-5 .video-box iframe {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+        }
+
+    section#section-6.fund {
+        margin-top: 0;
+    }
+
+        section#section-6.fund .col-12 {
+            position: relative;
+        }
+
+            section#section-6.fund .col-12 .fund-title {
+                position: absolute;
+                top: 0;
+                left: 50px;
+                right: 0;
+                width: 80%;
+                margin-bottom: 0;
+            }
+
+            section#section-6.fund .col-12 .row.fund-grid {
+                padding: 0 1.5rem;
+                margin-top: 15rem;
+            }
+
+    main.pb-3 {
+        padding-bottom: 0 !important;
+    }
+
+    .title, .name, .esg-card-details h1, .fund-title {
+        line-height: 1 !important;
+        font-size: 35px !important;
+    }
+
+    h3.details, .investment-details p, .commitment-spacing .position, .sustainable-spacing .description {
+        line-height: 1 !important;
+        font-size: 18px !important;
+        letter-spacing: 2.5px;
+    }
+
+    div.footer p {
+        padding: 1.5rem;
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    div.footer-bottom .me-auto {
+        display: none;
+    }
+
+    div.footer-bottom .ms-auto h5.text-blue {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    div.footer-bottom .ms-auto h3.text-blue {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    div.footer-bottom .ms-auto .row.justify-content-center.align-items-center .col-12 > h5 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    div.footer-bottom .ms-auto .dropdown {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ETF */
+    div.etf-banner {
+        height: 300px;
+    }
+
+        div.etf-banner h1.title {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 30px !important;
+        }
+
+        div.etf-banner h4.subtitle {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 26px !important;
+            top: 160px;
+        }
+
+    section#section-1.what-etf {
+        margin-top: 0;
+    }
+
+        section#section-1.what-etf .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-1.what-etf .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history, section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history.gg-2 {
+                position: absolute;
+                top: 70px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+                font-size: 18px;
+                line-height: 1.5;
+                margin-top: 0;
+            }
+
+        section#section-1.what-etf .sustainable-menu.etf .d-flex.flex-column.flex-sm-row.justify-content-center {
+            margin-top: 15rem;
+        }
+
+        section#section-1.what-etf .row .col-12.mb-5, section#section-1.what-etf .row .col-12.mt-5 {
+            margin: 0 !important;
+        }
+
+        /*  section#section-1.what-etf .col-12.col-md-6.order-2 {
+        margin-top: 25rem;
+    } */
+
+        section#section-1.what-etf .col-12.col-md-12 {
+            position: relative;
+        }
+
+            section#section-1.what-etf .col-12.col-md-12 .commitment-spacing {
+                position: absolute;
+                top: 120px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+        section#section-1.what-etf div.gg-2 {
+            margin-top: 12rem;
+            margin-bottom: 0 !important;
+        }
+
+    section#section-2.break-point {
+        height: 380px;
+    }
+
+        section#section-2.break-point .commitment-spacing {
+            left: 40px;
+        }
+
+            section#section-2.break-point .commitment-spacing h6 {
+                font-size: 22px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+    section#section-3.etf-video {
+        margin: 0 !important;
+    }
+
+        section#section-3.etf-video .row .col-12.col-md-6.margin-top-50 {
+            margin: 0 !important;
+        }
+
+    section#section-4.etf-comment {
+        margin: 0 !important;
+    }
+
+        section#section-4.etf-comment .row.fund-grid.comment {
+            margin-top: 0;
+        }
+
+    section#section-5.etf-contact .contact-card {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    section#section-5.etf-contact .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5.etf-contact .col-12.col-md-6 .commitment-spacing {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5.etf-contact form {
+        margin-top: 5rem;
+    }
+
+        section#section-5.etf-contact form .form-check {
+            padding: 0;
+        }
+
+    /* Appoach */
+    .appoach-banner {
+        height: 180px;
+    }
+
+    section#appoach-1 {
+        padding: 1.5rem;
+    }
+
+        section#appoach-1 .appoach-1-title {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+    /*ETF*/
+    .footer-bottom .ms-auto {
+        margin: 0 !important;
+    }
+
+    .col-12.col-md-6.order-1.order-md-2 .d-flex.justify-content-center.align-items-center {
+        margin-top: 3rem;
+    }
+
+    section#section-1.what-etf .col-12.mt-5 .row .col-12.col-md-12 {
+        margin-top: 15rem;
+    }
+
+    .commitment-spacing h6 {
+        font-size: 18px;
+    }
+
+    .etf-video iframe {
+        width: 100%;
+        height: 230px;
+    }
+
+    .gg-2 .row.mb-5 {
+        margin-bottom: 0 !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .investment-details p {
+        line-height: 1 !important;
+        font-size: 20px !important;
+        letter-spacing: 1px;
+        word-break: break-word;
+    }
+
+        .investment-details p br {
+            display: none;
+        }
+
+        .investment-details p br {
+            display: none;
+        }
+
+    .commitment-brief-history-1 p {
+        font-size: 16px;
+    }
+
+    .commitment-brief-history-2 p {
+        font-size: 16px;
+    }
+
+    section#section-5.sustainability .sustainability .title:before {
+        top: 5px;
+        left: -25px;
+    }
+
+    section#section-5.sustainability .sustainability-spacing {
+        margin-bottom: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .contact-card .commitment-spacing {
+        margin-left: 25px;
+    }
+
+    .carousel-menu {
+        display: none;
+    }
+
+    section#section-1, section#section-2, section#section-3, section#section-4, section#section-5, section#section-6 {
+        padding: 1.5rem 0 !important;
+    }
+
+    #section-1.sustainable {
+        background-size: 100%;
+        background-position: 35% -55px;
+    }
+
+    .sustainable-text.d-flex.flex-column {
+        position: absolute;
+        top: 300px;
+        left: 50px;
+        right: 0;
+        width: 80%;
+    }
+
+        .sustainable-text.d-flex.flex-column .sustainable-spacing {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+        }
+
+    .sustainable-menu .d-flex.flex-column.flex-sm-row.justify-content-center {
+        margin-top: 30rem;
+    }
+
+    .sustainable-menu .item-menu {
+        margin: 5px;
+        width: 100%;
+        max-width: 100%;
+        box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+    }
+
+        .sustainable-menu .item-menu .item-title {
+            font-size: 20px;
+        }
+
+        .sustainable-menu .item-menu .item-description {
+            font-size: 14px;
+        }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-brief-history-1 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6.order-2.order-md-1 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+        section#section-2.commitment .col-12.mb-5 {
+            margin-bottom: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.mt-5 {
+            margin-top: 0 !important;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-brief-history-2 {
+                margin-top: 7.5rem;
+                height: 280px;
+                overflow: hidden;
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+            }
+
+            section#section-2.commitment .col-12.col-md-6 .commitment-link {
+                padding-right: 2.5rem;
+                padding-left: 2.5rem;
+                margin-bottom: 0 !important;
+            }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 700px;
+    }
+
+        section#section-3.investment-approach .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-spacing {
+                position: absolute;
+                top: 20px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-3.investment-approach .col-12.col-md-6 .investment-details {
+                position: absolute;
+                top: 110px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: 320px;
+            right: 20px;
+            left: 20px;
+        }
+
+    section#section-4.esg {
+        background-position: -28rem -20rem;
+        background-repeat: no-repeat;
+        background-size: 250%;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 25rem;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+                section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing .details {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 32rem !important;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+    section#section-5.sustainability {
+        margin-top: 0;
+    }
+
+    section#section-5 .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5 .col-12.col-md-6 .sustainability-spacing {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5 .video-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 92%;
+        padding: 10px;
+        margin-top: 15rem;
+    }
+
+        section#section-5 .video-box iframe {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: -10px;
+            left: -5px;
+        }
+
+    section#section-6.fund {
+        margin-top: 0;
+    }
+
+        section#section-6.fund .col-12 {
+            position: relative;
+        }
+
+            section#section-6.fund .col-12 .fund-title {
+                position: absolute;
+                top: 17rem;
+                left: 50px;
+                right: 0;
+                width: 80%;
+                margin-bottom: 0;
+            }
+
+            section#section-6.fund .col-12 .row.fund-grid {
+                padding: 0 1.5rem;
+                margin-top: 30rem;
+            }
+
+    main.pb-3 {
+        padding-bottom: 0 !important;
+    }
+
+    .title, .name, .esg-card-details h1, .fund-title {
+        line-height: 1 !important;
+        font-size: 35px !important;
+    }
+
+    h3.details, .investment-details p, .commitment-spacing .position, .sustainable-spacing .description {
+        line-height: 1 !important;
+        font-size: 22px !important;
+    }
+
+    div.footer p {
+        padding: 1.5rem;
+        margin: 0;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    div.footer-bottom .me-auto {
+        display: none;
+    }
+
+    div.footer-bottom .ms-auto h5.text-blue {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    div.footer-bottom .ms-auto h3.text-blue {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    div.footer-bottom .ms-auto .row.justify-content-center.align-items-center .col-12 > h5 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    div.footer-bottom .ms-auto .dropdown {
+        display: none;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ETF */
+    div.etf-banner {
+        height: 400px;
+    }
+
+        div.etf-banner h1.title {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 30px !important;
+        }
+
+        div.etf-banner h4.subtitle {
+            text-align: center;
+            width: 80%;
+            max-width: 80%;
+            left: 30px;
+            font-size: 22px !important;
+        }
+
+    section#section-1.what-etf {
+        margin-top: 0;
+    }
+
+        section#section-1.what-etf .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-1.what-etf .col-12.col-md-6 .commitment-spacing {
+                position: absolute;
+                top: 40px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+            section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history, section#section-1.what-etf .col-12.col-md-6 .commitment-brief-history.gg-2 {
+                position: absolute;
+                top: 100px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+                font-size: 18px;
+                line-height: 1.5;
+                margin-top: 0;
+            }
+
+        section#section-1.what-etf .sustainable-menu.etf .d-flex.flex-column.flex-sm-row.justify-content-center {
+            margin-top: 15rem;
+        }
+
+        section#section-1.what-etf .row .col-12.mb-5, section#section-1.what-etf .row .col-12.mt-5 {
+            margin: 0 !important;
+        }
+
+        section#section-1.what-etf .col-12.col-md-6.order-2 {
+            margin-top: 25rem;
+        }
+
+        section#section-1.what-etf .col-12.col-md-12 {
+            position: relative;
+        }
+
+            section#section-1.what-etf .col-12.col-md-12 .commitment-spacing {
+                position: absolute;
+                top: 40px;
+                left: 50px;
+                right: 0;
+                width: 80%;
+            }
+
+        section#section-1.what-etf div.gg-2 {
+            margin-top: 12rem;
+            margin-bottom: 0 !important;
+        }
+
+    section#section-2.break-point {
+        height: 380px;
+    }
+
+        section#section-2.break-point .commitment-spacing {
+            left: 40px;
+        }
+
+            section#section-2.break-point .commitment-spacing h6 {
+                font-size: 22px;
+                width: 100%;
+                max-width: 100%;
+            }
+
+    section#section-3.etf-video {
+        margin: 0 !important;
+    }
+
+        section#section-3.etf-video .row .col-12.col-md-6.margin-top-50 {
+            margin: 0 !important;
+        }
+
+    section#section-4.etf-comment {
+        margin: 0 !important;
+    }
+
+        section#section-4.etf-comment .row.fund-grid.comment {
+            margin-top: 0;
+        }
+
+    section#section-5.etf-contact .contact-card {
+        margin-top: 0;
+        padding: 1rem;
+    }
+
+    section#section-5.etf-contact .col-12.col-md-6 {
+        position: relative;
+    }
+
+        section#section-5.etf-contact .col-12.col-md-6 .commitment-spacing {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            right: 0;
+            width: 80%;
+        }
+
+    section#section-5.etf-contact form {
+        margin-top: 5rem;
+    }
+
+        section#section-5.etf-contact form .form-check {
+            padding: 0;
+        }
+
+    /* Appoach */
+    .appoach-banner {
+        height: 180px;
+    }
+
+    section#appoach-1 {
+        padding: 1.5rem;
+    }
+
+        section#appoach-1 .appoach-1-title {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+    /*ETF*/
+    .col-12.col-md-6.order-1.order-md-2 .d-flex.justify-content-center.align-items-center {
+        margin-top: 3rem;
+    }
+
+    .commitment-spacing h6 {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .investment-details p {
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 1.75px;
+        -webkit-line-clamp: 6;
+        -moz-line-clamp: 6;
+        -ms-line-clamp: 6;
+        line-clamp: 6;
+    }
+
+        .investment-details p br {
+            display: none;
+        }
+
+    section#section-5.sustainability .sustainability-spacing {
+        margin-bottom: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .etf-video iframe {
+        height: 380px;
+    }
+
+    .commitment-brief-history-1 p {
+        font-size: 16px;
+    }
+
+    .commitment-brief-history-2 p {
+        font-size: 16px;
+    }
+
+    .contact-card .commitment-spacing {
+        margin-left: 25px;
+    }
+
+    .carousel-menu .item-menu h3.item-description {
+        font-size: 16px;
+    }
+
+    .carousel-menu .item-menu .item-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    section#section-1.sustainable {
+        background-position: 20% -100px;
+    }
+
+        section#section-1.sustainable .sustainable-text.d-flex.flex-column {
+            position: absolute;
+            top: 380px;
+            left: -200px;
+            right: 0;
+            width: 100%;
+        }
+
+        section#section-1.sustainable .sustainable-spacing .description {
+            font-size: 24px;
+        }
+
+        section#section-1.sustainable .sustainable-spacing {
+            margin-top: 0;
+            margin-right: 0;
+        }
+
+        section#section-1.sustainable .sustainable-menu .item-menu {
+            margin-top: 35rem;
+            width: 100%;
+            max-width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+            box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+        }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .commitment-spacing h3.position {
+            font-size: 24px;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 #show-less-2 {
+            margin-bottom: 0 !important;
+        }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 540px;
+        padding: 1.5rem 0;
+    }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: 180px;
+            left: 260px;
+            right: 0px;
+        }
+
+    section#section-4.esg {
+        position: relative;
+        background-position: -25rem -20rem;
+        background-size: 200%;
+        padding: 1.5rem !important;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 380px;
+                left: -40px;
+            }
+
+                section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing h3.details {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 35rem !important;
+        }
+
+            section#section-4.esg .col-12 .row.mt-5#article .col-12.col-md-4 {
+                margin-top: 0 !important;
+            }
+
+                section#section-4.esg .col-12 .row.mt-5#article .col-12.col-md-4 .esg-card-details {
+                    padding: 15px;
+                }
+
+                    section#section-4.esg .col-12 .row.mt-5#article .col-12.col-md-4 .esg-card-details h1 {
+                        font-size: 20px;
+                        line-height: 1;
+                    }
+
+        section#section-4.esg .esg-card {
+            height: 320px;
+        }
+
+            section#section-4.esg .esg-card .esg-card-image {
+                height: 120px;
+            }
+
+    section#section-5.sustainability {
+        margin-top: 0;
+    }
+
+        section#section-5.sustainability .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-5.sustainability .col-12.col-md-6 .sustainability-spacing p {
+                font-size: 24px;
+            }
+
+    section#section-5 .video-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 23rem;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+        section#section-5 .video-box iframe {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            position: absolute;
+            top: -10px;
+            left: -15px;
+        }
+
+    section#section-6.fund {
+        margin-top: 0;
+    }
+
+        section#section-6.fund .fund-card-filter .fund-card-text {
+            top: 140px;
+            left: 10px;
+        }
+
+    div.footer p {
+        padding: 1.5rem;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    div.footer-bottom {
+        font-size: 14px !important;
+        text-align: center;
+    }
+
+        div.footer-bottom .text-blue {
+            font-size: 14px !important;
+            text-align: center;
+        }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ETF */
+    .what-etf {
+        margin-top: 0 !important;
+    }
+
+    .etf-banner {
+        height: 420px;
+    }
+
+        .etf-banner .title {
+            left: 80px;
+            font-size: 3rem;
+        }
+
+        .etf-banner .subtitle {
+            width: 50%;
+            max-width: 50%;
+            top: 200px;
+            left: 80px;
+        }
+
+    .sustainable-menu .item-menu .item-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .sustainable-menu .item-menu .item-title {
+        font-size: 20px;
+    }
+
+    .sustainable-menu .item-menu .item-description {
+        font-size: 14px;
+    }
+
+    .break-point .commitment-spacing .name {
+        font-size: 3rem;
+    }
+
+    .break-point .commitment-spacing h6 {
+        font-size: 2rem;
+    }
+
+    div.gg-2 .row.mb-5 {
+        margin-bottom: 0 !important;
+    }
+
+    section#section-3.etf-video {
+        margin: 0 !important;
+        padding: 0 2.5rem;
+    }
+
+    section#section-4.etf-comment {
+        margin: 0 !important;
+        padding: 2.5rem;
+    }
+
+    .commitment-brief-history p {
+        line-height: 1;
+    }
+
+    .break-point .commitment-spacing {
+        position: absolute;
+        left: 80px;
+        top: 80px;
+    }
+
+    .commitment-spacing h6 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+    section#section-1.sustainable {
+        background-size: 90%;
+        background-position: 45% -100px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .investment-details p {
+        font-size: 18px;
+    }
+
+    section#section-5.sustainability .sustainability-spacing {
+        margin-bottom: 2.5rem;
+        margin-left: 20px;
+    }
+
+    .carousel-menu .item-menu h3.item-description {
+        font-size: 16px;
+    }
+
+    .carousel-menu .item-menu .item-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    section#section-1.sustainable {
+        background-size: 90%;
+        background-position: 45% -100px !important;
+    }
+
+        section#section-1.sustainable .sustainable-text.d-flex.flex-column {
+            position: absolute;
+            top: 545px;
+            left: -453px;
+            right: 0;
+            width: 100%;
+        }
+
+        section#section-1.sustainable .sustainable-spacing .description {
+            font-size: 24px;
+        }
+
+        section#section-1.sustainable .sustainable-spacing {
+            margin-top: 0;
+            margin-right: 0;
+        }
+
+        section#section-1.sustainable .sustainable-menu .item-menu {
+            margin-top: 45rem;
+            width: 100%;
+            max-width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+            box-shadow: 0 10px 20px rgb(220 220 220 / 50%);
+        }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .commitment-spacing h3.position {
+            font-size: 24px;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 #show-less-2 {
+            margin-bottom: 0 !important;
+        }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 540px;
+        padding: 1.5rem 0;
+    }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: 60px;
+            left: 360px;
+            right: 0px;
+        }
+
+    section#section-4.esg {
+        position: relative;
+        background-position: -32rem -28rem;
+        background-size: 200%;
+        padding: 1.5rem !important;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 35rem;
+                left: -32rem;
+                right: 10rem;
+            }
+
+                section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing h3.details {
+                    width: 100%;
+                    max-width: 100%;
+                }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 40rem !important;
+        }
+
+            section#section-4.esg .col-12 .row.mt-5#article .col-12.col-md-4 {
+                margin-top: 0 !important;
+            }
+
+                section#section-4.esg .col-12 .row.mt-5#article .col-12.col-md-4 .esg-card-details {
+                    padding: 15px;
+                }
+
+                    section#section-4.esg .col-12 .row.mt-5#article .col-12.col-md-4 .esg-card-details h1 {
+                        font-size: 28px;
+                        line-height: 1;
+                    }
+
+        section#section-4.esg .esg-card {
+            height: 380px;
+        }
+
+            section#section-4.esg .esg-card .esg-card-image {
+                height: 150px;
+            }
+
+    section#section-5.sustainability {
+        margin-top: 0;
+    }
+
+        section#section-5.sustainability .col-12.col-md-6 {
+            position: relative;
+        }
+
+            section#section-5.sustainability .col-12.col-md-6 .sustainability-spacing p {
+                font-size: 24px;
+            }
+
+    section#section-5 .video-box {
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 30rem;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+        section#section-5 .video-box iframe {
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            position: absolute;
+            top: -10px;
+            left: -15px;
+        }
+
+    section#section-6.fund {
+        margin-top: 0;
+    }
+
+        section#section-6.fund .fund-card-filter .fund-card-text {
+            top: 140px;
+            left: 10px;
+        }
+
+    div.footer p {
+        padding: 1.5rem;
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    div.footer-bottom {
+        font-size: 14px !important;
+        text-align: center;
+    }
+
+        div.footer-bottom .text-blue {
+            font-size: 14px !important;
+            text-align: center;
+        }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ETF */
+    .what-etf {
+        margin-top: 0 !important;
+    }
+
+    .etf-banner {
+        height: 420px;
+    }
+
+        .etf-banner .title {
+            left: 80px;
+            font-size: 3rem;
+        }
+
+        .etf-banner .subtitle {
+            width: 50%;
+            max-width: 50%;
+            top: 200px;
+            left: 80px;
+        }
+
+    .sustainable-menu .item-menu .item-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .sustainable-menu .item-menu .item-title {
+        font-size: 20px;
+    }
+
+    .sustainable-menu .item-menu .item-description {
+        font-size: 14px;
+    }
+
+    .break-point .commitment-spacing .name {
+        font-size: 3rem;
+    }
+
+    .break-point .commitment-spacing h6 {
+        font-size: 2rem;
+    }
+
+    div.gg-2 .row.mb-5 {
+        margin-bottom: 0 !important;
+    }
+
+    section#section-3.etf-video {
+        margin: 0 !important;
+        padding: 0 2.5rem;
+    }
+
+    section#section-4.etf-comment {
+        margin: 0 !important;
+        padding: 2.5rem;
+    }
+
+    .commitment-brief-history p {
+        line-height: 1;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+    .video-box {
+        height: 25rem;
+    }
+
+    .carousel-menu .item-menu h3.item-description {
+        font-size: 16px;
+    }
+
+    .carousel-menu .item-menu .item-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    section#section-1.sustainable {
+        background-position: 15% -125px;
+        background-size: 60%;
+    }
+
+        section#section-1.sustainable .sustainable-menu .item-menu {
+            margin-top: 10rem;
+            width: 100%;
+            max-width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+    section#section-2.commitment {
+        margin-top: 0;
+    }
+
+        section#section-2.commitment .commitment-spacing h3.position {
+            font-size: 24px;
+        }
+
+        section#section-2.commitment .col-12.col-md-6 #show-less-2 {
+            margin-bottom: 0 !important;
+        }
+
+    section#section-3.investment-approach .investment-image {
+        position: absolute;
+        top: -45px;
+        right: 40px;
+    }
+
+    /* ETF */
+    section#section-1.what-etf img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1599.98px) {
+    .etf-video iframe {
+        height: 600px;
+    }
+
+    section#section-1.sustainable {
+        background-size: 50%;
+        background-position: 20% -100px;
+    }
+
+        section#section-1.sustainable .sustainable-text.d-flex.flex-column {
+            position: absolute;
+            top: 120px;
+            left: -45px;
+            right: 0;
+            width: 100%;
+        }
+
+        section#section-1.sustainable .sustainable-spacing .description {
+            font-size: 24px;
+        }
+
+        section#section-1.sustainable .sustainable-spacing {
+            margin-top: 0;
+            margin-right: 0;
+        }
+}
+
+@media (min-width: 1920px) and (max-width: 2439.98px) {
+    .carousel-menu .item-menu h3.item-description {
+        font-size: 16px;
+    }
+
+    .carousel-menu .item-menu .item-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    section#section-1.sustainable {
+        background-position: 15% -125px;
+        background-size: 60%;
+    }
+
+        section#section-1.sustainable .sustainable-text.d-flex.flex-column {
+            position: absolute;
+            top: 10rem;
+            right: 10rem;
+            left: 0;
+        }
+
+        section#section-1.sustainable .sustainable-menu .item-menu {
+            margin-top: 40rem;
+            width: 100%;
+            max-width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+    section#section-4.esg .col-12 .row.mt-5#article {
+        margin-top: 10rem !important;
+    }
+}
+
+@media (min-width: 2440px) {
+    section#section-1.sustainable {
+        background-size: 60%;
+        background-position: 20% -100px;
+    }
+
+        section#section-1.sustainable .sustainable-text.d-flex.flex-column {
+            position: absolute;
+            top: 20rem;
+            left: -25rem;
+            right: 0;
+            width: 100%;
+        }
+
+        section#section-1.sustainable .sustainable-spacing .description {
+            font-size: 24px;
+        }
+
+        section#section-1.sustainable .sustainable-spacing {
+            margin-top: 0;
+            margin-right: 0;
+        }
+
+        section#section-1.sustainable .sustainable-menu .item-menu {
+            margin-top: 55rem;
+            width: 100%;
+            max-width: 100%;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+    section#section-3.investment-approach {
+        margin-top: 0;
+        height: 540px;
+        padding: 1.5rem 0;
+    }
+
+        section#section-3.investment-approach .investment-image {
+            position: absolute;
+            top: -20px;
+            left: 75rem;
+            right: 0px;
+        }
+
+    section#section-4.esg {
+        position: relative;
+        background-position: 10rem -25rem;
+        background-size: 65%;
+        padding: 1.5rem !important;
+    }
+
+        section#section-4.esg .col-12.col-md-5.offset-md-7 {
+            position: relative;
+        }
+
+            section#section-4.esg .col-12.col-md-5.offset-md-7 .esg-spacing {
+                position: absolute;
+                top: 150px;
+                left: -80px;
+            }
+
+        section#section-4.esg .col-12 .row.mt-5#article {
+            margin-top: 40rem !important;
+        }
+}
+
+.no-hover {
+    text-decoration: none;
+}
+
+.text-pm-primary {
+    color: #009ad9;
+}
+
+.text-pm-pink {
+    color: #f859ef;
+}
+
+@media (max-width: 520px) {
+    body {
+        -webkit-text-size-adjust: 85% !important;
+    }
+}

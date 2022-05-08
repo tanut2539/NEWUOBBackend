@@ -1,0 +1,381 @@
+﻿
+@{
+    ViewData["Title"] = "rtf";
+    Layout = null;
+}
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>@ViewData["Title"] </title>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<meta http-equiv="X-UA-Compatible" content="IE=10,9" />
+<link href="~/assets/css/bootstrap/bootstrap.min.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+<link href="~/assets/plugins/swiper/swiper-bundle.min.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+<link href="~/assets/plugins/videojs/css/video-js.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+<link href="~/assets/plugins/videojs/css/forest.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+<link href="~/assets//plugins/chocolat/chocolat.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+<link href="~/assets/css/theme.css?time=@DateTime.Now.ToString("yyyyMMddHHmmss")" rel="stylesheet" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://uob" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="url รูปภาพ" />
+<meta property="og:site_name" content="https://uob" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:domain" content="https://uob" />
+<meta name="twitter:title" content="" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://uob" />
+
+<meta name="twitter:image" content="url รูปภาพ" />
+<meta itemprop="name" content="" />
+<meta itemprop="description" content="" />
+<meta itemprop="image" content="url รูปภาพ" />
+
+<div class="navigation">
+    <div class="d-flex flex-row h-100 align-items-center">
+        <div class="me-auto navigation-logo">
+            <a href="https://uob-front.code-play.net/" target="_self"><img src="../assets/images/uob-logo-am.svg" alt="" /></a>
+        </div>
+    </div>
+</div>
+
+<!-- Banner -->
+<div class="etf-banner-desktop d-none d-md-block" style="background-image: url('@Url.Content("~/assets/images/etf/Banner_web-01.jpg")')"></div>
+<div class="etf-banner-mobile d-block d-md-none" style="background-image: url('@Url.Content("~/assets/images/etf/Banner_web-02.jpg")')"></div>
+
+<!-- Carousel Menu -->
+<section class="carousel-menu">
+    <div class="container">
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+            <a class="item-menu" href="#etf-info" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-9">
+                    </div>
+                    <h3 class="item-description">ข้อมูลกองทุน</h3>
+                </div>
+            </a>
+            <a class="item-menu active" href="#section-1" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-6">
+                    </div>
+                    <h3 class="item-description">ETF คืออะไร</h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-2" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-7">
+                    </div>
+                    <h3 class="item-description">Break Point</h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-3" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-8">
+                    </div>
+                    <h3 class="item-description">ข้อคิดเห็นกองทุน</h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-5" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-10">
+                    </div>
+                    <h3 class="item-description">ติดต่อเรา</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- What ETF -->
+<section id="section-1" class="what-etf">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h3></h3>
+                            <img src="@Url.Content("~/assets/images/etf-1.png")" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="commitment-spacing">
+                            <h1 class="name">ETF คืออะไร</h1>
+                        </div>
+                        <div class="commitment-brief-history gg-2">
+                            <p>
+                                ETF ย่อมาจาก Exchange Traded Fund
+                                เป็นกองทุนรวมดัชนีที่จดทะเบียนซื้อขายในตลาดหลักทรัพย์
+                                มีนโยบายสร้างผลตอบแทนให้ใกล้เคียงกับการเคลื่อนไหวของดัชนีหรือราคาของสินทรัพย์ที่กองทุนใช้อ้างอิง
+                                ผู้ลงทุนสามารถซื้อขาย ETF ได้เหมือนหุ้นตัวหนึ่ง
+                            </p>
+                        </div>
+                        <div class="sustainable-menu etf">
+                            <div class="
+                      d-flex
+                      flex-column flex-sm-row
+                      justify-content-center
+                    ">
+                                <div class="item-menu">
+                                    <div class="d-flex flex-column align-items-center h-100">
+                                        <div class="
+                            item-icon
+                            d-flex
+                            justify-content-center
+                            align-items-center
+                          ">
+                                            <img src="@Url.Content("~/assets/images/etf-3.png")" alt="icon" />
+                                        </div>
+                                        <h3 class="item-title">ผลตอบแทน</h3>
+                                        <h3 class="item-description">
+                                            มี 2 ลักษณะ คือ กำไรจากส่วนต่างของราคา (Capital gain)
+                                            ที่ผู้ลงทุนได้รับ เมื่อซื้อหน่วย ETF
+                                            ในราคาต่ำแล้วขายได้ในราคาสูงกว่าสำหรับ ETF
+                                            ที่มีนโยบายลงทุนในกลุ่มหุ้น ผู้ลงทุนมีโอกาสได้<br />
+                                            <a href="https://www.set.or.th/th/products/etf/etf_faq.html" target="_blank">สามารถอ่านเพิ่มเติมได้ที่</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="item-menu">
+                                    <div class="d-flex flex-column align-items-center h-100">
+                                        <div class="
+                            item-icon
+                            d-flex
+                            justify-content-center
+                            align-items-center
+                          ">
+                                            <img src="@Url.Content("~/assets/images/etf-4.png")" alt="icon" />
+                                        </div>
+                                        <h3 class="item-title">การซื้อขาย ETF</h3>
+                                        <h3 class="item-description">
+                                            การซื้อขาย ETF มีค่าใช้จ่ายอะไรบ้าง
+                                            บริษัทหลักทรัพย์จะเรียกเก็บค่าธรรมเนียมจากรายการซื้อและรายการขาย
+                                            หรือที่เรียกว่า Commission fee
+                                            ในการเป็นนายหน้าซื้อขายหลักทรัพย์ให้<br />
+                                            <a href="https://www.set.or.th/th/products/etf/etf_faq.html#11" target="_blank">สามารถอ่านเพิ่มเติมได้ที่</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="item-menu">
+                                    <div class="d-flex flex-column align-items-center h-100">
+                                        <div class="
+                            item-icon
+                            d-flex
+                            justify-content-center
+                            align-items-center
+                          ">
+                                            <img src="@Url.Content("~/assets/images/etf-5.png")" alt="icon" />
+                                        </div>
+                                        <h3 class="item-title">สนใจ ETF ต้องทำอย่างไร</h3>
+                                        <h3 class="item-description">
+                                            หากผู้ลงทุนมีบัญชีซื้อขายหุ้นอยู่แล้ว
+                                            ก็สามารถส่งคำสั่งซื้อขายผ่านตัวแทน UOBAM
+                                            หรือส่งคำสั่งด้วยตนเองผ่านอินเตอร์เน็ตได้ทันที
+                                            ส่วนผู้ลงทุนที่ยังไม่เคยเปิดบัญชี
+                                            สามารถลงทะเบียนเพื่อให้เจ้าหน้าที่ติดต่อกลับได้ที่<br />
+                                            <a href="#section-5" target="_self">ติดต่อเรา</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 order-2 order-md-1">
+                        <div class="commitment-spacing">
+                            <h1 class="name">ทำไมต้อง ETF</h1>
+                        </div>
+                        <div class="commitment-brief-history">
+                            <p>
+                                ผู้ลงทุนสามารถใช้ ETF เปนเครื่องมือกระจายความเสี่ยง
+                                ทําให้ลงทุนในสินทรัพย์ที่หลากหลายโดยใช้เงินน้อย
+                                และไม่ต้องวิเคราะห์หุ้นรายตัว
+                                มีโอกาสรับผลตอบแทนตามดัชนีอ้างอิง และมีโอกาสรับเงินปันผลด้วย
+                                นอกจากนี้ ETF เป็นกองทุน รวมที่ซื้อขายเปลี่ยนมือได้โดยสะดวก
+                                เพราะมีผู้ดูแลสภาพคล่อง ทําหน้าที่ส่งคําสั่งเสนอซื้อเสนอขาย
+                                ผู้ลงทุนสามารถทํารายการซื้อ ขาย ETF
+                                ในตลาดหลักทรัพย์ได้เมื่อต้องการโดยเปรียบเทียบราคากับมูลค่าทรัพย์สินสุทธิโดยประมาณ
+                                (iNAV = Indicative Net Asset Value)
+                                ที่แสดงควบคู่กันระหว่างเวลาซื้อขาย
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 order-1 order-md-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h3></h3>
+                            <img src="@Url.Content("~/assets/images/etf-2.png")" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="row">
+                    <div id="etf-info" class="col-12 col-md-12">
+                        <div class="commitment-spacing">
+                            <h1 class="name text-center">ข้อมูลกองทุน</h1>
+                        </div>
+                        <div class="gg-2">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a class="no-hover" href="https://www.uobam.co.th/srcm/publication/mlurxgoj9/xg/oj/o0x0/UHERO-One-Page-L-and-C-Approved_.pdf" target="_blank" ">
+                                        <div class="fund-info-card">
+                                            <h1>กองทุนเปิด ยูไนเต็ด ฮีโร่ อีทีเอฟ<br />United Hero ETF: UHERO</h1>
+                                            <h5>
+                                                เน้นลงทุนในหน่วยลงทุนของกองทุน รวมต่างประเทศ
+                                                ชื่อ Global X Video Games & Esports ETF
+                                                (กองทุนหลัก) เพียงกองทุนเดียว โดยเฉลี่ยในรอบปี
+                                                บัญชีไม่น้อยกว่าร้อยละ 80 ของมูลค่าทรัพย์สินสุทธิของกองทุน
+                                            </h5>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-12 col-md-6 col-xl-4">
+                                    <a class="no-hover" href="https://www.uobam.co.th/th/publication" target="_blank" ">
+                                        <div class="fund-info-card">
+                                            <h1>รายละเอียดตะกร้าหลักทรัพย์ (Portfolio Depository File)</h1>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section-3" class="etf-video">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 mb-2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/T1wmxwCcApw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-12 col-md-6 mb-2">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/t-k7FPjeTf8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-12 col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RrxhsgYVEuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-12 col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iNhr07kcPFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="section-4" class="etf-comment">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="commitment-spacing">
+                    <h1 class="name text-center">ข้อคิดเห็นกองทุน</h1>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row fund-grid comment">
+                    <div class="col-12 col-md-4">
+                        <div class="fund-card"
+                             style="background-image: url('@Url.Content("~/assets/images/etf-comment-1.png")')">
+                        </div>
+                        <p class="text-center">คุณ เจ Maser Gamer</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="fund-card"
+                             style="background-image: url('@Url.Content("~/assets/images/etf-comment-2.jpg")')">
+                        </div>
+                        <p class="text-center">คุณ ไม้ 007x กับตันทีม Bacon Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section-5" class="etf-contact">
+    <div class="container">
+        <div class="contact-card">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex justify-content-center">
+                    <img src="@Url.Content("~/assets/images/etf-contact.png")" alt="contact" width="60%" />
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="commitment-spacing">
+                        <h1 class="name">ติดต่อเรา</h1>
+                    </div>
+                    <form method="POST" action="https://script.google.com/macros/s/AKfycbzNqsQILb-wqUxpV6tykNRj4u7FN2Gbbd8VWvB9Ng2Kx10nAaSfujByravxebad9bVc/exec">
+                        <div class="mb-3">
+                            <select class="form-select" aria-label="Default select example" id="topic" name="Topic" required>
+                                <option value="" disabled selected hidden>โปรดเลือกหัวข้อที่ติดต่อ</option>
+                                <option value="รายละเอียดกองทุน">รายละเอียดกองทุน</option>
+                                <option value="เปิดบัญชีออนไลน์ UOBAM Invest">เปิดบัญชีออนไลน์ UOBAM Invest</option>
+                                <option value="รายละเอียดช่องทางการจัดจำหน่าย">รายละเอียดช่องทางการจัดจำหน่าย</option>
+                                <option value="ลงทุน UHRO ผ่านบัญชีหุ้น">ลงทุน UHRO ผ่านบัญชีหุ้น</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text"
+                                   class="form-control"
+                                   id="name"
+                                   name="Name"
+                                   aria-describedby="name"
+                                   placeholder="ชื่อ-นามสกุล" />
+                        </div>
+                        <div class="mb-3">
+                            <input type="text"
+                                   class="form-control"
+                                   id="phonenumber"
+                                   name="Phonenumber"
+                                   aria-describedby="phonenumber"
+                                   placeholder="เบอร์โทร" />
+                        </div>
+                        <div class="mb-3">
+                            <input type="email"
+                                   class="form-control"
+                                   id="email"
+                                   name="Email"
+                                   aria-describedby="email"
+                                   placeholder="อีเมล" />
+                        </div>
+                        <div class="mb-3 form-check d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btn-form">ส่งแบบฟอร์ม</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="application-download">
+    <img src="@Url.Content("~/assets/images/Application-UOBAM-Invest.png")" alt="Application Download" />
+</div>
+
+<div class="footer">
+    <p>
+        คำเตือน การลงทุนมีความเสี่ยง ผู้ลงทุนควรทำความเข้าใจลักษณะกองทุน นโยบายกองทุน เงื่อนไขผลตอบแทน ความเสี่ยง และผลการดำเนินงานของกองทุนก่อนตัดสินใจ<br />
+        ลงทุน ผลการดำเนินงานในอดีต/ผลการเปรียบเทียบผลการดำเนินงานที่เกี่ยวข้องกับผลิตภัณฑ์ในตลาดทุน มิได้เป็นสิ่งยืนยันถึงผลการดำเนินงานในอนาคต <br />
+        เนื่องจากกองทุนไม่ได้ป้องกันความเสี่ยงจากอัตราแลกเปลี่ยนเต็มจำนวน ผู้ลงทุนอาจจะขาดทุนหรือได้รับกำไรจากอัตราแลกเปลี่ยนหรือได้รับเงินคืนต่ำกว่าเงินลงทุนเริ่มแรกได้
+    </p>
+    <div class="footer-bottom">
+        <p>สอบถามข้อมูลหรือขอรับหนังสือชี้ชวนได้ที่ บลจ.ยูโอบี (ประเทศไทย) จำกัด โทร. 0-2786-2222</p>
+    </div>
+</div>
+
+<script src="~/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="~/assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script src="~/assets/plugins/zoom/js/zoom.js"></script>
+<script src="~/assets/js/main.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>

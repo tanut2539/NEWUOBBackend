@@ -1,0 +1,374 @@
+﻿@using UOB.PVD.CMS.Resources
+@model List< UOB.PVD.Model.ESG.FrontEndFundModel >
+@{
+    ViewData["Title"] = "list";
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="form-inline">
+                                    <input class="form-control mr-1" id="search_text">
+                                    <button class="btn btn-primary space-10" id="btn_search"> <i class="fas fa-search"></i> @Messages.btn_search</button>
+                                    <button class="btn btn-warning space-10" id="btn_clear"> @Messages.btn_clear </button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+
+                                <a class="btn btn-primary float-right space-10 " href="@Url.Action("index","Fund")"> <i class="fas fa-plus"></i> @Messages.btn_create  </a>
+                                <button class="btn btn-primary float-right space-10 " data-toggle="modal" data-target=".bd-example-modal-lg"> <i class="fas fa-tv"></i> ตั้งค่าการแสดงผล</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-top:10px">
+                    <div class="card-datatable">
+                        <div style="overflow-x:auto;">
+                            <table class="dt-banner table">
+                                <thead>
+                                    <tr>
+                                        <th width="50px">@Messages.bannerlist_datatable_col_no</th>
+                                        <th width="190px">@Messages.Fund_label_image_th</th>
+                                        <th width="190px">@Messages.Fund_label_image_en</th>
+                                        <th>@Messages.Fund_label_link</th>
+                                        <th width="150px">@Messages.bannerlist_datatable_col_status</th>
+                                        <th width="180px"> </th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade bd-example-modal-lg" id="display_setting" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="modal-body-content" style="height:500px;">
+                            <table class="table table-bordered" id="order_tb">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                </tr>
+                                <tbody class="row_drag">
+                                    @{
+                                        foreach (var item in Model)
+                                        {
+                                            <tr id="@item.order_by">
+                                                <td style="display:none;">@item.fund_seq</td>
+                                                <td><img src="@item.url_image" style="width:100px;" /></td>
+                                                <td>@item.title</td>
+                                                <td>@item.text</td>
+                                            </tr>
+                                        }
+                                    }
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-primary" onclick="SaveOrderBy()">@Messages.btn_save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        function SaveOrderBy() {
+            let oTable = document.getElementById('order_tb');
+            let data = [...oTable.rows].map(t => [...t.children].map(u => u.innerText))
+            let datas = {
+                fund_seq:[],
+            };
+            for (const element of data) {
+                datas.fund_seq.push(element[0])
+            }
+           $.ajax({
+               type: "POST",
+               url:  '@Url.Action("SaveOrderBy", "Fund")',
+               data: JSON.stringify(datas),
+               contentType: "application/json",
+               dataType: "json",
+               success: function (response) {
+                   Swal.fire(
+                       ' ',
+                       'success',
+                       'success'
+                   )
+               },
+               error: function (error) {
+                   Swal.fire({
+                       icon: 'error',
+                       title: '@Messages.message_error',
+                       text: objToString(error),
+                   })
+               }
+           });
+
+        }
+
+        $(document).ready(function () {
+
+            $(".row_drag").sortable({
+                delay: 100,
+                stop: function () {
+                    var selectedRow = new Array();
+                    $('.row_drag>tr').each(function () {
+                        selectedRow.push($(this).attr("id"));
+                    });
+
+                }
+            });
+            $(window).on('shown.bs.modal', function () {
+                $('#display_setting').modal('show');
+
+            });
+            $(window).on('hidden.bs.modal', function () {
+                $('#display_setting').modal('hide');
+                table.ajax.reload();
+            });
+
+        });
+        var table = $('.dt-banner').DataTable({
+            "ajax": {
+                "url": '@Url.Action("GetList", "Fund")',
+                "data": function (param) {
+                    param.search_text = $("#search_text").val()
+                },
+                "type": "POST",
+                "datatype": "json",
+                "async": false,
+                "dataSrc": function (json) {
+
+                    if (json.statusCode === 401) {
+                        window.location.href = "@Url.Action("login", "Account")";
+                        return false
+                    }
+                    if (json.result == 'fail') {
+                        Swal.fire({
+                            icon: 'error',
+                            text: json.message,
+                        })
+                    }
+
+                    json.draw = json.data.draw;
+                    json.recordsTotal = json.data.recordsTotal;
+                    json.recordsFiltered = json.data.recordsFiltered;
+
+                    return json.data.data;
+
+                },
+                "error": function (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        text: error,
+                    })
+                }
+            },
+            "ordering": false,
+            "bFilter": false,
+            "pagingType": "full_numbers",
+            "processing": false,
+            "serverSide": true,
+            "lengthChange": false,
+            "iDisplayLength": "10",
+            "columns": [
+                { "data": "rowindex" },
+                { "data": "image_th" },
+                { "data": "image_en" },
+                { "data": "link" },
+                { "data": "status" },
+                { "data": "fund_seq" },
+            ],
+            "columnDefs": [
+                {
+                    "targets": 1,
+                    "className": "text-left",
+                    "data": "image_th",
+                    "render": function (data, type, row, meta) {
+                        return '<img style="max-width:100%;height: auto" src="' + row.image_th+'">'
+
+                    }
+                },
+                {
+                    "targets": 2,
+                    "className": "text-left",
+                    "data": "image_en",
+                    "render": function (data, type, row, meta) {
+                        return '<img style="max-width:100%;height: auto" src="' + row.image_en + '">'
+
+                    }
+                },
+                 {
+                    "targets": 4,
+                    "className": "text-left",
+                     "data": "status",
+                     "render": function (data, type, row, meta) {
+                         switch (data) {
+                             case '1':
+                                 return `<span class="badge badge-pill badge-success">${row.status_name}</span>`;
+                                 break;
+                             case '0':
+                                 return `<span class="badge badge-pill badge-warning">${row.status_name}</span>`;
+                                 break;
+                             case '2':
+                                 return `<span class="badge badge-pill badge-warning">${row.status_name}</span>`;
+                                 break;
+                         }
+
+
+                    }
+                },
+                {
+                    "targets": 5,
+                    "className": "text-left",
+                    "data": "fund_seq",
+                    "render": function (data, type, row, meta) {
+
+                        return `<div style="display: flex;">
+                                    <a href="@Url.Action("index", "Fund")?id=${data}" class="btn btn-info btn-icon btn-sm space-10">@Messages.btn_view_detail </a>
+                                    <button type="button" class="btn btn-danger  btn-sm space-10" onclick="deleteArticle('${data}')">@Messages.btn_delete</button>
+                                </div>`;
+                    }
+                }
+            ],
+            "language": {
+                "emptyTable": "@Messages.Datatable_language_emptyTable",
+                "info": "@Messages.Datatable_language_info",
+                "infoEmpty": "@Messages.Datatable_language_infoEmpty",
+                "infoFiltered": "@Messages.Datatable_language_infoFiltered",
+                "thousands": "@Messages.Datatable_language_thousands",
+                "loadingRecords": "@Messages.Datatable_language_loadingRecords",
+                "processing":"@Messages.Datatable_language_processing",
+                "zeroRecords": "@Messages.Datatable_language_zeroRecords",
+                "paginate": {
+                    "first":  "@Messages.Datatable_language_paginate_First",
+                    "last":  "@Messages.Datatable_language_paginate_Last",
+                    "next":  "@Messages.Datatable_language_paginate_Next",
+                    "previous":  "@Messages.Datatable_language_paginate_previous",
+                },
+            }
+        });
+        $("#btn_search").click(function () {
+            table.ajax.reload();
+        });
+        $("#btn_clear").click(function () {
+            $('#search_text').val(null);
+            table.ajax.reload();
+        });
+
+
+
+        function deleteArticle(param) {
+
+
+            if (param) {
+                Swal.fire({
+                    text: unicodeToChar('@Messages.confirm_delete'),
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        let uri = '@Url.Action("Delete", "Fund")';//default to function add
+                        let data = {
+                            fund_seq: param,
+                        };
+                        $.ajax({
+                            type: "POST",
+                            url: uri,
+                            data: JSON.stringify(data),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function (response) {
+                                if (response.message == "success") {
+                                    Swal.fire(
+                                         unicodeToChar("@Messages.success"),
+                                        '',
+                                        'success'
+                                    )
+                                    table.ajax.reload();
+                                }
+                                else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        text: response.message,
+                                    })
+                                }
+                            },
+                            error: function (error) {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: '@Messages.message_error',
+                                    text: error,
+                                })
+                            }
+                        });
+
+                    }
+                })
+            }
+            else {
+                Swal.fire({
+                    icon: 'error',
+                    title: '@Messages.message_error',
+                    text: error,
+                })
+            }
+
+        }
+        function objToString(obj) {
+            var str = '{';
+            if (typeof obj == 'object') {
+
+                for (var p in obj) {
+                    if (obj.hasOwnProperty(p)) {
+                        str += p + ':' + objToString(obj[p]) + ',';
+                    }
+                }
+            }
+            else {
+                if (typeof obj == 'string') {
+                    return '"' + obj + '"';
+                }
+                else {
+                    return obj + '';
+                }
+            }
+
+
+
+            return str.substring(0, str.length - 1) + "}";
+        }
+    </script>
+}

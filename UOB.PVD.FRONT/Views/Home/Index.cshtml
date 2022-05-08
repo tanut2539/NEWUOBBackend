@@ -1,0 +1,677 @@
+﻿@using UOB.PVD.FRONT.Resources
+@model UOB.PVD.Model.FrontEnd.HomeDTO
+
+<div class="uob-a-zone">
+    <div class="container p-10 md:p-20">
+        <!-- Begin Zone Title -->
+        <h1 class="a-zone-title">@Messages.Index_Message_1
+            <span>@Messages.Index_Message_2</span>
+        </h1>
+        <!-- End Zone Title -->
+        <!-- Begin Zone Description -->
+        <p class="a-zone-description-1">
+            @Messages.Index_Message_3
+            </p>
+        <!-- End Zone Description -->
+        <!-- Begin Zone Title -->
+        <h3 class="a-zone-title">
+            @Messages.Index_Message_4
+        </h3>
+        <!-- End Zone Title -->
+        <!-- Begin Zone Description -->
+        <p class="a-zone-description-2">
+            @Messages.Index_Message_5
+        </p>
+        <!-- End Zone Description -->
+    </div>
+</div>
+<!-- End A-Zone -->
+<!-- Begin Tabs -->
+<div class="uob-tabs">
+    <div class="mb-4">
+        <ul class="flex flex-wrap justify-center -mb-px"
+            id="myTab"
+            data-tabs-toggle="#myTabContent"
+            role="tablist">
+            <li class="mr-2" role="presentation">
+                <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 active"
+                        id="tab-1"
+                        data-tabs-target="#profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="profile"
+                        aria-selected="true">
+                    @Messages.Index_Message_6
+                </button>
+            </li>
+            <li class="mr-2" role="presentation">
+                <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300"
+                        id="tab-2"
+                        data-tabs-target="#dashboard"
+                        type="button"
+                        role="tab"
+                        aria-controls="dashboard"
+                        aria-selected="false">
+                    @Messages.Index_Message_7
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="myTabContent">
+        <div class="p-4" id="profile" role="tabpanel" aria-labelledby="tab-1">
+            <!-- Content 1 -->
+            <!-- Begin Tab Title -->
+            <h1 class="tab-title">@Messages.Index_Message_8</h1>
+            <!-- End Tab Title -->
+            <!-- Begin Tab Subtitle -->
+            <h1 class="tab-subtitle"> @Messages.Index_Message_9</h1>
+            <!-- End Tab Subtitle -->
+            <!-- Begin Tab Description -->
+            <p class="tab-description">@Messages.Index_Message_10</p>
+            <h1 class="tab-title"> @Messages.Index_Message_11</h1>
+            <p class="tab-description" style="white-space: pre-line;">@Messages.Index_Message_12</p>
+            <!-- End Tab Description -->
+            <!-- Begin Banner Tiles -->
+            <h1 class="title-tiles"> @Messages.Index_Message_13</h1>
+            <!-- End Banner Tiles -->
+            <!-- Begin Banner 1 -->
+            <div class="tab-banner-1">
+                <h1 class="tab-banner-1-title">@Messages.Index_Message_14</h1>
+                <div class="tab-banner-filter"></div>
+            </div>
+            <!-- End Banner 1 -->
+            <!-- Begin Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBInvestorChoice.InvestmentType[0].PolicyType[0].policy_type_name </div>
+                        @foreach (var item in Model.UOBInvestorChoice.InvestmentType[0].PolicyType[0].Policy)
+                        {
+                    <div class="tab-card">
+                        <div class="card-title">
+                            <span class="icon-factsheet"></span>
+                            <div class="title-factsheet">@item.policy_title</div>
+                        </div>
+                        <div class="card-description">
+                            <p>
+                                @item.policy_detail
+                            </p>
+                        </div>
+                        <a href="@item.url" class="card-link" aria-label="button"></a>
+                    </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBInvestorChoice.InvestmentType[0].PolicyType[1].policy_type_name</div>
+                        @foreach (var item in Model.UOBInvestorChoice.InvestmentType[0].PolicyType[1].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- End Grid-->
+            <!-- Begin Banner 2 -->
+            <div class="tab-banner-2">
+                <h1 class="tab-banner-2-title">@Messages.Index_Message_15 </h1>
+                <div class="tab-banner-filter"></div>
+            </div>
+            <!-- End Banner 2 -->
+            <!-- Begin Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBInvestorChoice.InvestmentType[1].PolicyType[0].policy_type_name</div>
+                        @foreach (var item in Model.UOBInvestorChoice.InvestmentType[1].PolicyType[0].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBInvestorChoice.InvestmentType[1].PolicyType[1].policy_type_name</div>
+                        @foreach (var item in Model.UOBInvestorChoice.InvestmentType[1].PolicyType[1].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBInvestorChoice.InvestmentType[1].PolicyType[2].policy_type_name</div>
+                        @foreach (var item in Model.UOBInvestorChoice.InvestmentType[1].PolicyType[2].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- End Grid-->
+            <!-- Begin Donut Chart -->
+            <div class="uob-chart">
+                <div class="uob-chart-title">
+                    <h1>
+                        @Messages.Index_Message_16
+                                        
+                                    </h1>
+                </div>
+                <div class="uob-chart-canvas">
+                    <div class="md:block hidden">
+                        <div class="grid gap-x-8 gap-y-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 justify-center">
+                            <div class="chart-item">
+                                <div id="defensive-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[0].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[0].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-10-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[1].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[1].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-20-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[2].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[2].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-40-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[3].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[3].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-15-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[4].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[4].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="sustainablegrowth-60-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[5].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[5].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-60-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[6].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[6].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-80-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[7].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[7].chart_title</h1></a>
+                            </div>
+                            <div class="chart-item">
+                                <div id="growth-100-chart"></div>
+                                <a class="chart-link" href="@Model.UOBInvestorChoice.ChartFile[8].chart_file_url" target="_blank"><h1 class="chart-item">@Model.UOBInvestorChoice.ChartFile[8].chart_title </h1></a>
+                               </div>
+                        </div>
+                    </div>
+                    <div class="md:hidden block">
+                        <!-- Slick Slider -->
+                        <div class="swiper mySwiper-1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="defensive-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/SSF_20210706142950.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_26</h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-10-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/G10_20210706142727.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_27 </h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-20-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/G20_20210706142744.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_28 </h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-40-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/G40_20210706142753.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_29 </h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-15-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/IG15_20210706142819.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_30 </h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="sustainablegrowth-60-chart-m"></div>
+                                        <h1 class="chart-item">@Messages.Index_Message_31 </h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-60-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/G60_20210706142802.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_32</h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-80-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/G80_20210706142810.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_33 </h1></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="chart-item flex flex-col justify-center items-center">
+                                        <div id="growth-100-chart-m"></div>
+                                        <a class="chart-link" href="~/files/invc/G100_20210706142736.pdf" target="_blank"><h1 class="chart-item">@Messages.Index_Message_34</h1></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="sw-bt-1" class="swiper-button-next"></div>
+                            <div id="sw-bt-2" class="swiper-button-prev"></div>
+                            <!-- <div  id="sw-pg-1" class="swiper-pagination"></div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="uob-chart-details">
+                    <div class="flex flex-col md:flex-row">
+                        <ul class="list-disc basis-3/5 xl:basis-1/5">
+                            <li class="pvd-dot-1">@Messages.Index_Message_35</li>
+                            <li class="pvd-dot-2">@Messages.Index_Message_36 </li>
+                            <li class="pvd-dot-3">@Messages.Index_Message_37 </li>
+                        </ul>
+                        <ul class="list-disc basis-4/5 xl:basis-1/5">
+                            <li class="pvd-dot-4">
+                                @Messages.Index_Message_38 
+                            </li>
+                            <li class="pvd-dot-5">
+                                @Messages.Index_Message_39 
+                            </li>
+                            <li class="pvd-dot-6">@Messages.Index_Message_40 </li>
+                            <li class="pvd-dot-7">@Messages.Index_Message_41 </li>
+                        </ul>
+                    </div>
+                    <div class="uob-invest-details mt-3">
+                        <p>
+                            <span class="highlight">@Messages.Index_Message_42 </span>
+
+                            <span class="highlight">@Messages.Index_Message_43  </span> @Messages.Index_Message_44
+
+                            <span class="highlight">@Messages.Index_Message_45  </span> @Messages.Index_Message_46
+
+                            <span class="highlight">@Messages.Index_Message_47  </span> @Messages.Index_Message_48
+
+                            <span class="highlight"> @Messages.Index_Message_49</span>  @Messages.Index_Message_50
+                        </p>
+                        <p>
+                            @Messages.Index_Message_51
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Donut Chart -->
+        </div>
+        <div class="hidden p-4"
+             id="dashboard"
+             role="tabpanel"
+             aria-labelledby="tab-2">
+            <!-- Content 2 -->
+            <!-- Begin Tab Title -->
+            <h1 class="tab-title">@Messages.Index_Message_52</h1>
+            <!-- End Tab Title -->
+            <!-- Begin Tab Description -->
+            <p class="tab-description">@Messages.Index_Message_53</p>
+            <h1 class="tab-title"> @Messages.Index_Message_11</h1>
+            <p class="tab-description" style="white-space: pre-line;">@Messages.Index_Message_61</p>
+            <!-- End Tab Description -->
+            <!-- Begin Banner 3 -->
+            <div class="tab-banner-3">
+                <h1 class="tab-banner-3-title">@Messages.Index_Message_54</h1>
+                <div class="tab-banner-filter"></div>
+            </div>
+            <!-- End Banner 3 -->
+            <!-- Begin Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[0].PolicyType[0].policy_type_name </div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[0].PolicyType[0].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[0].PolicyType[1].policy_type_name</div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[0].PolicyType[1].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[0].PolicyType[2].policy_type_name</div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[0].PolicyType[2].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- End Grid-->
+            <!-- Begin Banner 4 -->
+            <div class="tab-banner-4">
+                <h1 class="tab-banner-4-title">@Messages.Index_Message_55 </h1>
+                <div class="tab-banner-filter"></div>
+            </div>
+            <!-- End Banner 4 -->
+            <!-- Begin Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[1].PolicyType[0].policy_type_name  </div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[1].PolicyType[0].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[1].PolicyType[1].policy_type_name</div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[1].PolicyType[1].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[1].PolicyType[2].policy_type_name</div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[1].PolicyType[2].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="grid-list">
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="tab-box">@Model.UOBMasterFund.InvestmentType[1].PolicyType[3].policy_type_name</div>
+                        @foreach (var item in Model.UOBMasterFund.InvestmentType[1].PolicyType[3].Policy)
+                        {
+                            <div class="tab-card">
+                                <div class="card-title">
+                                    <span class="icon-factsheet"></span>
+                                    <div class="title-factsheet">@item.policy_title</div>
+                                </div>
+                                <div class="card-description">
+                                    <p>
+                                        @item.policy_detail
+                                    </p>
+                                </div>
+                                <a href="@item.url" class="card-link" aria-label="button"></a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- End Grid-->
+            <!-- Begin Chart -->
+            <div class="tab2-chart-title flex flex-col justify-center items-center">
+                <div class="chart-image">
+
+                    <img src="@Url.Content("~/assets/images/company/chart-map.svg")" alt="Image" />
+                </div>
+                <div class="w-full uob-chart">
+                    <div class="uob-chart-title">
+                        <h1>@Messages.Index_Message_56</h1>
+                    </div>
+                    <div class="uob-chart-canvas">
+                        <div class="md:block hidden">
+                            <div class="chart-image">
+                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_desktop)" class="w-full" alt="Image" />
+                                <a href="~/files/uobmf/2UOBTF_20210706142626.pdf" class="policy-1" target="_blank" aria-label="policy-1">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBFI_20210706142414.pdf" class="policy-2" target="_blank" aria-label="policy-2">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBMS_20210706142543.pdf" class="policy-3" target="_blank" aria-label="policy-3">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBEQ_20210706142405.pdf" class="policy-4" target="_blank" aria-label="policy-4">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBTEF_20210706142617.pdf" class="policy-5" target="_blank" aria-label="policy-5">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBSDF_20210706142552.pdf" class="policy-6" target="_blank" aria-label="policy-6">&nbsp;</a>
+                                <a href="~/files/uobmf/UOBSAT_20210706142959.pdf" class="policy-7" target="_blank" aria-label="policy-7">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBGIS_20210706142534.pdf" class="policy-8" target="_blank" aria-label="policy-8">&nbsp;</a>
+                                <a href="https://www.uobam.co.th/th/mutual-fund/00717/USI" class="policy-9" target="_blank" aria-label="policy-9">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBSGA_20210706142609.pdf" class="policy-10" target="_blank" aria-label="policy-10">&nbsp;</a>
+                                <a href="~/files/uobmf/UGBF_20210831.pdf" class="policy-11" target="_blank" aria-label="policy-11">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBUGD_20210706142634.pdf" class="policy-12" target="_blank" aria-label="policy-12">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBSGE_20210712095929.pdf" class="policy-13" target="_blank" aria-label="policy-13">&nbsp;</a>
+                                <a href="https://www.uobam.co.th/th/mutual-fund/00691/UESG" class="policy-14" target="_blank" aria-label="policy-14">&nbsp;</a>
+                                <a href="~/files/uobmf/2UOBSG_20210706142600.pdf" class="policy-15" target="_blank" aria-label="policy-15">&nbsp;</a>
+                            </div>
+                        </div>
+                        <div class="md:hidden block">
+                            <!-- Slick Slider -->
+                            <div class="swiper mySwiper-2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBTF_20210706142626.pdf" target="_blank" aria-label="policy-1-m">
+
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_1)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBFI_20210706142414.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_2)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBMS_20210706142543.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_3)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBEQ_20210706142405.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_4)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBTEF_20210706142617.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_5)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBSDF_20210706142552.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_6)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/UOBSAT_20210706142959.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_7)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBGIS_20210706142534.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_8)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="https://www.uobam.co.th/th/mutual-fund/00717/USI" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_9)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBSGA_20210706142609.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_10)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/UGBF_20210831.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_11)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBUGD_20210706142634.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_12)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBSGE_20210712095929.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_13)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="https://www.uobam.co.th/th/mutual-fund/00691/UESG" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_14)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="chart-item flex flex-col justify-center items-center">
+                                            <a class="flex justify-center items-center" href="~/files/uobmf/2UOBSG_20210706142600.pdf" target="_blank" aria-label="policy-1-m">
+                                                <img class="lozad" data-src="@Url.Content(@Messages.img_chart_mobile_15)" style="width: 60%;" alt="Policy 1">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="sw-bt-3" class="swiper-button-next"></div>
+                                <div id="sw-bt-4" class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uob-invest-details">
+                        <p>@Messages.Index_Message_57</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End Chart -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appoach_detail1" xml:space="preserve">
+    <value>At UOB Asset Management (UOBAM), our vision is to be a leading fund manager in sustainability in Asia that creates long-term value and positive impact for our stakeholders whilst enabling sustainable investments accessible for all.
+As an active asset manager, UOBAM believes that it has a fiduciary duty to allocate capital into more sustainable investments and be active owners of our investments and as a signatory to the United Nations Principles for Responsible Investment (PRI), we are committed to adopting and implementing the principles and reporting on our progress towards their implementation. To enable this outcome, UOBAM has made sustainability a key strategic pillar of the firm which helps to drive our commitment and purpose towards creating value for our investors and communities as well as helping them achieve their sustainable investment goals and aspirations.</value>
+  </data>
+  <data name="appoach_detail10" xml:space="preserve">
+    <value>(a) where administrative or other procedures result in the costs of voting outweighing the benefits;
+(b) the voting securities are part of a securities lending program and UOBAM is unable to vote securities that are out on loan;
+(c) a meeting notice is delivered close to the meeting date and UOBAM has insufficient time to adequately assess the issues being tabled at the shareholders’ meeting and / or process the vote;
+(d) UOBAM sells shares prior to a company's meeting date and decides not to vote those shares, on the basis that UOBAM shall not be restricted from trading in a security due to an upcoming shareholder meeting; and
+(e) voting securities have been blocked from trading in order to be tendered for voting purposes and UOBAM believes that preserving the ability to trade the security is in the best interest of the beneficiaries;
+(f) in event of a situation where regulatory obligations and rulings of the SIC imposed on UOB Group that also apply to UOBAM, may prohibit UOBAM from voting on securities due to its deemed affiliation for a corporate action.
+
+ 
+Sustainability is a key pillar in UOB Asset Management’s (UOBAM) corporate strategy, and we view active ownership is a crucial aspect of our sustainability culture, as it can positively influence companies to engage in sustainable business practices, creating not only long-term value for these companies but also social and environmental benefits for the world.
+We have a strong regard for fostering good stewardship and as an asset manager based in Singapore, we are a signatory to our local stewardship code (Singapore Stewardship Principles (SSP) for Responsible Investors). UOBAM is also a signatory of the UN supported Principles for Responsible Investment (PRI), and we are committed to follow their 6 Principles.
+Active ownership at UOBAM consists of company engagement and proxy voting activities. These activities form a key component of our responsible investment approach and fulfils UOBAM’s fiduciary duty as an investment manager to act in the best long-term interests of our clients.</value>
+  </data>
+  <data name="appoach_detail11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="appoach_detail12" xml:space="preserve">
+    <value>Our sustainability governance structure provides oversight and accountability on the implementation of our responsible investment policy. Our UOBAM Board of directors through the Management Committee (MC), reviews long-term business and organisational goals and provides the strategic direction for UOBAM’s sustainable investments and sustainability practices. The MC manages the implementation of strategic direction that is handed down by UOBAM’s Board of Directors and will be supported by our Regional Sustainability Group (RSG), Local Sustainability Group (LSG), and dedicated Sustainability Offices (SO).
+The RSG reports directly to the MC on sustainable investing matters and is made up of the Sustainability Chairs and Champions from each regional office. The RSG coordinates with MC to guide the regional implementation of our sustainable investment mandates as well as sustainability initiatives.
+The LSG at each office is supported by dedicated Country SO to monitor and report on the progress of our sustainability activities and mandates. The Country Sustainability Champions take the lead in our corporate sustainability activities, which include ESG product and solution launches, thought leadership and events, sustainability staff training, and corporate sustainability stewardship programmes, and Dedicated ESG Investment Specialists leading their respective offices in implementing our sustainable investing framework.
+UOBAM’s dedicated regional SO incorporated into the overall investment organization structure supports our sustainability governance structure with the integration of our ESG investment methodology and implementation of strategic sustainability initiatives. The SOs, each comprising the country’s ESG Champion, a dedicated ESG Investment Specialist and Investment Team. These teams possess local expertise and on-ground engagement through the utilization of dedicated ESG resources to execute engagement for companies in the portfolio in the event of a controversy or to determine specific ESG information. Dedicated ESG resources also provide manual ESG scoring coverage on companies that are not covered by major third-party ESG data providers.
+The Singapore Sustainability Office and Centre of Excellence (SOCE) works in close collaboration with all UOBAM regional SOs in order to ensure that companies managed in the portfolio are well positioned for secular growth and alpha generation. The SOCE utilises UOBAM’s integrated ESG management system to facilitate two-way data transfer and to obtain ESG coverage from regional offices, whilst simultaneously delivering real-time updates on the ESG performance of companies, as well as news alerts, to ensure that controversies detected can be followed up with engagement action. The SOCE also develops the governance controls and systems in place to ensure the implementation of UOBAM’s Sustainable Investment policy and corporate and communications plans.</value>
+  </data>
+  <data name="appoach_detail13" xml:space="preserve">
+    <value>We take an inside-out approach to sustainable investing and move beyond just focusing on internal processes such as ESG integration into investment processes and sustainable investment governance. We look to take a proactive approach towards driving sustainable investing externally which ties in closely with the principle of “working together in implementing the principles” where our external efforts include establishing strategic investment partnerships with global sustainability leaders such as Robeco and Fukoku Capital Management.
+Through such external partnerships that we aim to further enhance our capabilities and develop the accessibility of sustainability investment opportunities in the Asia region for investors. This will be done through sustainability mandates, working in policy consultation, and responsible investment education and thought leadership.</value>
+  </data>
+  <data name="appoach_detail2" xml:space="preserve">
+    <value>In our commitment towards advancing and supporting the principles of PRI, we have put in place our sustainable investing policy as part of our sustainable investment framework, as set out in the table below.</value>
+  </data>
+  <data name="appoach_detail3" xml:space="preserve">
+    <value>We believe that Environmental, Social, and Governance (ESG) issues are financially material to a company’s performance and will translate to material financial impact on the investments that we make. As part of our fiduciary duty to our investors, we have put in place our sustainable investing framework and process which focuses on deep fundamental research, augmented by the use of technology and leveraging on our local expertise. &lt;br&gt; Our proprietary sustainable investment framework is a common framework that is utilised across the firm, and is implemented through the integration of ESG evaluation within our investment process. The process of ESG evaluation involves the assessment of material ESG factors of companies which is determined by UOBAM’s proprietary materiality map.
+UOBAM’s proprietary materiality map is developed by referencing the Sustainability Accounting and Standards Board (SASB) materiality map. UOBAM’s proprietary materiality map also assigns specific E, S and G pillar weights to companies across 11 sectors that are classified using Global Industry Classification Standard (GICS). Below is an overview of how ESG is incorporated into our investment process.</value>
+  </data>
+  <data name="appoach_detail4" xml:space="preserve">
+    <value>The execution of ESG evaluation and integration into our investment process is supported by dedicated resources in our regional investment teams and covering all major asset classes that we invest in. Overall, we believe that ESG integration into our investment process contributes to performance and risk mitigation by enabling us to identify high-quality companies which are resilient, well-managed, able to grow sustainably and are likely to maintain their competitiveness in the long term.</value>
+  </data>
+  <data name="appoach_detail5" xml:space="preserve">
+    <value>To complement ESG incorporation into our investment process, we also have in place an Active Ownership Policy which has a coverage that aligns to the Sustainable Investment Policy. The Active Ownership Policy serves to facilitate dialogue, engagement, and proxy voting. We will leverage our regional footprint and the local expertise of our regional investment teams to execute meaningful dialogues and engagement which will drive strategic investment decisions for the sustainable investments we make.
+To quantify and enable our investors to better understand how their investments are helping to address critical global issues such as climate change and human capital management, we have developed internal capabilities to carry out portfolio impact analysis to highlight how we reduce our environmental footprint, and to make a more tangible contribution to the UN Sustainable Development Goals (SDGs), UOBAM will also integrate impact measurement aligned with these global trends as part of portfolio analysis.
+We also continuously monitor on a global and regional basis, the changing regulatory landscape that impacts sustainable investing. Whenever possible, we will participate in responding to regulatory consultations to provide our inputs and help guide and develop ESG policies and guidelines that support the advancement of the six Principles of the PRI. Our responses to such regulatory consultations will be aligned to our sustainable investing policy and will look to support the six Principles of the PRI. To ensure that this alignment is achieved, we have in place our sustainability governance structure that will provide oversight and accountability for our responses.</value>
+  </data>
+  <data name="appoach_detail6" xml:space="preserve">
+    <value>Sustainability is a key pillar in UOB Asset Management’s (UOBAM) corporate strategy, and we view active ownership is a crucial aspect of our sustainability culture, as it can positively influence companies to engage in sustainable business practices, creating not only long-term value for these companies but also social and environmental benefits for the world.
+
+We have a strong regard for fostering good stewardship and as an asset manager based in Singapore, we are a signatory to our local stewardship code (Singapore Stewardship Principles (SSP) for Responsible Investors). UOBAM is also a signatory of the UN supported Principles for Responsible Investment (PRI), and we are committed to follow their 6 Principles.
+
+Active ownership at UOBAM consists of company engagement and proxy voting activities. These activities form a key component of our responsible investment approach and fulfils UOBAM’s fiduciary duty as an investment manager to act in the best long-term interests of our clients.</value>
+  </data>
+  <data name="appoach_detail7" xml:space="preserve">
+    <value>UOBAM believes in the value of engagement and aim to enhance risk-adjusted returns of our investments and shareholders’ value in the long run. We identify a range of thematic and material ESG issues that can affect our investee companies in the long run and engage them to ensure that they are well prepared to mitigate these issues.
+Throughout the engagement process, we gain valuable insights into our investee companies’ propensity deal with ESG issues and whether they will take the appropriate measures to manage these issues. Engagement acts as an important information source to aid our investment decision.
+By engaging with companies, we can also encourage improvement in their ESG disclosure, identify the need to advocate positive change, communicate our concerns and improve its practices on ESG issues, where necessary.
+We prioritise our engagement based on geography of companies and size of holdings, severity of identified material ESG issue, potential to generate long-term value following a successful engagement, and specific client request(s).
+UOBAM engages with companies through a variety of channels and also considers collaborative engagement with other stakeholders in the event we believe that the efficacy and chance of success of the engagement can be enhanced.</value>
+  </data>
+  <data name="appoach_detail8" xml:space="preserve">
+    <value>UOBAM aims to vote on the vast majority of proposals raised at every company meeting in a timely manner. UOBAM has engaged the services of proxy voting agent, Institutional Shareholder Services Inc. (“ISS”) to provide us with proxy voting services and proxy voting research and recommendations.
+While UOBAM has authorised ISS to vote on its behalf, UOBAM retains full discretion over all voting decisions and reserves the right to vote contrary to the recommendations of ISS. This can occur when UOBAM have a differing view that these vote recommendations are not in the best interest of its clients, after taking into account relevant information in its decision e.g. engagement outcome, internal research, etc.
+There may be situations where UOBAM may choose not to vote or abstain from voting:
+(a) where administrative or other procedures result in the costs of voting outweighing the benefits;
+(b) the voting securities are part of a securities lending program and UOBAM is unable to vote securities that are out on loan;
+(c) a meeting notice is delivered close to the meeting date and UOBAM has insufficient time to adequately assess the issues being tabled at the shareholders’ meeting and / or process the vote;
+(d) UOBAM sells shares prior to a company’s meeting date and decides not to vote those shares, on the basis that UOBAM shall not be restricted from trading in a security due to an upcoming shareholder meeting; and
+(e) voting securities have been blocked from trading in order to be tendered for voting purposes and UOBAM believes that preserving the ability to trade the security is in the best interest of the beneficiaries;
+(f) in event of a situation where regulatory obligations and rulings of the SIC imposed on UOB Group that also apply to UOBAM, may prohibit UOBAM from voting on securities due to its deemed affiliation for a corporate action.
+Sustainability is a key pillar in UOB Asset Management’s (UOBAM) corporate strategy, and we view active ownership is a crucial aspect of our sustainability culture, as it can positively influence companies to engage in sustainable business practices, creating not only long-term value for these companies but also social and environmental benefits for the world.
+We have a strong regard for fostering good stewardship and as an asset manager based in Singapore, we are a signatory to our local stewardship code (Singapore Stewardship Principles (SSP) for Responsible Investors). UOBAM is also a signatory of the UN supported Principles for Responsible Investment (PRI), and we are committed to follow their 6 Principles.
+Active ownership at UOBAM consists of company engagement and proxy voting activities. These activities form a key component of our responsible investment approach and fulfills UOBAM’s fiduciary duty as an investment manager to act in the best long-term interests of our clients.</value>
+  </data>
+  <data name="appoach_detail9" xml:space="preserve">
+    <value>Over the course of the engagement process, UOBAM would pursue a number of courses of action should the company constantly fails to meet the standards expected.
+UOBAM will vote against management at the annual company meetings if we are not satisfied with managements’ response to the ESG issues raised and ability to mitigate the identified risks. UOBAM may also consider voting for shareholder resolutions initiated in response to the ESG issues.
+Ultimately, if the company still continuously fails to meet the standards expected after the engagement timeline, UOBAM will decide to reduce our exposure to investment holdings size or divest our investment in the company.</value>
+  </data>
+  <data name="appoach_m_1" xml:space="preserve">
+    <value>~/assets/images/appoach-m/1-th-mobile.png</value>
+  </data>
+  <data name="appoach_m_2" xml:space="preserve">
+    <value>~/assets/images/appoach-m/2-th-mobile.png</value>
+  </data>
+  <data name="appoach_m_3" xml:space="preserve">
+    <value>~/assets/images/appoach-m/3-th-mobile.png</value>
+  </data>
+  <data name="appoach_sub_title1" xml:space="preserve">
+    <value>UOBAM’S Sustainable Investing Vision and Goals</value>
+  </data>
+  <data name="appoach_sub_title10" xml:space="preserve">
+    <value>UOBAM’s Sustainable Investing Governance Structure</value>
+  </data>
+  <data name="appoach_sub_title11" xml:space="preserve">
+    <value>United Nations-supported Principles for Responsible Investment (PRI)</value>
+  </data>
+  <data name="appoach_sub_title13" xml:space="preserve">
+    <value>UOBAM’s Approach to Strategic Partnerships</value>
+  </data>
+  <data name="appoach_sub_title2" xml:space="preserve">
+    <value>UOBAM’s Sustainable Investment Framework</value>
+  </data>
+  <data name="appoach_sub_title6" xml:space="preserve">
+    <value>UOBAM Active Ownership Approach</value>
+  </data>
+  <data name="appoach_sub_title7" xml:space="preserve">
+    <value>Proxy Voting</value>
+  </data>
+  <data name="appoach_sub_title9" xml:space="preserve">
+    <value>Investing for profit and purpose</value>
+  </data>
+  <data name="appoach_title" xml:space="preserve">
+    <value>Sustainable Investment and Active Ownership Approach</value>
+  </data>
+  <data name="btn_header1" xml:space="preserve">
+    <value>Company Engagement</value>
+  </data>
+  <data name="btn_read_more" xml:space="preserve">
+    <value>Read More &gt;&gt;</value>
+  </data>
+  <data name="footer_condition" xml:space="preserve">
+    <value>warning: investments are risky, investors should understand the characteristics of the fund,
+fund policy, return conditions, risk and performance of the fund before 
+making an investment decision. past performance/comparison of performance 
+related to capital markets products it is not a confirmation of future performance. 
+investment is risked by exchange rates that may arise from foreign 
+investment. although the fund may hedge at the discretion of the mutual fund
+manager, because the fund does not hedge the entire amount of hedging, investors 
+may lose or profit from exchange rates or receive lower refunds than initial
+investments.</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello-123</value>
+  </data>
+  <data name="img_artwork_1" xml:space="preserve">
+    <value>~/assets/images/appoach-m/1-en-desktop.png</value>
+  </data>
+  <data name="img_artwork_2" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/2.png</value>
+  </data>
+  <data name="img_artwork_3" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/3.png</value>
+  </data>
+  <data name="img_artwork_4" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/4.png</value>
+  </data>
+  <data name="img_artwork_5" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/5.png</value>
+  </data>
+  <data name="img_artwork_m_2" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/2_Mobile.png</value>
+  </data>
+  <data name="img_artwork_m_3" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/3_Mobile.png</value>
+  </data>
+  <data name="img_artwork_m_4" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/4_Mobile.png</value>
+  </data>
+  <data name="img_artwork_m_5" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/5_Mobile.png</value>
+  </data>
+  <data name="img_artwork_m_6" xml:space="preserve">
+    <value>~/assets/images/appoach/EN/5.png</value>
+  </data>
+  <data name="port_title" xml:space="preserve">
+    <value>Start investing today Start your investment to grow
+to achieve financial objectives effectively</value>
+  </data>
+  <data name="section_1_menu_1_text" xml:space="preserve">
+    <value>Sustainability is about meeting the  &lt;br /&gt; needs of the present generation without compromising the ability of future generations to meet theirs.</value>
+  </data>
+  <data name="section_1_menu_1_title" xml:space="preserve">
+    <value>Doing Well by Doing Good</value>
+  </data>
+  <data name="section_1_menu_2_text" xml:space="preserve">
+    <value>Sustainable investing balances traditional investing fundamentals with environmental, social, and governance (ESG)</value>
+  </data>
+  <data name="section_1_menu_2_title" xml:space="preserve">
+    <value>Investing for Profit and Purpose</value>
+  </data>
+  <data name="section_1_menu_3_text" xml:space="preserve">
+    <value>Our technological edge in ESG integration lies in augmentation with
+The support of Artificial Intelligence-
+Machine Learning (AI-ML)</value>
+  </data>
+  <data name="section_1_menu_3_title" xml:space="preserve">
+    <value>Our Edge in Sustainable Investing</value>
+  </data>
+  <data name="section_1_text" xml:space="preserve">
+    <value>Applying sustainable development &lt;br /&gt;  principles to financial investments, taking ESG factors into account</value>
+  </data>
+  <data name="section_1_title" xml:space="preserve">
+    <value>WHAT IS SUSTAINABLE &lt;br /&gt; INVESTING?</value>
+  </data>
+  <data name="section_2_ceo_history" xml:space="preserve">
+    <value>In recent years, the importance of sustainability has been rapidly increasing. At UOBAM, we recognise that we have an important role to play as socially responsible stewards to drive sustainability in the world.
+ 
+The investment community has a key role to play in supporting sustainability and the growing emphasis on environmental, social and governance (ESG) issues by channelling capital into sustainable opportunities, while supporting the United Nations Sustainable Development Goals (UN SDGs).
+ 
+Asset owners and investors have become increasingly committed to ensure that they are investing responsibly and for a greater purpose. Thus, as Asset Managers, we have a responsibility to be socially responsible stewards for the world to look up to and we can play a vital role by offering sustainable investing solutions for both asset owners and investors alike.
+ 
+We believe integrating ESG evaluation into our investment process across all investment asset classes will contribute to performance by enabling us to identify high-quality companies which are resilient, well-managed, able to grow sustainably and are likely to maintain their competitiveness in the long term.
+ 
+By doing so, we can accommodate our clients’ needs to invest for profit and purpose, as we manage their wealth successfully, responsibly, and sustainably. Here at UOBAM, we understand that sustainability is a continuous journey and to have a more tangible contribution to the UN SDGs, we will embed sustainability as a core component of our corporate culture. This will allow us to be active stewards of sustainability, achieve long-term value creation and positive impact to the environment, our communities, and stakeholders.
+ 
+Ultimately, at UOBAM, we invest for profit and purpose whilst shaping a better world for future generations.</value>
+  </data>
+  <data name="section_2_ceo_history1" xml:space="preserve">
+    <value>In the past few years, the concept of sustainable corporate development or ESG which stands for Environment, Social and Governance are based on the fact that business operations interact with environment and human social life which has grown in popularity. Hence, to balance how the businesses co-exist with the environment and society, companies could enhance and sustaining their profitability. This includes incorporating the ESG concept in investments to which the investors have been increasingly pay attention. Since UOBAM recognized, with its own vision, the importance of managing the investments within the framework of social responsibility 18 years ago, it has pioneered its investment practice based on the companies’ good corporate governance. 
+ 
+This is our commitment to be a leadership in the ESG concept in investment dimensions. UOBAM group and UOBAM (Thailand) has signed the Principles for Responsible Investment with the United Nation Principles for Responsible Investment (UNPRI) in January 2020 publicly demonstrate its commitment to responsible investment and build networks with the parties in the global capital market in advocating collaboration to develop Thailand’s capital market sustainably under the framework of ESG (Environment, Social, and Governance). In September 2021, UOBAM also participated the signing ceremony the statement of commitment for “Sustainable Thailand 2021” which is the collaboration of over 40 organizations among the government, institutional investors, and banks to reinforce Thailand’s financial system in playing a sustainable role in the country development.
+ 
+We believes integrating ESG factors enhances its research and investment methodology, consequently assisting in generating better long-term returns for its investors. In addition, as more Thai and global businesses from a variety of industries assimilate ESG factors into their business processes and aim for long-term sustainable growth, at UOBAM (Thailand) we invest for profit and purpose, towards a sustainable future.</value>
+  </data>
+  <data name="section_2_ceo_name" xml:space="preserve">
+    <value>Thio Boon Kiat</value>
+  </data>
+  <data name="section_2_ceo_name1" xml:space="preserve">
+    <value>Vana Bulbon</value>
+  </data>
+  <data name="section_2_ceo_position" xml:space="preserve">
+    <value>Group CEO of UOB Asset Management
+UOBAM (Thailand)</value>
+  </data>
+  <data name="section_2_ceo_position1" xml:space="preserve">
+    <value>Chief Executive Officer
+UOBAM (Thailand)</value>
+  </data>
+  <data name="section_3_text" xml:space="preserve">
+    <value>At UOB Asset Management (UOBAM), our vision is to be a leading fund manager in sustainability in Asia that creates long - term value and positive impact for our stakeholders whilst enabling sustainable investments accessible for all.</value>
+  </data>
+  <data name="section_3_title" xml:space="preserve">
+    <value>UOBAM’S SUSTAINABLE  &lt;br /&gt; INVESTMENT APPROACH</value>
+  </data>
+  <data name="section_4_text" xml:space="preserve">
+    <value>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda</value>
+  </data>
+  <data name="section_4_title" xml:space="preserve">
+    <value>Article &amp; Activity</value>
+  </data>
+  <data name="section_5_text" xml:space="preserve">
+    <value>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae Vitae dicta sunt explicabo.</value>
+  </data>
+  <data name="section_5_title" xml:space="preserve">
+    <value>SUSTAINABILITY IS THE ONE OF MEGATREND</value>
+  </data>
+  <data name="section_menu_1" xml:space="preserve">
+    <value>WHAT IS SUSTAINABLE INVESTING?</value>
+  </data>
+  <data name="section_menu_2" xml:space="preserve">
+    <value>Our Commitment</value>
+  </data>
+  <data name="section_menu_3" xml:space="preserve">
+    <value>UOBAM’S Sustainable &lt;br /&gt;Investment Approach</value>
+  </data>
+  <data name="section_menu_4" xml:space="preserve">
+    <value>Article &amp; Activity</value>
+  </data>
+  <data name="section_menu_5" xml:space="preserve">
+    <value>Sustainability Solution</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>While UOBAM has authorised ISS to vote on its behalf, UOBAM retains full discretion over all voting decisions and reserves the right to vote contrary to the recommendations of ISS. This can occur when UOBAM have a differing view that these vote recommendations are not in the best interest of its clients, after taking into account relevant information in its decision e.g. engagement outcome, internal research, etc.</value>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>We have a strong regard for fostering good stewardship and as an asset manager based in Singapore, we are a signatory to our local stewardship code (Singapore Stewardship Principles (SSP) for Responsible Investors). UOBAM is also a signatory of the UN supported Principles for Responsible Investment (PRI), and we are committed to follow their 6 Principles.</value>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>Active ownership at UOBAM consists of company engagement and proxy voting activities. These activities form a key component of our responsible investment approach and fulfils UOBAM’s fiduciary duty as an investment manager to act in the best long-term interests of our clients.</value>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>We take an inside-out approach to sustainable investing and move beyond just focusing on internal processes such as ESG integration into investment processes and sustainable investment governance. We look to take a proactive approach towards driving sustainable investing externally which ties in closely with the principle of “working together in implementing the principles” where our external efforts include establishing strategic investment partnerships with global sustainability leaders such as Robeco and Fukoku Capital Management.</value>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>Through such external partnerships that we aim to further enhance our capabilities and develop the accessibility of sustainability investment opportunities in the Asia region for investors. This will be done through sustainability mandates, working in policy consultation, and responsible investment education and thought leadership.</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>There may be situations where UOBAM may choose not to vote or abstain from voting:</value>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>(a) where administrative or other procedures result in the costs of voting outweighing the benefits;</value>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>(b) the voting securities are part of a securities lending program and UOBAM is unable to vote securities that are out on loan;</value>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>(c) a meeting notice is delivered close to the meeting date and UOBAM has insufficient time to adequately assess the issues being tabled at the shareholders’ meeting and / or process the vote;</value>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>(d) UOBAM sells shares prior to a company's meeting date and decides not to vote those shares, on the basis that UOBAM shall not be restricted from trading in a security due to an upcoming shareholder meeting; and</value>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>(e) voting securities have been blocked from trading in order to be tendered for voting purposes and UOBAM believes that preserving the ability to trade the security is in the best interest of the beneficiaries;</value>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>(f) in event of a situation where regulatory obligations and rulings of the SIC imposed on UOB Group that also apply to UOBAM, may prohibit UOBAM from voting on securities due to its deemed affiliation for a corporate action.</value>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>Sustainability is a key pillar in UOB Asset Management’s (UOBAM) corporate strategy, and we view active ownership is a crucial aspect of our sustainability culture, as it can positively influence companies to engage in sustainable business practices, creating not only long-term value for these companies but also social and environmental benefits for the world.</value>
+  </data>
+</root>

@@ -1,0 +1,96 @@
+﻿@model UOB.PVD.Model.LoginDTO
+
+@{
+    Layout = "";
+    ViewData["Title"] = "เข้าสู่ระบบ";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>เข้าสู่ระบบ </title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link href="~/assets/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+ 
+    <!-- icheck bootstrap -->
+    <link href="~/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Theme style -->
+    <link href="~/assets/dist/css/adminlte.min.css" rel="stylesheet" />
+
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="card card-outline ">
+            <div class="card-header text-center">
+ 
+                <img src="@Url.Content("~/assets/image/uob-logo.jpg")" style="height:auto; width:100%" />
+            </div>
+            <div class="card-body">
+                @{
+                    if (!string.IsNullOrEmpty(ViewBag.error))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.error
+                        </div>
+                    }
+                }
+                <p class="login-box-msg">กรุณาเข้าสู่ระบบเพื่อเริ่มใช้งาน</p>
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                {
+                    <div class="input-group mb-3">
+                        @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+
+
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        @Html.PasswordFor(model => model.password, new { @class = "form-control", autocomplete = "off", placeholder = "password" })
+
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block" style="margin-top:30px;">เข้าสู่ระบบ</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                }
+
+
+                <!-- /.social-auth-links -->
+
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+    </div>
+    <!-- /.login-box -->
+    <!-- jQuery -->
+    <script src="~/assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <script src="~/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="~/assets/dist/js/adminlte.min.js"></script>
+
+</body>
+</html>

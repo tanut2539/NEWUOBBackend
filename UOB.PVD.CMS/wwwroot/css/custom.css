@@ -1,0 +1,24 @@
+﻿.space-10 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    box-shadow: none;
+}
+.show-image-zoom {
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+}

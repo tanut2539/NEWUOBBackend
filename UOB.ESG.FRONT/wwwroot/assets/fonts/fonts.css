@@ -1,0 +1,70 @@
+@font-face{
+    font-family:font_light_45regular;
+    src:url(kittithada/psl240pro-webfont.eot);
+    src:url(kittithada/psl240pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl240pro-webfont.woff2) format('woff2'),url(kittithada/psl240pro-webfont.woff) format('woff'),url(kittithada/psl240pro-webfont.ttf) format('truetype'),url(kittithada/psl240pro-webfont.svg#font_light_45regular) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_light_45italic;
+    src:url(kittithada/psl241pro-webfont.eot);
+    src:url(kittithada/psl241pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl241pro-webfont.woff2) format('woff2'),url(kittithada/psl241pro-webfont.woff) format('woff'),url(kittithada/psl241pro-webfont.ttf) format('truetype'),url(kittithada/psl241pro-webfont.svg#font_light_45italic) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_roman_55regular;
+    src:url(kittithada/psl242pro-webfont.eot);
+    src:url(kittithada/psl242pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl242pro-webfont.woff2) format('woff2'),url(kittithada/psl242pro-webfont.woff) format('woff'),url(kittithada/psl242pro-webfont.ttf) format('truetype'),url(kittithada/psl242pro-webfont.svg#font_roman_55regular) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_roman_55italic;
+    src:url(kittithada/psl243pro-webfont.eot);
+    src:url(kittithada/psl243pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl243pro-webfont.woff2) format('woff2'),url(kittithada/psl243pro-webfont.woff) format('woff'),url(kittithada/psl243pro-webfont.ttf) format('truetype'),url(kittithada/psl243pro-webfont.svg#font_roman_55italic) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_medium_65regular;
+    src:url(kittithada/psl244pro-webfont.eot);
+    src:url(kittithada/psl244pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl244pro-webfont.woff2) format('woff2'),url(kittithada/psl244pro-webfont.woff) format('woff'),url(kittithada/psl244pro-webfont.ttf) format('truetype'),url(kittithada/psl244pro-webfont.svg#font_medium_65regular) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_medium_65italic;
+    src:url(kittithada/psl255pro-webfont.eot);
+    src:url(kittithada/psl255pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl255pro-webfont.woff2) format('woff2'),url(kittithada/psl255pro-webfont.woff) format('woff'),url(kittithada/psl255pro-webfont.ttf) format('truetype'),url(kittithada/psl255pro-webfont.svg#font_medium_65italic) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_bold_75regular;
+    src:url(kittithada/psl245pro-webfont.eot);
+    src:url(kittithada/psl245pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl245pro-webfont.woff2) format('woff2'),url(kittithada/psl245pro-webfont.woff) format('woff'),url(kittithada/psl245pro-webfont.ttf) format('truetype'),url(kittithada/psl245pro-webfont.svg#font_bold_75regular) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_bold_75italic;
+    src:url(kittithada/psl256pro-webfont.eot);
+    src:url(kittithada/psl256pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl256pro-webfont.woff2) format('woff2'),url(kittithada/psl256pro-webfont.woff) format('woff'),url(kittithada/psl256pro-webfont.ttf) format('truetype'),url(kittithada/psl256pro-webfont.svg#font_bold_75italic) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_thin_35regular;
+    src:url(kittithada/psl239pro-webfont.eot);
+    src:url(kittithada/psl239pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl239pro-webfont.woff2) format('woff2'),url(kittithada/psl239pro-webfont.woff) format('woff'),url(kittithada/psl239pro-webfont.ttf) format('truetype'),url(kittithada/psl239pro-webfont.svg#font_thin_35regular) format('svg');
+    font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:font_thin_35italic;
+    src:url(kittithada/psl254pro-webfont.eot);
+    src:url(kittithada/psl254pro-webfont.eot?#iefix) format('embedded-opentype'),url(kittithada/psl254pro-webfont.woff2) format('woff2'),url(kittithada/psl254pro-webfont.woff) format('woff'),url(kittithada/psl254pro-webfont.ttf) format('truetype'),url(kittithada/psl254pro-webfont.svg#font_thin_35italic) format('svg');
+    font-weight:400;
+    font-style:normal
+}

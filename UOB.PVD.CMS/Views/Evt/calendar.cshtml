@@ -1,0 +1,173 @@
+﻿@model UOB.PVD.Model.EVT.CmsCalendarResponseModel
+@using UOB.PVD.CMS.Resources
+@{
+    ViewData["Title"] = "Evt Calendar";
+}
+@*<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/core/main.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/daygrid/main.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/timegrid/main.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/4.2.0/list/main.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/@Html.Raw("@")fullcalendar/timeline@4.2.0/main.min.css'>
+    <link rel='stylesheet' href='https://unpkg.com/@Html.Raw("@")fullcalendar/resource-timeline@4.2.0/main.min.css'>*@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.css" integrity="sha256-jLWPhwkAHq1rpueZOKALBno3eKP3m4IMB131kGhAlRQ=" crossorigin="anonymous">
+<style>
+    .fc-day:hover {
+        cursor: pointer;
+        border-bottom: 2px solid #0094ff;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+</style>
+
+<div id='calendar'></div>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-lg" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal_title"> Modal</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="modalThaiDate" />
+                <div class="row">
+                    <div class="col-sm-2">
+                        <button class="btn btn-app bg-info" style="width:100%;" onclick="createEvents()"><i class="fas fa-plus"></i> เพิ่ม Event</button>
+                    </div>
+                    <div class="col-sm-10">
+                        <div style="padding-left:15px">
+                            <div class="row">
+                                <div class="col-12" id="eventInDay">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.js" integrity="sha256-bFpArdcNM5XcSM+mBAUSDAt4YmEIeSAdUASB2rrSli4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@Html.Raw("@")fullcalendar/core@5.11.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@Html.Raw("@")fullcalendar/daygrid@5.11.0/main.js"></script>
+
+    <!-- interaction plugin must be included after core -->
+    <script src="https://cdn.jsdelivr.net/npm/@Html.Raw("@")fullcalendar/interaction@5.11.0/main.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/@Html.Raw("@")fullcalendar/core@5.11.0/main.min.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales/th.js" integrity="sha256-0OQRVhIdIQtWvi01Bbz+y8Z/omqx3Mrc9qiW+8RBwbE=" crossorigin="anonymous"></script>
+    <script src="~/helper/helper.js"></script>
+    <script>
+        function createEvents() {
+            window.location = `@Url.Action("Event", "Evt")?date=${$("#modalThaiDate").val()}`;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                locale: 'th',
+                initialView: 'dayGridMonth',
+                events: JSON.parse(JSON.stringify([@Json.Serialize(@Model.calendar)]))[0] ,
+                dateClick: function (info) {
+                    document.getElementById("modal_title").innerHTML = convertToThaiDate(info.date);
+                    $("#modalThaiDate").val(convertDateToDDMMYYYY(info.date))
+                    $('#modal-lg').modal('show');
+                },
+
+                eventClick: function (info) {
+                    var eventDate = info.event.start;
+
+                    info.jsEvent.preventDefault(); // don't let the browser navigate
+                    document.getElementById("modal_title").innerHTML = convertToThaiDate(eventDate);
+                    $("#modalThaiDate").val(convertDateToDDMMYYYY(eventDate))
+                    randerDataInModel(convertDateToDDMMYYYY(eventDate))
+
+
+                    $('#modal-lg').modal('show');
+                },
+
+
+            });
+
+            calendar.render();
+        });
+
+
+        function randerDataInModel(d) {
+            let data = {
+                thaiDate: d,
+            };
+            $.ajax({
+                type: "POST",
+                url: `@Url.Action("GetEventInDay", "Evt")`,
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    console.log("response", response)
+                    blockPage(false);
+                    if (response.message == "success") {
+                        let tempage = "";
+                        for (const element of response.data.events) {
+                            tempage +=
+                            `
+                                <tr>
+                                    <th scope="row">
+                                        <img src="src="${element.banner}" style="width:30px;height:auto"/></th>
+                                    <td scope="col">
+                                        <b>${element.event_name_th}</b>
+                                        <p> ${element.event_name_en}</p>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("Event", "Evt")?date=${d}&eventId=${element.event_id}" class="space-10 btn btn-info btn-icon btn-sm">@Messages.btn_view_detail </a>
+                                    </td>
+                                </tr>
+                            `;
+                        }
+                        let baseTempage = `<table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">ชื่อ Event</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>${tempage}</tbody>
+                                    </table>`;
+                        $("#eventInDay").html(baseTempage);
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            html: response.message,
+                        })
+                    }
+                },
+                error: function (error) {
+                    console.log("error", error)
+                    blockPage(false);
+                    Swal.fire({
+                        icon: 'error',
+                        title: '@Messages.message_error',
+                        text: error.responseText,
+                    })
+                }
+            });
+        }
+
+
+
+    </script>
+}

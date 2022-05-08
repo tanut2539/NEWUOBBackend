@@ -1,0 +1,351 @@
+﻿@model UOB.PVD.Model.MasterFundDTO
+@{
+    ViewData["Title"] = "จัดการข้อมูล";
+}
+
+
+<div class="row" style="margin: 15px">
+    <div class="col-6">
+
+
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-primary float-right space-10" id="btn_save"> <i class="far fa-save space-10"></i> บันทึก  </button>
+        <a href="@Url.Action("InCountryList","MasterFund")" class="btn btn-default float-right space-10"> <i class="fas fa-arrow-left"></i>ย้อนกลับ</a>
+
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card card-primary card-outline card-tabs">
+            <div class="card-header">
+                <p class="card-title"> รายละเอียด</p>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                @Html.HiddenFor(x => x.policy_seq)
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="ProductName"> ประเภทนโยบาย</label>
+
+                            @Html.DropDownListFor(model => model.policy_type_id, new List<SelectListItem>
+                              {
+                                  new SelectListItem{Text="นโยบายตราสารหนี้", Value="IN1003"},
+                                  new SelectListItem{Text="นโยบายผสม", Value="IN1004"},
+                                  new SelectListItem{Text="นโยบายตราสารทุน", Value="IN1005"},
+                              }, new { @class = "form-control select2" })
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="ProductName">หัวข้อ (ภาษาไทย)</label>
+                            @Html.EditorFor(model => model.policy_title_th, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="ProductName">หัวข้อ (ภาษาอังกฤษ)</label>
+                            @Html.EditorFor(model => model.policy_title_en, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="ProductName">รายละเอียด (ภาษาไทย)</label>
+                            @Html.TextAreaFor(model => model.policy_detail_th, new { @class = "form-control", maxlength = "250" })
+
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="ProductName">รายละเอียด (ภาษาอังกฤษ)</label>
+                            @Html.TextAreaFor(model => model.policy_detail_en, new { @class = "form-control", maxlength = "250" })
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card card-primary card-outline card-tabs">
+            <div class="card-header">
+                <p class="card-title"> ไฟล์ และ Url</p>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.RadioButtonFor(m => m.show_with, "PDF", new { id = "show_with_pdf" })
+                        @Html.Label("show_with_pdf", "ใช้  PDF")
+                        <br />
+                        @Html.RadioButtonFor(m => m.show_with, "URL", new { id = "show_with_url" })
+                        @Html.Label("show_with_url", "ใช้ URL")
+                        <hr />
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-6">
+                                @Html.HiddenFor(x => x.policy_pdf_name_th)
+                                @Html.HiddenFor(x => x.policy_pdf_url_th)
+                                @Html.HiddenFor(x => x.policy_pdf_original_name_th)
+                                <center>
+                                    <div style="border: 1px solid black; min-height: 90px; width: 50%">
+                                        <div style="height: 100%; width: 100%">
+                                            <div id="pdf_logo_th" class="hidden">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <label for="upload_pdf_th" class="btn btn-sm custom-file-upload" style="margin-top: 9px; width: 100%;">
+                                        <i class="fas fa-cloud-upload-alt space-10"></i>  อัพโหลด PDF ภาษาไทย
+                                    </label>
+                                    <input id="upload_pdf_th" type="file" accept="application/pdf" />
+                                </center>
+                            </div>
+
+                            <div class="col-6">
+                                @Html.HiddenFor(x => x.policy_pdf_name_en)
+                                @Html.HiddenFor(x => x.policy_pdf_url_en)
+                                @Html.HiddenFor(x => x.policy_pdf_original_name_en)
+                                <center>
+                                    <div style="border: 1px solid black; min-height: 90px; width: 50%">
+                                        <div style="height: 100%; width: 100%">
+                                            <div id="pdf_logo_en" class="hidden">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <label for="upload_pdf_en" class="btn btn-sm custom-file-upload" style="margin-top: 9px; width: 100%;">
+                                        <i class="fas fa-cloud-upload-alt space-10"></i>  อัพโหลด PDF ภาษาอังกฤษ
+                                    </label>
+                                    <input id="upload_pdf_en" type="file" accept="application/pdf" />
+                                </center>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="policy_goto_url_th">URL (ภาษาไทย)</label>
+                            @Html.EditorFor(model => model.policy_goto_url_th, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="policy_goto_url_en">URL (ภาษาอังกฤษ)</label>
+                            @Html.EditorFor(model => model.policy_goto_url_en, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#policy_type_id').select2({
+                theme: 'bootstrap4'
+            })
+
+            if ($("#policy_seq").val()) {
+                if ($('input[name="show_with"]:checked').val() == "PDF") {
+                    $("#pdf_logo_th").removeClass("hidden").addClass("");
+                    var el = document.getElementById("pdf_logo_th");
+                    el.innerHTML = `<a href="${$("#policy_pdf_url_th").val()}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${$("#policy_pdf_original_name_th").val()}</a>`;
+
+                    $("#pdf_logo_en").removeClass("hidden").addClass("");
+                    var el2 = document.getElementById("pdf_logo_en");
+                    el2.innerHTML = `<a href="${$("#policy_pdf_url_en").val()}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${$("#policy_pdf_original_name_en").val()}</a>`;
+                }
+
+            }
+        });
+
+        $("#btn_save").click(function () {
+            let errorMessage = "";
+            if (!$('input[name="show_with"]:checked').val()) {
+                errorMessage += "<p> - กรุณาเลือกการแสดงผลหน้าเว็บ Url หรือ PDF </p>"
+            }
+            else {
+                if ($('input[name="show_with"]:checked').val() == "PDF") {
+                    if (!$('#policy_pdf_name_th').val()) {
+                        errorMessage += "<p> - กรุณาอัพโหลด PDF (ภาษาไทย) </p>";
+                    }
+                    if (!$('#policy_pdf_name_en').val()) {
+                        errorMessage += "<p> - กรุณาอัพโหลด PDF (ภาษาอังกฤษ) </p>";
+                    }
+                }
+                else {
+                    if (!$('#policy_goto_url_th').val()) {
+                        errorMessage += "<p> - กรุณากรอก URL (ภาษาไทย) </p>";
+                    }
+                    if (!$('#policy_goto_url_en').val()) {
+                        errorMessage += "<p> - กรุณากรอก URL (ภาษาอังกฤษ)</p>";
+                    }
+                }
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ระบบ',
+                    html: errorMessage,
+                })
+                return;
+            }
+
+            Swal.fire({
+                title: 'ระบบ',
+                text: "คุณต้องการบันทึกรายการนี้ หรือไม่",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ตกลง',
+                cancelButtonText: "ยกเลิก",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    let data = {
+                        policy_seq: $('#policy_seq').val(),
+                        policy_id: $('#policy_id').val(),
+                        policy_type_id: $('#policy_type_id').val(),
+                        policy_title_th: $('#policy_title_th').val(),
+                        policy_title_en: $('#policy_title_en').val(),
+                        policy_detail_th: $('#policy_detail_th').val(),
+                        policy_detail_en: $('#policy_detail_en').val(),
+                        show_with: $('input[name="show_with"]:checked').val(),
+                        policy_pdf_name_th: $('#policy_pdf_name_th').val(),
+                        policy_pdf_original_name_th: $('#policy_pdf_original_name_th').val(),
+                        policy_pdf_name_en: $('#policy_pdf_name_en').val(),
+                        policy_pdf_original_name_en: $('#policy_pdf_original_name_en').val(),
+                        policy_goto_url_th: $('#policy_goto_url_th').val(),
+                        policy_goto_url_en: $('#policy_goto_url_en').val()
+                    };
+
+                    let policy_seq = $("#policy_seq").val();
+                    let uri = '@Url.Action("Create", "MasterFund")'
+                    if (policy_seq) {
+                        uri = '@Url.Action("Update", "MasterFund")'
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: uri,
+                        data: JSON.stringify(data),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (response) {
+                            console.log("response", response)
+                            if (response.message == "success") {
+                                var url = '@Url.Action("InCountry", "MasterFund")?id=' + response.data.current_id;
+                                window.location.href = url;
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    text: response.message,
+                                })
+                            }
+                        },
+                        error: function (error) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'ระบบ',
+                                text: "ผิดพลาด",
+                            })
+                        }
+                    });
+                }
+            })
+
+
+        });
+
+        $("#upload_pdf_th").change(function (event) {
+            uploadFile(event.target.id,event.target.files,"@ViewBag.investment_type","TH");
+        });
+
+        $("#upload_pdf_en").change(function (event) {
+            uploadFile(event.target.id, event.target.files, "@ViewBag.investment_type","EN");
+        });
+
+        function uploadFile(type,listFiles, investment_type, language) {
+            var data = new FormData();
+            for (let i = 0; i < listFiles.length; i++) {
+                data.append("files", listFiles[i]);
+            }
+
+            if (data) {
+                $.ajax({
+                    url: `@Url.Action("UploadFile", "MasterFund")?investment_type=${investment_type}&language=${language}`,
+                    type: "POST",
+                    dataType: "json",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    async: false,
+                    success: function (response) {
+                        console.log("response", response)
+                        if (response) {
+                            if (response.result == "Fail") {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'ระบบ',
+                                    text: response.message,
+                                })
+                                return false;
+                            }
+
+                            switch (type) {
+                                case 'upload_pdf_th':
+                                    $("#pdf_logo_th").removeClass("hidden").addClass("");
+                                    var el = document.getElementById("pdf_logo_th");
+                                    el.innerHTML = `<a href="${response.url}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${response.fileOriginalName}</a>`;
+                                    $('#policy_pdf_name_th').val(response.name);
+                                    $('#policy_pdf_url_th').val(response.url);
+                                    $('#policy_pdf_original_name_th').val(response.fileOriginalName);
+                                    break;
+                                case 'upload_pdf_en':
+
+                                    $("#pdf_logo_en").removeClass("hidden").addClass("");
+                                    var el = document.getElementById("pdf_logo_en");
+                                    el.innerHTML = `<a href="${response.url}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${response.fileOriginalName}</a>`;
+                                    $('#policy_pdf_name_en').val(response.name);
+                                    $('#policy_pdf_url_en').val(response.url);
+                                    $('#policy_pdf_original_name_en').val(response.fileOriginalName);
+                                    break;
+
+                            }
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                });
+            }
+        }
+    </script>
+
+}

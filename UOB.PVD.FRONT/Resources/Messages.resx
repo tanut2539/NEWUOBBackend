@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="banner_title" xml:space="preserve">
+    <value>Provident Fund</value>
+  </data>
+  <data name="img_chart_desktop" xml:space="preserve">
+    <value>~/assets/images/chart/desktop/chart-en.png</value>
+  </data>
+  <data name="img_chart_mobile_1" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/1.png</value>
+  </data>
+  <data name="img_chart_mobile_10" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/10.png</value>
+  </data>
+  <data name="img_chart_mobile_11" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/11.png</value>
+  </data>
+  <data name="img_chart_mobile_12" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/12.png</value>
+  </data>
+  <data name="img_chart_mobile_13" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/13.png</value>
+  </data>
+  <data name="img_chart_mobile_14" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/14.png</value>
+  </data>
+  <data name="img_chart_mobile_15" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/15.png</value>
+  </data>
+  <data name="img_chart_mobile_2" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/2.png</value>
+  </data>
+  <data name="img_chart_mobile_3" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/3.png</value>
+  </data>
+  <data name="img_chart_mobile_4" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/4.png</value>
+  </data>
+  <data name="img_chart_mobile_5" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/5.png</value>
+  </data>
+  <data name="img_chart_mobile_6" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/6.png</value>
+  </data>
+  <data name="img_chart_mobile_7" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/7.png</value>
+  </data>
+  <data name="img_chart_mobile_8" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/8.png</value>
+  </data>
+  <data name="img_chart_mobile_9" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/en/9.png</value>
+  </data>
+  <data name="Index_Message_1" xml:space="preserve">
+    <value>Pooled funds under</value>
+  </data>
+  <data name="Index_Message_10" xml:space="preserve">
+    <value>A master pooled fund with carefully constructed seven pre-defined allocations to three underlying mutual funds which represent each core asset class. Fund members are able to select one of the seven investment plans, or as per the condition that the fund committee set forth in the fund regulation.
+The fund won the 6th Provident Fund Award 2017 “Pooled Fund – fund size less than 10,000 Million Baht” from The Securities and Exchange Commission, Thailand (SEC)</value>
+  </data>
+  <data name="Index_Message_11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_14" xml:space="preserve">
+    <value>LOCAL</value>
+  </data>
+  <data name="Index_Message_15" xml:space="preserve">
+    <value>GLOBAL</value>
+  </data>
+  <data name="Index_Message_16" xml:space="preserve">
+    <value>UOB Investor Choice Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_17" xml:space="preserve">
+    <value>Defensive</value>
+  </data>
+  <data name="Index_Message_18" xml:space="preserve">
+    <value>Growth 10</value>
+  </data>
+  <data name="Index_Message_19" xml:space="preserve">
+    <value>Growth 20</value>
+  </data>
+  <data name="Index_Message_2" xml:space="preserve">
+    <value>management of UOBAM 
+(Thailand)</value>
+  </data>
+  <data name="Index_Message_20" xml:space="preserve">
+    <value>Growth 40</value>
+  </data>
+  <data name="Index_Message_21" xml:space="preserve">
+    <value>Growth 15</value>
+  </data>
+  <data name="Index_Message_22" xml:space="preserve">
+    <value>SustainableGrowth 60</value>
+  </data>
+  <data name="Index_Message_23" xml:space="preserve">
+    <value>Growth 60</value>
+  </data>
+  <data name="Index_Message_24" xml:space="preserve">
+    <value>Growth 80</value>
+  </data>
+  <data name="Index_Message_25" xml:space="preserve">
+    <value>Growth 100</value>
+  </data>
+  <data name="Index_Message_26" xml:space="preserve">
+    <value>Defensive</value>
+  </data>
+  <data name="Index_Message_27" xml:space="preserve">
+    <value>Growth 10</value>
+  </data>
+  <data name="Index_Message_28" xml:space="preserve">
+    <value>Growth 20</value>
+  </data>
+  <data name="Index_Message_29" xml:space="preserve">
+    <value>Growth 40</value>
+  </data>
+  <data name="Index_Message_3" xml:space="preserve">
+    <value>Pooled funds under management of UOB Asset
+Management(Thailand) Co., Ltd. are Master Pooled
+Fund under which the fund members are allowed
+to select investment plan that matches with their
+risk appetite and retirement goal, varied by age,
+investment horizon, investment knowledge,
+expected return or acceptable risk level.</value>
+  </data>
+  <data name="Index_Message_30" xml:space="preserve">
+    <value>Growth 15</value>
+  </data>
+  <data name="Index_Message_31" xml:space="preserve">
+    <value>Sustainable Growth 60</value>
+  </data>
+  <data name="Index_Message_32" xml:space="preserve">
+    <value>Growth 60</value>
+  </data>
+  <data name="Index_Message_33" xml:space="preserve">
+    <value>Growth 80</value>
+  </data>
+  <data name="Index_Message_34" xml:space="preserve">
+    <value>Growth 100</value>
+  </data>
+  <data name="Index_Message_35" xml:space="preserve">
+    <value>Domestic Money Market: TCMFPVD*</value>
+  </data>
+  <data name="Index_Message_36" xml:space="preserve">
+    <value>Domestic Fixed Income: TFIFPVD*</value>
+  </data>
+  <data name="Index_Message_37" xml:space="preserve">
+    <value>Domestic Equity: TEF*</value>
+  </data>
+  <data name="Index_Message_38" xml:space="preserve">
+    <value>Global Short-Term fixed income: UFFF-I*</value>
+  </data>
+  <data name="Index_Message_39" xml:space="preserve">
+    <value>Global Fixed Income: USI*</value>
+  </data>
+  <data name="Index_Message_4" xml:space="preserve">
+    <value>UOBAM (Thailand) offers the following master pooled funds:</value>
+  </data>
+  <data name="Index_Message_40" xml:space="preserve">
+    <value>Global Equity: UESG*</value>
+  </data>
+  <data name="Index_Message_41" xml:space="preserve">
+    <value>Global Balanced Fund: UGBF-N*</value>
+  </data>
+  <data name="Index_Message_42" xml:space="preserve">
+    <value>Investment Policy of each underlying mutual fund</value>
+  </data>
+  <data name="Index_Message_43" xml:space="preserve">
+    <value>UGBF-N:</value>
+  </data>
+  <data name="Index_Message_44" xml:space="preserve">
+    <value>feeder to JPMorgan Investment Funds – Global Balanced Fund class: JPM Global Balanced C (acc) - USD (hedged) at least 80% of NAV. The Master Fund objective is to create the regular income in long term.</value>
+  </data>
+  <data name="Index_Message_45" xml:space="preserve">
+    <value>UFFF-I:</value>
+  </data>
+  <data name="Index_Message_46" xml:space="preserve">
+    <value>invest in foreign bond mutual funds and / or exchange-traded fund (ETF) and / or mutual funds under management of UOBAM</value>
+  </data>
+  <data name="Index_Message_47" xml:space="preserve">
+    <value>USI:</value>
+  </data>
+  <data name="Index_Message_48" xml:space="preserve">
+    <value>feeder to RobecoSAM SDG Credit Income IH USD to maintain consistent income by investing in a variety of debt instruments under UN Sustainable Development GoalsSDGs</value>
+  </data>
+  <data name="Index_Message_49" xml:space="preserve">
+    <value>UESG:</value>
+  </data>
+  <data name="Index_Message_5" xml:space="preserve">
+    <value>1. UOB Investor Choice Registered Provident Fund
+2. UOB Master Fund Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_50" xml:space="preserve">
+    <value>feeder to Robeco Sustainable Global Stars Equities IL EUR</value>
+  </data>
+  <data name="Index_Message_51" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_52" xml:space="preserve">
+    <value>2. UOB Master Fund Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_53" xml:space="preserve">
+    <value>Another master pooled fund with a variety of investment policies, which either invest directly in financial instruments or via mutual funds. The fund committee determines the investment options to be made available to the fund members, or allows the members to freely choose a desired mix of investment policies by themselves (Do It Yourself: DIY).</value>
+  </data>
+  <data name="Index_Message_54" xml:space="preserve">
+    <value>LOCAL</value>
+  </data>
+  <data name="Index_Message_55" xml:space="preserve">
+    <value>GLOBAL</value>
+  </data>
+  <data name="Index_Message_56" xml:space="preserve">
+    <value>UOB Investor Choice Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_57" xml:space="preserve">
+    <value>* Remark :
+Investment Policy 1-4 = direct investment
+Other Investment Policy = invest through mutual funds</value>
+  </data>
+  <data name="Index_Message_58" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_59" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_6" xml:space="preserve">
+    <value>1. UOB Investor Choice Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_60" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_61" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_7" xml:space="preserve">
+    <value>2. UOB Master Fund Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_8" xml:space="preserve">
+    <value>1. UOB Investor Choice Registered Provident Fund</value>
+  </data>
+  <data name="Index_Message_9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menu_item_1" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="menu_item_2" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="menu_item_3" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="menu_item_4" xml:space="preserve">
+    <value>Credentials</value>
+  </data>
+  <data name="menu_item_5" xml:space="preserve">
+    <value>PVD Fact Sheet</value>
+  </data>
+  <data name="menu_item_6" xml:space="preserve">
+    <value>Risk Profile</value>
+  </data>
+  <data name="menu_item_7" xml:space="preserve">
+    <value>Downloads</value>
+  </data>
+  <data name="menu_item_8" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="menu_item_9" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Sheet_Message_1" xml:space="preserve">
+    <value>PVD Fact Sheet</value>
+  </data>
+  <data name="Sheet_Message_10" xml:space="preserve">
+    <value>Manage your personal portfolio with recommended mutual funds</value>
+  </data>
+  <data name="Sheet_Message_11" xml:space="preserve">
+    <value>Recommended Fund: Megatrend SSF</value>
+  </data>
+  <data name="Sheet_Message_12" xml:space="preserve">
+    <value>Recommended Fund: Megatrend RMF</value>
+  </data>
+  <data name="Sheet_Message_13" xml:space="preserve">
+    <value>Manage your post-retirement portfolio</value>
+  </data>
+  <data name="Sheet_Message_14" xml:space="preserve">
+    <value>Investment Policy of each underlying mutual fund</value>
+  </data>
+  <data name="Sheet_Message_15" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sheet_Message_16" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sheet_Message_2" xml:space="preserve">
+    <value>UOB Master Fund (UOBMF)</value>
+  </data>
+  <data name="Sheet_Message_3" xml:space="preserve">
+    <value>Investor choice (INVC)</value>
+  </data>
+  <data name="Sheet_Message_4" xml:space="preserve">
+    <value>SMK1</value>
+  </data>
+  <data name="Sheet_Message_5" xml:space="preserve">
+    <value>SMK1</value>
+  </data>
+  <data name="Sheet_Message_6" xml:space="preserve">
+    <value>SMK2</value>
+  </data>
+  <data name="Sheet_Message_7" xml:space="preserve">
+    <value>SMK2</value>
+  </data>
+  <data name="Sheet_Message_8" xml:space="preserve">
+    <value>Investment Outlook</value>
+  </data>
+  <data name="Sheet_Message_9" xml:space="preserve">
+    <value>ESG Investment</value>
+  </data>
+</root>

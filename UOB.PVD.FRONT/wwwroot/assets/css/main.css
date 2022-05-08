@@ -1,0 +1,1671 @@
+@import url('../fonts/stylesheet.css');
+
+/* Body */
+body {
+    font-family: 'Kittithada', sans-serif;
+}
+
+/* Carousel Banner */
+.uob-carousel-container {
+    position: relative;
+    height: 240px;
+    width: 100%;
+    background-image: url('../images/banner/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .uob-carousel-container h1 {
+        position: absolute;
+        top: calc(30%);
+        left: calc(35%);
+        color: #ffffff;
+        font-size: 55px;
+    }
+
+h1.a-zone-title span {
+    color: #002469;
+}
+
+/* Menu Itmes */
+.uob-menu-items {
+    position: relative;
+    background-color: #eeeeee;
+}
+
+.menu-item {
+    height: 100%;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 5px solid transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+    .menu-item:hover {
+        color: #E1091D;
+        border-bottom: 5px solid #E1091D;
+        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
+    }
+
+.item-icon {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 5px;
+}
+
+.item-title {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+}
+
+.item-icon.icon-1 {
+    background-image: url('../images/menu/1-on-default.svg');
+}
+
+.item-icon.icon-2 {
+    background-image: url('../images/menu/2-on-default.svg');
+}
+
+.item-icon.icon-3 {
+    background-image: url('../images/menu/3-on-default.svg');
+}
+
+.item-icon.icon-4 {
+    background-image: url('../images/menu/4-on-default.svg');
+}
+
+.item-icon.icon-5 {
+    background-image: url('../images/menu/5-on-default.svg');
+}
+
+.item-icon.icon-6 {
+    background-image: url('../images/menu/6-on-default.svg');
+}
+
+.item-icon.icon-7 {
+    background-image: url('../images/menu/7-on-default.svg');
+}
+
+.item-icon.icon-8 {
+    background-image: url('../images/menu/8-on-default.svg');
+}
+
+.item-icon.icon-9 {
+    background-image: url('../images/menu/9-on-default.svg');
+}
+
+.menu-item:hover .icon-1 {
+    background-image: url('../images/menu/1-on-hover.svg');
+}
+
+.menu-item:hover .icon-2 {
+    background-image: url('../images/menu/2-on-hover.svg');
+}
+
+.menu-item:hover .icon-3 {
+    background-image: url('../images/menu/3-on-hover.svg');
+}
+
+.menu-item:hover .icon-4 {
+    background-image: url('../images/menu/4-on-hover.svg');
+}
+
+.menu-item:hover .icon-4 {
+    background-image: url('../images/menu/4-on-hover.svg');
+}
+
+.menu-item:hover .icon-5 {
+    background-image: url('../images/menu/5-on-hover.svg');
+}
+
+.menu-item:hover .icon-6 {
+    background-image: url('../images/menu/6-on-hover.svg');
+}
+
+.menu-item:hover .icon-7 {
+    background-image: url('../images/menu/7-on-hover.svg');
+}
+
+.menu-item:hover .icon-8 {
+    background-image: url('../images/menu/8-on-hover.svg');
+}
+
+.menu-item:hover .icon-9 {
+    background-image: url('../images/menu/9-on-hover.svg');
+}
+
+/* A Zone */
+.uob-a-zone {
+    position: relative;
+    height: 800px;
+    background-image: url('/assets/images/azone/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1.a-zone-title {
+    position: absolute;
+    width: 40%;
+    font-size: 60px;
+    color: #2f71c0;
+    line-height: 1;
+    white-space: pre-line;
+}
+
+p.a-zone-description-1 {
+    position: absolute;
+    top: 18rem;
+    width: 40%;
+    font-size: 26px;
+    color: #666666;
+    line-height: 1;
+    white-space: pre-line;
+}
+
+h3.a-zone-title {
+    position: absolute;
+    bottom: 10rem;
+    width: 40%;
+    font-size: 26px;
+    color: #002469;
+    line-height: 1;
+}
+
+p.a-zone-description-2 {
+    position: absolute;
+    bottom: 80px;
+    width: 60%;
+    font-size: 26px;
+    color: #666666;
+    line-height: 1;
+    white-space: pre-line;
+}
+
+/* Tabs */
+.uob-tabs {
+    padding: 2.5rem;
+}
+
+    .uob-tabs [role=tab] {
+        font-size: 28px;
+        line-height: 1;
+        white-space: pre-line;
+        box-shadow: none;
+    }
+
+        .uob-tabs .dark [role=tab].active, .uob-tabs .dark [role=tab].active:hover, .uob-tabs [role=tab].active, .uob-tabs [role=tab].active:hover {
+            border-color: #003E7E;
+            color: #003E7E;
+            border-bottom: 4px solid;
+        }
+
+    .uob-tabs h1.tab-title {
+        text-align: center;
+        font-size: 40px;
+        color: #2F71C0;
+        margin-bottom: 0;
+        white-space: pre-line;
+    }
+
+    .uob-tabs h1.tab-subtitle {
+        text-align: center;
+        font-size: 32px;
+        color: #002469;
+        margin-bottom: 0;
+    }
+
+    .uob-tabs .title-tiles {
+        text-align: center;
+        font-size: 40px;
+        color: #2F71C0;
+        margin-top: 30px;
+        margin-bottom: 0;
+        white-space: pre-line;
+    }
+
+    .uob-tabs .tab-banner-1 {
+        position: relative;
+        margin: 2.5rem 0;
+        height: 240px;
+        background-image: url('../images/index/bg-index-1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    .uob-tabs .tab-banner-2 {
+        position: relative;
+        margin: 2.5rem 0;
+        height: 240px;
+        background-image: url('../images/index/bg-index-2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    .uob-tabs .tab-banner-3 {
+        position: relative;
+        margin: 2.5rem 0;
+        height: 240px;
+        background-image: url('../images/index/bg-index-3.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    .uob-tabs .tab-banner-4 {
+        position: relative;
+        margin: 2.5rem 0;
+        height: 240px;
+        background-image: url('../images/index/bg-index-4.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+    }
+
+    .uob-tabs .tab-banner-1-title {
+        position: absolute;
+        top: calc(35%);
+        right: 120px;
+        font-size: 48px;
+        color: #ffffff;
+        z-index: 9;
+    }
+
+    .uob-tabs .tab-banner-2-title {
+        position: absolute;
+        top: calc(40%);
+        left: 120px;
+        font-size: 48px;
+        color: #ffffff;
+        z-index: 9;
+    }
+
+    .uob-tabs .tab-banner-3-title {
+        position: absolute;
+        top: calc(35%);
+        right: 120px;
+        font-size: 38px;
+        color: #ffffff;
+        z-index: 9;
+    }
+
+    .uob-tabs .tab-banner-4-title {
+        position: absolute;
+        top: calc(40%);
+        left: 120px;
+        font-size: 38px;
+        color: #ffffff;
+        z-index: 9;
+    }
+
+    .uob-tabs .tab-banner-filter {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        top: 0;
+        opacity: .3;
+        background: rgb(255, 255, 255);
+        background: -moz-linear-gradient(60deg, rgba(255, 255, 255, 1) 0%, rgba(0, 33, 103, 1) 100%);
+        background: -webkit-linear-gradient(60deg, rgba(255, 255, 255, 1) 0%, rgba(0, 33, 103, 1) 100%);
+        background: linear-gradient(60deg, rgba(255, 255, 255, 1) 0%, rgba(0, 33, 103, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#002167", GradientType=1);
+    }
+
+    .uob-tabs .tab-box {
+        padding: .5rem 2rem;
+        border-radius: 8px;
+        text-align: center;
+        background-color: #003E7E;
+        color: #ffffff;
+        font-size: 26px;
+    }
+
+    .uob-tabs .tab-card {
+        position: relative;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        border-color: #003E7E;
+    }
+
+        .uob-tabs .tab-card:hover {
+            cursor: pointer;
+            background-color: #003E7E;
+        }
+
+    .uob-tabs .card-title h3 {
+        color: #002167;
+    }
+
+    .uob-tabs .tab-card:hover .card-title h3, .uob-tabs .tab-card:hover .card-description p {
+        color: #ffffff;
+    }
+
+    .uob-tabs .card-description p {
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .uob-tabs .card-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+/* Chart */
+.uob-chart {
+    margin-top: 3rem;
+}
+
+.uob-chart-title {
+    font-size: 40px;
+    text-align: center;
+    color: #2F71C0;
+}
+
+.uob-chart-canvas {
+    margin: 0;
+    padding: 0;
+}
+
+.chart-item {
+    position: relative;
+    margin: 1rem 0;
+    width: 100%;
+    height: 300px;
+}
+
+    .chart-item svg {
+        height: 600px;
+    }
+
+.chart-link {
+    margin-top: 20px;
+    height: 0px;
+}
+
+    .chart-link:hover {
+        padding: 15px 30px;
+    }
+
+    .chart-link h1:hover {
+        cursor: pointer;
+        background-color: #003E7E;
+        color: #ffffff !important;
+        width: 100%;
+        height: 30px;
+        display: block;
+    }
+
+h1.chart-item {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    color: #002167;
+}
+
+.pvd-dot-1::marker {
+    color: #109AD6;
+}
+
+.pvd-dot-2::marker {
+    color: #2F71C0;
+}
+
+.pvd-dot-3::marker {
+    color: #003E7E;
+}
+
+.pvd-dot-4::marker {
+    color: #E63633;
+}
+
+.pvd-dot-5::marker {
+    color: #FF5957;
+}
+
+.pvd-dot-6::marker {
+    color: #FF7473;
+}
+
+.pvd-dot-7::marker {
+    color: #F7A48C;
+}
+
+#sw-bt-1 {
+    right: 0;
+}
+
+#sw-bt-2 {
+    left: 0;
+}
+
+/* Invest Details */
+.uob-invest-details p {
+    font-size: 24px;
+    overflow: hidden;
+    white-space: pre-line;
+    line-height: 1;
+    color: #666666;
+}
+
+.uob-invest-details span.highlight {
+    color: #003E7E;
+}
+
+/* Fixed */
+p.tab-description {
+    font-size: 24px;
+}
+
+.tab-card {
+    font-size: 24px !important;
+}
+
+.list-disc li {
+    font-size: 20px;
+}
+
+img {
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -5px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 5px;
+}
+
+/* PVD Fact Sheet */
+.pvd-fact-sheet-title {
+    position: relative;
+    padding: 3.5rem 10rem;
+}
+
+    .pvd-fact-sheet-title h1 {
+        font-size: 48px;
+        font-weight: 800;
+        color: #2F71C0;
+    }
+
+/* Accordion */
+.accordion-body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .accordion-body a {
+        font-size: 20px;
+        color: #002469;
+        background-color: #ffffff;
+        margin: 10px 0;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+.accordion-button {
+    font-size: 24px !important;
+}
+
+.accordion-item:first-of-type, .accordion-item:first-of-type .accordion-button {
+    border-radius: 0;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background: rgb(0, 36, 105);
+    background: -moz-linear-gradient(80deg, rgba(0, 36, 105, 1) 0%, rgba(134, 211, 246, 1) 100%);
+    background: -webkit-linear-gradient(80deg, rgba(0, 36, 105, 1) 0%, rgba(134, 211, 246, 1) 100%);
+    background: linear-gradient(80deg, rgba(0, 36, 105, 1) 0%, rgba(134, 211, 246, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002469", endColorstr="#86d3f6", GradientType=1);
+}
+
+.accordion-item i {
+    margin-right: 15px;
+}
+
+.title-factsheet {
+    display: inline-block;
+    width: 98%;
+}
+
+.download_btn::after {
+    content: " ";
+    display: inline-block;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE4cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDE4IDE2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCAzLjguMyAoMjk4MDIpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmRvd25sb2FkPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTE3LjQsOS4zNzI3ODEwNyBDMTcuMDY4Nzk0MSw5LjM3Mjc4MTA3IDE2LjgwMDA1ODgsOS42MzUyMTMxOSAxNi44MDAwNTg4LDkuOTU4NTUxMTcgTDE2LjgwMDA1ODgsMTQuMDU5MTcxNiBMMS4yLDE0LjA1OTE3MTYgTDEuMiw5Ljk1ODU1MTE3IEMxLjIsOS42MzUyMTMxOSAwLjkzMTIzNTI5NCw5LjM3MjgwOTc4IDAuNiw5LjM3MjgwOTc4IEMwLjI2ODgyMzUyOSw5LjM3MjgwOTc4IDAsOS42MzUyMTMxOSAwLDkuOTU4NTUxMTcgTDAsMTQuNjQ0OTcwNCBDMCwxNC45NjgzMDg0IDAuMjY4ODIzNTI5LDE1LjIzMDc2OTIgMC42LDE1LjIzMDc2OTIgTDE3LjQsMTUuMjMwNzY5MiBDMTcuNzMxMjM1MywxNS4yMzA3NjkyIDE4LDE0Ljk2ODI3OTcgMTgsMTQuNjQ0OTcwNCBMMTgsOS45NTg1NTExNyBDMTgsOS42MzUyMTMxOSAxNy43MzEyMDU5LDkuMzcyNzgxMDcgMTcuNCw5LjM3Mjc4MTA3IEwxNy40LDkuMzcyNzgxMDcgWiBNOC41NzA0MTE3NiwxMS41NDYwOTQ3IEM4LjY4OTIwNTg4LDExLjY2MjA3NzEgOC44NDQsMTEuNzE5NTA4NCA5LDExLjcxOTUwODQgQzkuMTU2LDExLjcxOTUwODQgOS4zMTA4MjM1MywxMS42NjIwNzcxIDkuNDI5NjE3NjUsMTEuNTQ3MjcyIEwxMy4wMjU5NzA2LDcuNDUwMTgzNjEgQzEzLjI2MjM4MjQsNy4yMTkzNjczOSAxMy4yNjIzODI0LDYuODQ0NDg0ODYgMTMuMDI1OTcwNiw2LjYxMzY2ODY0IEMxMi43ODk1ODgyLDYuMzgyODUyNDIgMTIuNDA2NzY0Nyw2LjM4Mjg1MjQyIDEyLjE2OTE3NjUsNi42MTM2Njg2NCBMOS42MDAwMjk0MSw5LjU0MTQ4NTM4IEw5LjYwMDAyOTQxLDAuNTg1Nzk4ODE3IEM5LjYwMDAyOTQxLDAuMjYyNDMyMTI3IDkuMzMxMTc2NDcsMCA5LDAgQzguNjY4ODUyOTQsMCA4LjQsMC4yNjI0NjA4NDIgOC40LDAuNTg1Nzk4ODE3IEw4LjQsOS41NDE0ODUzOCBMNS44Mjk1ODgyNCw2LjYxMzY2ODY0IEM1LjU5MzE3NjQ3LDYuMzgyODUyNDIgNS4yMTAzODIzNSw2LjM4Mjg1MjQyIDQuOTcyODIzNTMsNi42MTM2Njg2NCBDNC43MzYzODIzNSw2Ljg0NDQ4NDg2IDQuNzM2MzgyMzUsNy4yMTkzNjczOSA0Ljk3MjgyMzUzLDcuNDUwMTgzNjEgTDguNTcwNDExNzYsMTEuNTQ2MDk0NyBaIiBpZD0iZG93bmxvYWQiIGZpbGw9IiMwMDlBRDkiPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+);
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+.icon-factsheet {
+    background: url('https://www.uobam.co.th/images/download/icon-download.svg') no-repeat;
+    width: 30px;
+    height: 28px;
+    background-position: -40px -100px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.card-title {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.tab-card:hover .title-factsheet {
+    color: #ffffff;
+}
+
+/* Chart 2 */
+.tab2-chart-title {
+    margin: 5rem 0;
+}
+
+/* Chart Image & fixed link */
+.chart-image {
+    position: relative;
+}
+
+    .chart-image .policy-1 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-2 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        left: 11rem;
+    }
+
+    .chart-image .policy-3 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        left: 22rem;
+    }
+
+    .chart-image .policy-4 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        left: 32.5rem;
+    }
+
+    .chart-image .policy-5 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        left: 43.2rem;
+    }
+
+    .chart-image .policy-6 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        left: 54rem;
+    }
+
+    .chart-image .policy-7 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        right: 13rem;
+    }
+
+    .chart-image .policy-8 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        top: 7.5rem;
+        right: 2.5rem;
+    }
+
+    .chart-image .policy-9 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-10 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        left: 11rem;
+    }
+
+    .chart-image .policy-11 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        left: 22rem;
+    }
+
+    .chart-image .policy-12 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        left: 32.5rem;
+    }
+
+    .chart-image .policy-13 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        left: 43.2rem;
+    }
+
+    .chart-image .policy-14 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        left: 54rem;
+    }
+
+    .chart-image .policy-15 {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        bottom: 3rem;
+        right: 13rem;
+    }
+
+/* Footer */
+.footer {
+    background-color: #002469;
+}
+
+    .footer .footer-top, .footer .footer-bottom {
+        padding: 2.5rem;
+    }
+
+.footer-top {
+    border-bottom: 2px solid #ffffff;
+}
+
+    .footer-top p {
+        color: #ffffff;
+        text-align: center;
+        line-height: 1;
+        font-size: 24px;
+    }
+
+.footer-bottom p {
+    color: #ffffff;
+    line-height: 1;
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 319.98px) {
+    .uob-chart-details {
+        margin-top: 30px;
+    }
+
+    .uob-carousel-container {
+        height: 60px;
+    }
+
+        .uob-carousel-container h1 {
+            top: calc(25%);
+            left: calc(30%);
+            font-size: 18px;
+        }
+
+    .uob-a-zone {
+        height: 600px;
+    }
+
+    h1.a-zone-title {
+        width: 70%;
+        font-size: 20px;
+    }
+
+    h3.a-zone-title {
+        bottom: 13rem;
+        width: 70%;
+        font-size: 14px;
+    }
+
+    p.a-zone-description-1 {
+        top: 8rem;
+        width: 70%;
+        font-size: 14px;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 8rem;
+        width: 70%;
+        font-size: 14px;
+    }
+
+
+    .uob-menu-items {
+        overflow: auto;
+    }
+
+    .item-title {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    .item-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .uob-tabs {
+        padding: 1.5rem;
+    }
+
+    .uob-chart-title {
+        font-size: 22px;
+    }
+
+    .uob-tabs .tab-banner-1-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-2-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-3-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-4-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .accordion-body {
+        padding: 1.5rem;
+    }
+
+        .accordion-body a {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+    .menu-item {
+        padding: .5rem;
+        width: 100px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 374.98px) {
+    .uob-chart-details {
+        margin-top: 30px;
+    }
+
+    .uob-carousel-container {
+        height: 60px;
+    }
+
+        .uob-carousel-container h1 {
+            top: calc(25%);
+            left: calc(40%);
+            font-size: 22px;
+        }
+
+    .uob-a-zone {
+        height: 440px;
+    }
+
+    h1.a-zone-title {
+        width: 70%;
+        font-size: 22px;
+    }
+
+    h3.a-zone-title {
+        bottom: 9rem;
+        width: 70%;
+        font-size: 14px;
+    }
+
+    p.a-zone-description-1 {
+        top: 8rem;
+        width: 70%;
+        font-size: 14px;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 5rem;
+        width: 70%;
+        font-size: 14px;
+    }
+
+    .uob-menu-items {
+        overflow: auto;
+    }
+
+    .item-title {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .item-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .uob-tabs {
+        padding: 1.5rem;
+    }
+
+    .uob-chart-title {
+        font-size: 22px;
+    }
+
+    .uob-tabs .tab-banner-1-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-2-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-3-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-4-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .accordion-body {
+        padding: 1.5rem;
+    }
+
+        .accordion-body a {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+    .pvd-fact-sheet-title {
+        padding: 2.5rem;
+    }
+
+        .pvd-fact-sheet-title h1 {
+            font-size: 30px;
+        }
+
+    .menu-item {
+        padding: .5rem;
+        width: 100px;
+    }
+
+    .uob-tabs .tab-banner-1-title {
+        top: calc(40%);
+        left: 40px;
+        right: 0;
+        font-size: 32px;
+    }
+
+    .uob-tabs .tab-banner-3-title {
+        top: calc(40%);
+        left: 40px;
+        right: 0;
+        font-size: 32px;
+    }
+
+    .uob-tabs .tab-banner-2-title {
+        top: calc(40%);
+        left: 25px;
+        font-size: 32px;
+    }
+
+    .uob-tabs .tab-banner-4-title {
+        top: calc(40%);
+        left: 25px;
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 575.98px) {
+    .uob-chart-details {
+        margin-top: 30px;
+    }
+
+    .uob-carousel-container {
+        height: 80px;
+    }
+
+        .uob-carousel-container h1 {
+            top: calc(25%);
+            left: calc(40%);
+            font-size: 26px;
+        }
+
+    .uob-a-zone {
+        height: 500px;
+    }
+
+    h1.a-zone-title {
+        width: 70%;
+        font-size: 24px;
+    }
+
+    h3.a-zone-title {
+        bottom: 11rem;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    p.a-zone-description-1 {
+        top: 8rem;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 6rem;
+        width: 70%;
+        font-size: 16px;
+    }
+
+    .uob-menu-items {
+        overflow: auto;
+    }
+
+    .menu-item {
+        padding: .5rem;
+        width: 100px;
+    }
+
+    .item-title {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .item-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .uob-tabs {
+        padding: 1.5rem;
+    }
+
+    .uob-chart-title {
+        font-size: 22px;
+    }
+
+    .uob-tabs .tab-banner-1-title {
+        top: calc(40%);
+        left: 40px;
+        right: 0;
+        font-size: 40px;
+    }
+
+    .uob-tabs .tab-banner-2-title {
+        top: calc(40%);
+        left: 25px;
+        font-size: 40px;
+    }
+
+    .uob-tabs .tab-banner-3-title {
+        top: calc(40%);
+        left: 40px;
+        right: 0;
+    }
+
+    .uob-tabs .tab-banner-4-title {
+        top: calc(40%);
+        left: 40px;
+    }
+
+    .accordion-body {
+        padding: 1.5rem;
+    }
+
+        .accordion-body a {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+    .uob-tabs .title-tiles {
+        padding-top: 2.5rem;
+    }
+
+    .pvd-fact-sheet-title {
+        padding: 2.5rem;
+    }
+
+        .pvd-fact-sheet-title h1 {
+            font-size: 36px;
+        }
+
+    .uob-tabs [role=tab] {
+        font-size: 20px;
+    }
+
+    .uob-tabs h1.tab-title, .uob-tabs h1.tab-subtitle {
+        font-size: 22px;
+    }
+
+    p.tab-description {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .uob-chart-details {
+        margin-top: 30px;
+    }
+
+    .uob-carousel-container {
+        height: 120px;
+    }
+
+        .uob-carousel-container h1 {
+            top: calc(30%);
+            left: calc(30%);
+            font-size: 34px;
+        }
+
+    h1.a-zone-title {
+        width: 45%;
+        font-size: 24px;
+    }
+
+    h3.a-zone-title {
+        bottom: 16rem;
+        width: 40%;
+        font-size: 18px;
+    }
+
+    p.a-zone-description-1 {
+        top: 12rem;
+        width: 45%;
+        font-size: 14px;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 7rem;
+        width: 45%;
+        font-size: 16px;
+    }
+
+    .uob-tabs .tab-banner-1-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-2-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-3-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .uob-tabs .tab-banner-4-title {
+        top: calc(25%);
+        left: 30px;
+    }
+
+    .accordion-body {
+        padding: 1.5rem;
+    }
+
+        .accordion-body a {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+    .pvd-fact-sheet-title {
+        padding: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .uob-menu-items {
+        height: 120px;
+    }
+
+    .item-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .item-title {
+        font-size: 14px;
+    }
+
+    h1.a-zone-title {
+        width: 45%;
+        font-size: 34px;
+    }
+
+    .uob-a-zone {
+        height: 700px;
+    }
+
+    h3.a-zone-title {
+        bottom: 13rem;
+        width: 40%;
+        font-size: 20px;
+    }
+
+    p.a-zone-description-1 {
+        top: 13rem;
+        width: 45%;
+        font-size: 20px;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 7rem;
+        width: 45%;
+        font-size: 20px;
+    }
+
+    .uob-tabs h1.tab-title {
+        font-size: 32px;
+    }
+
+    .uob-chart-title {
+        font-size: 44px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (orientation: portrait) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .uob-menu-items {
+        height: 120px;
+    }
+
+    h1.a-zone-title {
+        width: 45%;
+        font-size: 40px;
+    }
+
+    h3.a-zone-title {
+        bottom: 15rem;
+        width: 40%;
+        font-size: 24px;
+    }
+
+    p.a-zone-description-1 {
+        top: 15rem;
+        width: 45%;
+        font-size: 24px;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 8rem;
+        width: 45%;
+        font-size: 24px;
+    }
+
+    .chart-image .policy-1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-2 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        left: 7rem;
+    }
+
+    .chart-image .policy-3 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        left: 14rem;
+    }
+
+    .chart-image .policy-4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        left: 21rem;
+    }
+
+    .chart-image .policy-5 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        left: 28rem;
+    }
+
+    .chart-image .policy-6 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        left: 35rem;
+    }
+
+    .chart-image .policy-7 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        right: 9rem;
+    }
+
+    .chart-image .policy-8 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 5rem;
+        right: 1rem;
+    }
+
+    .chart-image .policy-9 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-10 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        left: 7rem;
+    }
+
+    .chart-image .policy-11 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        left: 14rem;
+    }
+
+    .chart-image .policy-12 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        left: 21rem;
+    }
+
+    .chart-image .policy-13 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        left: 28rem;
+    }
+
+    .chart-image .policy-14 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        left: 35rem;
+    }
+
+    .chart-image .policy-15 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        bottom: 2rem;
+        right: 8.5rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+    .uob-menu-items {
+        height: 120px;
+    }
+
+    h1.a-zone-title {
+        font-size: 46px;
+    }
+
+    h3.a-zone-title {
+        bottom: 15rem;
+    }
+
+    p.a-zone-description-1 {
+        top: 15rem;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 10rem;
+    }
+
+    .chart-image .policy-1 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-2 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 11rem;
+    }
+
+    .chart-image .policy-3 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 21rem;
+    }
+
+    .chart-image .policy-4 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 31rem;
+    }
+
+    .chart-image .policy-5 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 41rem;
+    }
+
+    .chart-image .policy-6 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 51rem;
+    }
+
+    .chart-image .policy-7 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        right: 13rem;
+    }
+
+    .chart-image .policy-8 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        right: 2.5rem;
+    }
+
+    .chart-image .policy-9 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-10 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 11rem;
+    }
+
+    .chart-image .policy-11 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 21rem;
+    }
+
+    .chart-image .policy-12 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 31rem;
+    }
+
+    .chart-image .policy-13 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 41rem;
+    }
+
+    .chart-image .policy-14 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 51rem;
+    }
+
+    .chart-image .policy-15 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        right: 13rem;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1599.98px) {
+    .uob-menu-items {
+        height: 120px;
+    }
+
+    h1.a-zone-title {
+        font-size: 50px;
+    }
+
+    p.a-zone-description-1 {
+        top: 15rem;
+    }
+
+    h3.a-zone-title {
+        bottom: 15rem;
+    }
+
+    p.a-zone-description-2 {
+        bottom: 10rem;
+    }
+
+    .chart-image .policy-1 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-2 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 11rem;
+    }
+
+    .chart-image .policy-3 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 21rem;
+    }
+
+    .chart-image .policy-4 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 31rem;
+    }
+
+    .chart-image .policy-5 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 41rem;
+    }
+
+    .chart-image .policy-6 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        left: 51rem;
+    }
+
+    .chart-image .policy-7 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        right: 13rem;
+    }
+
+    .chart-image .policy-8 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 7.5rem;
+        right: 2.5rem;
+    }
+
+    .chart-image .policy-9 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: .5rem;
+    }
+
+    .chart-image .policy-10 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 11rem;
+    }
+
+    .chart-image .policy-11 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 21rem;
+    }
+
+    .chart-image .policy-12 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 31rem;
+    }
+
+    .chart-image .policy-13 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 41rem;
+    }
+
+    .chart-image .policy-14 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        left: 51rem;
+    }
+
+    .chart-image .policy-15 {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        bottom: 3rem;
+        right: 13rem;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 2439.98px) {
+}
+
+@media (min-width: 2440px) {
+}

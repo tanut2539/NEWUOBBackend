@@ -1,0 +1,201 @@
+﻿@using UOB.ESG.FRONT.Resources
+@{
+    ViewData["Title"] = "Appoach";
+}
+
+
+
+<div class="appoach-banner"
+     style="background-image: url('@Url.Content("~/assets/images/appoach_bg.png")')"></div>
+
+<section id="appoach-1" class="app">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="appoach-1-title">
+                    @Html.Raw(Message.appoach_title)
+                </h1>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+           
+                        <div class="gallery gallery-fw d-none d-md-block" data-item-height="480">
+                            <div class="gallery-item" data-image="@Url.Content("~/assets/images/appoach_sus.png")" data-title="Artwork 1" style="background-size: contain;"></div>
+                        </div>
+                        <div class="gallery gallery-fw d-block d-md-none" data-item-height="280">
+                            <div class="gallery-item" data-image="@Url.Content("~/assets/images/appoach_sus.png")" data-title="Artwork 1" style="background-size: contain;"></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h3 class="appoach-1-td">
+                            @Html.Raw(Message.appoach_sub_title1)
+                        </h3>
+                        <p>
+                            @Html.Raw(Message.appoach_detail1)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="appoach-1-td">
+                            @Html.Raw(Message.appoach_sub_title2)
+                        </h3>
+                        <p>
+                            @Html.Raw(Message.appoach_detail2)
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="gallery gallery-fw d-none d-md-block" data-item-height="480">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_1)" data-title="Artwork 2" style="background-size: contain;"></div>
+                                </div>
+                                <div class="d-block d-md-none">
+                                    <div class="swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="@Url.Content(Message.appoach_m_1)" alt="1" />
+                                            </div> <div class="swiper-slide">
+                                                <img src="@Url.Content(Message.appoach_m_2)" alt="2" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="@Url.Content(Message.appoach_m_3)" alt="3" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    @Html.Raw(Message.appoach_detail3)
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <div class="gallery gallery-fw d-none d-md-block" data-item-height="280">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_2)" data-title="Artwork 3" style="background-size: contain;"></div>
+                                </div>
+                                <div class="gallery gallery-fw d-block d-md-none" data-item-height="1000">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_m_2)" data-title="Artwork 3" style="background-size: contain;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                @Html.Raw(Message.appoach_detail4)
+                            </div>
+                            <div class="col-12">
+                                <div class="gallery gallery-fw d-none d-md-block" data-item-height="400">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_3)" data-title="Artwork 4" style="background-size: contain;"></div>
+                                </div>
+                                <div class="gallery gallery-fw d-block d-md-none" data-item-height="400">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_m_3)" data-title="Artwork 4" style="background-size: contain;"></div>
+                                </div>
+                                <div class="gallery gallery-fw d-block d-md-none" data-item-height="400">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_m_4)" data-title="Artwork 4" style="background-size: contain;"></div>
+                                </div>
+                                <div class="gallery gallery-fw d-block d-md-none" data-item-height="400">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_m_5)" data-title="Artwork 4" style="background-size: contain;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                @Html.Raw(Message.appoach_detail5)
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h3 class="appoach-1-td">
+                                                    @Html.Raw(Message.appoach_sub_title6)
+                                                </h3>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="gallery gallery-fw d-none d-md-block" data-item-height="360">
+                                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_4)" data-title="Artwork 5" style="background-size: contain;"></div>
+                                                </div>
+                                                <div class="gallery gallery-fw d-block d-md-none" data-item-height="260">
+                                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_4)" data-title="Artwork 5" style="background-size: contain;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <p>
+                                            @Html.Raw(Message.appoach_detail6)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne"
+                                                    aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                @Html.Raw(Message.btn_header1)
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne"
+                                             class="accordion-collapse collapse show"
+                                             aria-labelledby="headingOne"
+                                             data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                @Html.Raw(Message.appoach_detail7)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseTwo"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseTwo">
+                                                @Html.Raw(Message.appoach_sub_title7)
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo"
+                                             class="accordion-collapse collapse"
+                                             aria-labelledby="headingTwo"
+                                             data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                @Html.Raw(Message.appoach_detail8)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="gallery gallery-fw d-none d-md-block" data-item-height="1000">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_5)" data-title="Artwork 7" style="background-size: contain;"></div>
+                                </div>
+                                <div class="gallery gallery-fw d-block d-md-none" data-item-height="320">
+                                    <div class="gallery-item" data-image="@Url.Content(Message.img_artwork_m_6)" data-title="Artwork 7" style="background-size: contain;"></div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <p>
+                                    @Html.Raw(Message.appoach_detail12)
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <h3 class="appoach-1-td">
+                                    @Html.Raw(Message.appoach_sub_title13)
+                                </h3>
+                                <p>
+                                    @Html.Raw(Message.appoach_detail13)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

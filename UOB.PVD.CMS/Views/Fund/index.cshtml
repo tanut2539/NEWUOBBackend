@@ -1,0 +1,453 @@
+﻿@model UOB.PVD.Model.ESG.FundModel
+@using UOB.PVD.CMS.Resources
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    input[type="file"] {
+        display: none;
+    }
+
+    .custom-file-upload {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+        box-shadow: none;
+    }
+</style>
+<div class="row" style="margin-bottom:10px">
+    <div class="col-6">
+        @if (!string.IsNullOrEmpty(Model.fund_seq))
+        {
+            switch (Model.status)
+            {
+                case "1":
+                    <span class="badge badge-pill badge-success" id="status_name">@Model.status_name</span>
+                    break;
+                case "0":
+                    <span class="badge badge-pill badge-warning" id="status_name">@Model.status_name</span>
+                    break;
+
+            }
+
+        }
+
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-primary float-right space-10" id="btn_save"> <i class="far fa-save space-10"></i>  @Messages.btn_save  </button>
+        <button type="button" class="btn btn-success float-right space-10 @{if (string.IsNullOrEmpty(Model.fund_seq) || Model.status == "1" ) { <text>hidden</text>}} " onclick="publishFund()" id="btn_publish"> @Messages.btn_publish</button>
+        <button type="button" class="btn btn-warning float-right space-10 @{if (string.IsNullOrEmpty(Model.fund_seq) || Model.status == "0" ) { <text>hidden</text>}} " onclick="UnpublishFund()" id="btn_unpublish"> @Messages.btn_unpublish</button>
+        <button type="button" class="btn btn-danger float-right space-10 @{if (string.IsNullOrEmpty(Model.fund_seq)) { <text>hidden</text>}} " id="btn_delete"> <i class="fas fa-trash space-10"></i>  @Messages.btn_delete</button>
+        <a href="@Url.Action("list","Fund")" class="btn btn-default float-right space-10"> <i class="fas fa-arrow-left"></i> @Messages.btn_back</a>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary card-outline card-tabs">
+            <div class="card-header">
+                <p class="card-title"> @Messages.Fund_label_detail   </p>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                @Html.HiddenFor(x => x.fund_seq)
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <label for="title_th" class="col-sm-2 col-form-label"> @Messages.banner_label_title_th</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.title_th, new { htmlAttributes = new { @class = "form-control", maxlength = "250" } })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="title_en" class="col-sm-2 col-form-label"> @Messages.banner_label_title_en</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.title_en, new { htmlAttributes = new { @class = "form-control", maxlength = "250" } })
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">@Messages.banner_label_text_th</label>
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(m => m.text_th, new { @class = "form-control", @style = "margin-top: 0px; margin-bottom: 0px; height: 85px;", maxlength = "550" })
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">@Messages.banner_label_text_en</label>
+                            <div class="col-sm-10">
+                                @Html.TextAreaFor(model => model.text_en, new { @class = "form-control", @style = "margin-top: 0px; margin-bottom: 0px; height: 85px;", maxlength = "550" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group row">
+                            <label for="title_th" class="col-sm-2 col-form-label"> @Messages.Fund_label_link</label>
+                            <div class="col-sm-10">
+                                @Html.EditorFor(model => model.link, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary card-outline card-tabs">
+            <div class="card-header">
+                <p class="card-title"> @Messages.Fund_label_upload_image</p>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 d-flex align-items-stretch flex-column">
+                        <div class="card bg-light d-flex flex-fill">
+                            <div class="card-header text-muted border-bottom-0">
+                                @Messages.Fund_label_image_th
+                                <p style="color:red; margin-top:-5px; font-size:13px">@Messages.upload_imagenormal_size</p>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="file_upload_th" style="margin-top:10px;"></div>
+                                        @Html.HiddenFor(x => x.image_th)
+                                        @Html.HiddenFor(x => x.url_image_th)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-right">
+                                    <button type="button" class="btn btn-sm bg-gradient-danger" id="file-delete-th"> <i class="fas fa-trash space-10"></i></button>
+                                    <label for="file-upload-th" class="btn btn-sm custom-file-upload" style="margin-top:9px;">
+                                        <i class="fas fa-cloud-upload-alt space-10"></i>@Messages.btn_upload
+                                    </label>
+                                    <input id="file-upload-th" type="file" accept="image/*" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 d-flex align-items-stretch flex-column">
+                        <div class="card bg-light d-flex flex-fill">
+                            <div class="card-header text-muted border-bottom-0">
+                                @Messages.Fund_label_image_en
+                                <p style="color:red; margin-top:-5px; font-size:13px">@Messages.banner_label_head_upload_image_mobile_th</p>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="file_upload_en" style="margin-top:10px;"></div>
+                                        @Html.HiddenFor(x => x.image_en)
+                                        @Html.HiddenFor(x => x.url_image_en)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="text-right">
+                                    <button type="button" class="btn btn-sm bg-gradient-danger" id="file-delete-en"> <i class="fas fa-trash space-10"></i></button>
+                                    <label for="file-upload-en" class="btn btn-sm custom-file-upload" style="margin-top:9px;">
+                                        <i class="fas fa-cloud-upload-alt space-10"></i>@Messages.btn_upload
+                                    </label>
+                                    <input id="file-upload-en" type="file" accept="image/*" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/helper/helper.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            let url_image_th = $('#url_image_th').val();
+            if (url_image_th) {
+                var el = document.getElementById("file_upload_th");
+                el.innerHTML = '<img src=' + url_image_th + ' width=\"100%\" height=\"auto\">';
+            }
+            let url_image_en = $('#url_image_en').val();
+            if (url_image_en) {
+                var el = document.getElementById("file_upload_en");
+                el.innerHTML = '<img src=' + url_image_en + ' width=\"100%\" height=\"auto\">';
+            }
+        });
+
+        $("#file-delete-th").click(function () {
+            var el = document.getElementById("file_upload_th");
+            el.innerHTML = '';
+            $('#image_th').val(null)
+            $('#url_image_th').val(null)
+        });
+        $("#file-delete-en").click(function () {
+            var el = document.getElementById("file_upload_en");
+            el.innerHTML = '';
+            $('#image_en').val(null)
+            $('#url_image_en').val(null)
+        });
+        $("#file-upload-th").change(function (event) {
+            uploadPicture(event.target.files, event.target.id);
+        });
+        $("#file-upload-en").change(function (event) {
+            uploadPicture(event.target.files, event.target.id);
+        });
+
+        $("#btn_save").click(function () {
+
+            Swal.fire({
+                text: unicodeToChar("@Messages.confirm_save"),
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'OK'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    let uri = '@Url.Action("Add", "Fund")';//default to function add
+                    let data = {
+                        fund_seq: $('#fund_seq').val(),
+                        link: $('#link').val(),
+                        image_th: $('#image_th').val(),
+                        image_en: $('#image_en').val(),
+                        title_th: $('#title_th').val(),
+                        title_en: $('#title_en').val(),
+                        text_en: $('#text_en').val(),
+                        text_th: $('#text_th').val(),
+                    };
+                    let fund_seq = $('#fund_seq').val();
+                    if (fund_seq) {
+                        uri = '@Url.Action("Edit", "Fund")';//case edit id id is not empty
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: uri,
+                        data: JSON.stringify(data),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (response) {
+                            if (response.message == "success") {
+                                var url = '@Url.Action("list", "Fund")';
+                                window.location.href = url;
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    text: response.message,
+                                })
+                            }
+                        },
+                        error: function (error) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: '@Messages.message_error',
+                                text: objToString(error),
+                            })
+                        }
+                    });
+                }
+            })
+        });
+        $("#btn_delete").click(function () {
+            let fund_seq = "@Model.fund_seq";
+            if (!fund_seq) {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Fund not found',
+                })
+                return;
+            }
+            Swal.fire({
+                text: unicodeToChar("@Messages.confirm_delete") ,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    let uri = '@Url.Action("Delete", "Fund")';//default to function add
+                    let data = {
+                        fund_seq: fund_seq,
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: uri,
+                        data: JSON.stringify(data),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (response) {
+                            if (response.message == "success") {
+                                var url = '@Url.Action("list", "Fund")';
+                                window.location.href = url;
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    text: response.message,
+                                })
+                            }
+                        },
+                        error: function (error) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: '@Messages.message_error',
+                                text: objToString(error),
+                            })
+                        }
+                    });
+                }
+            })
+        });
+        function objToString(obj) {
+            var str = '{';
+            if (typeof obj == 'object') {
+
+                for (var p in obj) {
+                    if (obj.hasOwnProperty(p)) {
+                        str += p + ':' + objToString(obj[p]) + ',';
+                    }
+                }
+            }
+            else {
+                if (typeof obj == 'string') {
+                    return '"' + obj + '"';
+                }
+                else {
+                    return obj + '';
+                }
+            }
+
+
+
+            return str.substring(0, str.length - 1) + "}";
+        }
+
+        function uploadPicture(image, type) {
+            let formData = new FormData();
+            formData.append("files", image[0]);
+            $.ajax({
+                url: '@Url.Action("UploadFile", "Fund")',
+                type: "POST",
+                dataType: "json",
+                data: formData,
+                contentType: false,
+                processData: false,
+                async: false,
+                success: function (response) {
+                    switch (type) {
+                        case 'file-upload-th':
+                            var el = document.getElementById("file_upload_th");
+                            el.innerHTML = '<img src=' + response.url + ' width=\"100%\" height=\"auto\">';
+                            $('#image_th').val(response.name)
+                            $('#url_image_th').val(response.url)
+                            break;
+                        case 'file-upload-en':
+                            var el = document.getElementById("file_upload_en");
+                            el.innerHTML = '<img src=' + response.url + ' width=\"100%\" height=\"auto\">';
+                            $('#image_en').val(response.name)
+                            $('#url_image_en').val(response.url)
+                            break;
+                    }
+
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                }
+            });
+        }
+        function publishFund() {
+            let uri = '@Url.Action("Publish", "Fund")';//default to function add
+            let data = {
+                fund_seq: $('#fund_seq').val(),
+                link: $('#link').val(),
+                image_th: $('#image_th').val(),
+                image_en: $('#image_en').val(),
+            };
+            $.ajax({
+                type: "POST",
+                url: uri,
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    if (response.message == "success") {
+                        $("#btn_unpublish").removeClass("hidden").addClass("");
+                        $("#btn_publish").removeClass("").addClass("hidden");
+                        $("#status_name").removeClass("badge-warning").addClass("badge-success").text('Publish');
+                        //$("#status_name").removeClass("badge-warning").addClass("badge-success").text('Publish');
+                    }
+                    else {
+                        Swal.fire({
+                            icon: 'error',
+                            text: response.message,
+                        })
+                    }
+                },
+                error: function (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: '@Messages.message_error',
+                        text: error,
+                    })
+                }
+            });
+        }
+         function UnpublishFund() {
+            let fund_seq = "@Model.fund_seq";
+            if (!fund_seq) {
+                Swal.fire({
+                    icon: 'error',
+                    text: 'Fund  not found',
+                })
+                return;
+            }
+                    let uri = '@Url.Action("Publish", "Fund")';//default to function add
+                    let data = {
+                        fund_seq: fund_seq,
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: uri,
+                        data: JSON.stringify(data),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (response) {
+                            if (response.message == "success") {
+                                $("#btn_unpublish").removeClass("").addClass("hidden");
+                                $("#btn_publish").removeClass("hidden").addClass("");
+                                $("#status_name").removeClass("badge-success").addClass("badge-warning").text('Publish');
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    text: response.message,
+                                })
+                            }
+                        },
+                        error: function (error) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: '@Messages.message_error',
+                                text: error,
+                            })
+                        }
+                    });
+        }
+    </script>
+}

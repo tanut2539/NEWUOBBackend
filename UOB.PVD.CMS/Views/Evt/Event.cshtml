@@ -1,0 +1,509 @@
+﻿@model UOB.PVD.Model.EVT.EventModel
+@using UOB.PVD.CMS.Resources
+@{
+    ViewData["Title"] = "Event";
+}
+<link href="~/assets/datepinker/datetimepicker.css" rel="stylesheet" />
+
+<div class="row" style="margin-bottom:10px">
+    <div class="col-6">
+        @if (!string.IsNullOrEmpty(Model.event_id))
+        {
+
+
+        }
+
+    </div>
+    <div class="col-6">
+        <button type="button" class="btn btn-primary float-right space-10" id="btn_save"> <i class="far fa-save space-10"></i>  @Messages.btn_save  </button>
+
+        <a href="@Url.Action("calendar","Evt")" class="btn btn-default float-right space-10"> <i class="fas fa-arrow-left"></i> @Messages.btn_back</a>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card card-primary card-outline card-outline-tabs">
+            <div class="card-header p-0 border-bottom-0">
+                <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="custom-tabs-1-tab" data-toggle="pill" href="#custom-tabs-1" role="tab" aria-controls="custom-tabs-1" aria-selected="true">รายละเอียดกิจกรรม</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-tabs-2-tab" data-toggle="pill" href="#custom-tabs-2" role="tab" aria-controls="custom-tabs-2" aria-selected="false">รายชื่อผู้สมัคร</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="custom-tabs-four-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-1" role="tabpanel" aria-labelledby="custom-tabs-1-tab">
+                        @Html.HiddenFor(x => x.event_id)
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-2 col-form-label"> วันที่เริ่ม</label>
+                                    <div class="col-sm-10">
+                                        <div id="picker_evevt_date_from"></div>
+                                        @Html.HiddenFor(x => x.event_date_from)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-2 col-form-label"> วันที่สิ้นสุด</label>
+                                    <div class="col-sm-10">
+                                        <div id="picker_evevt_date_to"></div>
+                                        @Html.HiddenFor(x => x.event_date_to)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-2 col-form-label"> ชื่อ Event (ภาษาไทย)</label>
+                                    <div class="col-sm-10">
+                                        @Html.EditorFor(model => model.event_name_th, new { htmlAttributes = new { @class = "form-control", maxlength = "300" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-2 col-form-label"> ชื่อ Event (ภาษาอังกฤษ)</label>
+                                    <div class="col-sm-10">
+                                        @Html.EditorFor(model => model.event_name_en, new { htmlAttributes = new { @class = "form-control", maxlength = "300" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-3 col-form-label"> ประเภทงาน (ภาษาไทย)</label>
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.event_type_th, new { htmlAttributes = new { @class = "form-control", maxlength = "300" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-3 col-form-label"> ประเภทงาน (ภาษาอังกฤษ)</label>
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.event_type_en, new { htmlAttributes = new { @class = "form-control", maxlength = "300" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-3 col-form-label"> สถานที่จัดงาน (ภาษาไทย)</label>
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.event_at_th, new { htmlAttributes = new { @class = "form-control", maxlength = "300" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-3 col-form-label"> สถานที่จัดงาน (ภาษาอังกฤษ)</label>
+                                    <div class="col-sm-9">
+                                        @Html.EditorFor(model => model.event_at_en, new { htmlAttributes = new { @class = "form-control", maxlength = "300" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row" style="margin-left:-5px;">
+                                    <div class="input-group">
+                                        <label for="title_th" class="col-sm-4 col-form-label"> จำนวนที่นั่ง</label>
+                                        @Html.EditorFor(model => model.register_total, new { htmlAttributes = new { @class = "form-control number-int", maxlength = "250", @style = "text-align:right" } })
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">คน</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+
+                            </div>
+                            <div class="form-group row" style="margin-left:5px;">
+                                <div class="input-group">
+                                    <label for="title_th" class="col-sm-4 col-form-label"> ค่าธรรมเนียม</label>
+                                    @Html.EditorFor(model => model.fee, new { htmlAttributes = new { @class = "form-control number", maxlength = "250", @style = "text-align:right" } })
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">บาท</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+ 
+                                    <div class="form-check">
+                                        @Html.CheckBoxFor(model => model.is_register_by_qrcode, new { @class = "form-check-input" })
+                                        <label class="form-check-label">ใช้ qrcode ในการลงทะเบียน</label>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom:15px;" id="divQrCode" class="hidden">
+                                    @Html.EditorFor(model => model.qr_code, new { htmlAttributes = new { @class = "form-control", maxlength = "300", placeholder = "ระบุ url " } })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-2 col-form-label"> วันที่เปิดรับสมัคร</label>
+                                    <div class="col-sm-10">
+                                        <div id="picker_register_schedule_from"></div>
+                                        @Html.HiddenFor(x => x.register_schedule_from)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label for="title_th" class="col-sm-2 col-form-label"> วันที่ปิดรับสมัคร</label>
+                                    <div class="col-sm-10">
+                                        <div id="picker_register_schedule_to"></div>
+                                        @Html.HiddenFor(x => x.register_schedule_to)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-primary card-outline card-tabs collapsed-card">
+                                    <div class="card-header">
+                                        <p class="card-title">รายละเอียด Event (ภาษาไทย)</p>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                @Html.HiddenFor(x => x.event_detail_th)
+                                                <textarea class="texteditor" id="texteditor_content_th"> @Model.event_detail_th</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-primary card-outline card-tabs collapsed-card">
+                                    <div class="card-header">
+                                        <p class="card-title">รายละเอียด Event (ภาษาอังกฤษ)</p>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                @Html.HiddenFor(x => x.event_detail_en)
+                                                <textarea class="texteditor" id="texteditor_content_en"> @Model.event_detail_en</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card card-primary card-outline card-tabs">
+                                    <div class="card-header">
+                                        <p class="card-title"> อัพโหลด Event Banner  </p>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card bg-light d-flex flex-fill">
+                                                    <div class="card-header text-muted border-bottom-0">
+                                                        @Messages.Article_label_image_th (ภาษาไทย)
+                                                        <p style="color:red; margin-top:-5px; font-size:13px"> </p>
+                                                    </div>
+                                                    <div class="card-body pt-0">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div id="file_upload_th" style="margin-top:10px;"></div>
+                                                                @Html.HiddenFor(x => x.event_banner_th)
+                                                                @Html.HiddenFor(x => x.url_event_banner_th)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="text-right">
+                                                            <button type="button" class="btn btn-sm bg-gradient-danger" id="file-delete-th"> <i class="fas fa-trash space-10"></i></button>
+                                                            <label for="file-upload-th" class="btn btn-sm custom-file-upload" style="margin-top:9px;">
+                                                                <i class="fas fa-cloud-upload-alt space-10"></i>@Messages.btn_upload
+                                                            </label>
+                                                            <input id="file-upload-th" type="file" accept="image/*" />
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card bg-light d-flex flex-fill">
+                                                    <div class="card-header text-muted border-bottom-0">
+                                                        @Messages.Article_label_image_th (ภาษาอังกฤษ)
+                                                        <p style="color:red; margin-top:-5px; font-size:13px"> </p>
+                                                    </div>
+                                                    <div class="card-body pt-0">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div id="file_upload_en" style="margin-top:10px;"></div>
+                                                                @Html.HiddenFor(x => x.event_banner_en)
+                                                                @Html.HiddenFor(x => x.url_event_banner_en)
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <div class="text-right">
+                                                            <button type="button" class="btn btn-sm bg-gradient-danger" id="file-delete-en"> <i class="fas fa-trash space-10"></i></button>
+                                                            <label for="file-upload-en" class="btn btn-sm custom-file-upload" style="margin-top:9px;">
+                                                                <i class="fas fa-cloud-upload-alt space-10"></i>@Messages.btn_upload
+                                                            </label>
+                                                            <input id="file-upload-en" type="file" accept="image/*" />
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-2" role="tabpanel" aria-labelledby="custom-tabs-2-tab">
+                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    <script src="~/assets/datepinker/datetimepicker.js"></script>
+    <script src="~/assets/datepinker/moment-with-locales.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: "textarea.texteditor",
+            theme: "modern",
+            height: 400,
+            language: 'th_TH',
+            fontsize_formats: "8pt 10pt 12pt 14pt 16pt 18pt 20pt 22pt 24pt 36pt 46pt 72pt",
+            plugins: [
+                "advlist autolink lists link charmap preview hr anchor pagebreak table",
+                "code",
+                "insertdatetime nonbreaking save contextmenu",
+                "paste textcolor image colorpicker textpattern"
+            ],
+            toolbar1: "styleselect | fontselect | fontsizeselect | forecolor backcolor | bold italic underline",
+            toolbar2: "alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | insertfile undo redo | preview",
+            content_css: [
+                "./assets/css/codepen.min.css"
+            ],
+            table_default_attributes: {
+                'border': 'none'
+            },
+            table_default_styles: {
+                'border-collapse': 'collapse',
+                'width': '100%'
+            },
+            table_responsive_width: true,
+        });
+        $(document).ready(function () {
+            $('.number').number(true,2);
+            $(".number").focus(function () { $(this).select(); });
+            $('.number-int').number(true);
+            $(".number-int").focus(function () { $(this).select(); });
+
+            var event_date_from = new Date('@Model.event_date_from');
+            $('#picker_evevt_date_from').dateTimePicker(event_date_from);
+
+            var event_date_to = new Date('@Model.event_date_to');
+            $('#picker_evevt_date_to').dateTimePicker(event_date_to);
+
+            var register_schedule_from = new Date('@Model.register_schedule_from');
+            $('#picker_register_schedule_from').dateTimePicker(register_schedule_from);
+
+            var register_schedule_to = new Date('@Model.register_schedule_to');
+            $('#picker_register_schedule_to').dateTimePicker(register_schedule_to);
+ 
+            $("#btn_save").click(function () {
+                console.log("time", $('#event_date_from').val() )
+                Swal.fire({
+                    text: unicodeToChar("@Messages.confirm_save"),
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        blockPage(true);
+                        let uri = '@Url.Action("AddEvt", "Evt")';//default to function add
+
+                        let data = {
+                            event_id: $('#event_id').val(),
+                            event_code: $('#event_code').val(),
+                            event_name_th: $('#event_name_th').val(),
+                            event_name_en: $('#event_name_en').val(),
+                            event_date_from: $('#event_date_from').val(),
+                            event_date_to: $('#event_date_to').val(),
+                            event_type_th: $('#event_type_th').val(),
+                            event_type_en: $('#event_type_en').val(),
+                            event_at_th: $('#event_at_th').val(),
+                            event_at_en: $('#event_at_en').val(),
+                            register_total: $('#register_total').val(),
+                            register_schedule_from: $('#register_schedule_from').val(),
+                            register_schedule_to: $('#register_schedule_to').val(),
+                            fee: $('#fee').val(),
+                            is_register_by_qrcode: $('#is_register_by_qrcode').is(':checked') ,
+                            qr_code: $('#qr_code').val(),
+                            event_detail_th: tinyMCE.editors[$('#texteditor_content_th').attr('id')].getContent(),
+                            event_detail_en: tinyMCE.editors[$('#texteditor_content_en').attr('id')].getContent()
+                        };
+                        let event_id = $('#event_id').val();
+                        if (event_id) {
+                            uri = '@Url.Action("Add", "AddEvt")';//case edit id id is not empty
+                        }
+                        console.log("JSON.stringify(data)", JSON.stringify(data))
+                        $.ajax({
+                            type: "POST",
+                            url: uri,
+                            data: JSON.stringify(data),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function (response) {
+                                blockPage(false);
+                                if (response.message == "success") {
+                    
+                                }
+                                else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        html: response.message,
+                                    })
+                                }
+                            },
+                            error: function (error) {
+                                console.log("error", error)
+                                blockPage(false);
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: '@Messages.message_error',
+                                    text: error.responseText,
+                                })
+                            }
+                        });
+                    }
+                })
+            });
+        })
+
+
+        $("#file-upload-th").change(function (event) {
+            uploadFile(event.target.id, event.target.files, "TH");
+        });
+        $("#file-upload-en").change(function (event) {
+            uploadFile(event.target.id, event.target.files, "EN");
+        });
+        $("#file-delete-th").click(function () {
+            var el = document.getElementById("file_upload_th");
+            el.innerHTML = '';
+            $('#event_banner_th').val(null);
+            $('#url_event_banner_th').val(null);
+        });
+        $("#file-delete-en").click(function () {
+            var el = document.getElementById("file_upload_en");
+            el.innerHTML = '';
+            $('#event_banner_en').val(null);
+            $('#url_event_banner_en').val(null);
+        });
+
+        $('#is_register_by_qrcode').click(function () {
+            if (!$(this).is(':checked')) {
+                $('#qr_code').val(null);
+                $("#divQrCode").removeClass("").addClass("hidden");
+            }
+            else {
+                $("#divQrCode").removeClass("hidden").addClass("");
+            }
+        });
+
+
+        function uploadFile(type,listFiles, language) {
+            var data = new FormData();
+            for (let i = 0; i < listFiles.length; i++) {
+                data.append("files", listFiles[i]);
+            }
+
+            if (data) {
+                $.ajax({
+                    url: `@Url.Action("UploadFile", "Evt")?language=${language}`,
+                    type: "POST",
+                    dataType: "json",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    async: false,
+                    success: function (response) {
+                        if (response) {
+                            if (response.result == "Fail") {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'ระบบ',
+                                    text: response.message,
+                                })
+                                return false;
+                            }
+                            switch (type) {
+                                case 'file-upload-th':
+                                    var el = document.getElementById("file_upload_th");
+                                    el.innerHTML = '<img src=' + response.url + ' width=\"100%\" height=\"auto\">';
+                                    $('#event_banner_th').val(response.name);
+                                    $('#url_event_banner_th').val(response.url);
+                                    break;
+                                case 'file-upload-en':
+                                    var el = document.getElementById("file_upload_en");
+                                    el.innerHTML = '<img src=' + response.url + ' width=\"100%\" height=\"auto\">';
+                                    $('#event_banner_en').val(response.name);
+                                    $('#url_event_banner_en').val(response.url);
+                                    break;
+
+                            }
+
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                });
+            }
+        }
+
+    </script>
+}

@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="banner_title" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพ</value>
+  </data>
+  <data name="img_chart_desktop" xml:space="preserve">
+    <value>~/assets/images/chart/desktop/chart-th.png</value>
+  </data>
+  <data name="img_chart_desktop1" xml:space="preserve">
+    <value>~/assets/images/chart/desktop/chart-en.png</value>
+  </data>
+  <data name="img_chart_mobile_1" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/1.png</value>
+  </data>
+  <data name="img_chart_mobile_10" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/10.png</value>
+  </data>
+  <data name="img_chart_mobile_11" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/11.png</value>
+  </data>
+  <data name="img_chart_mobile_12" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/12.png</value>
+  </data>
+  <data name="img_chart_mobile_13" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/13.png</value>
+  </data>
+  <data name="img_chart_mobile_14" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/14.png</value>
+  </data>
+  <data name="img_chart_mobile_15" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/15.png</value>
+  </data>
+  <data name="img_chart_mobile_2" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/2.png</value>
+  </data>
+  <data name="img_chart_mobile_3" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/3.png</value>
+  </data>
+  <data name="img_chart_mobile_4" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/4.png</value>
+  </data>
+  <data name="img_chart_mobile_5" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/5.png</value>
+  </data>
+  <data name="img_chart_mobile_6" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/6.png</value>
+  </data>
+  <data name="img_chart_mobile_7" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/7.png</value>
+  </data>
+  <data name="img_chart_mobile_8" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/8.png</value>
+  </data>
+  <data name="img_chart_mobile_9" xml:space="preserve">
+    <value>~/assets/images/chart/mobile/th/9.png</value>
+  </data>
+  <data name="Index_Message_1" xml:space="preserve">
+    <value>กองทุนร่วมภายใต้การจัดการของ</value>
+  </data>
+  <data name="Index_Message_10" xml:space="preserve">
+    <value>ตามประเภทสินทรัพย์หลัก (Core Asset Class) ในสัดส่วนการลงทุนที่แตกต่างกันตามหลักการ Asset Allocation โดยสมาชิกสามารถเลือกนโยบายลงทุน (Employee’s Choice) ได้ในระดับกองทุนย่อย
+(Sub-Fund) โดยจัดแบ่งตามระดับผลตอบแทนที่คาดหวัง และความเสี่ยงจากการลงทุนที่สมาชิกยอมรับได้</value>
+  </data>
+  <data name="Index_Message_11" xml:space="preserve">
+    <value>จุดเด่น</value>
+  </data>
+  <data name="Index_Message_12" xml:space="preserve">
+    <value>กองทุนได้รับรางวัลรองชนะเลิศกองทุนสำรองเลี้ยงชีพดีเด่นครั้งที่ 6 ประจำปี 2560 ประเภท “Pooled Fund ขนาดกองทุนเล็กกว่า 10,000  ล้านบาท” จากสำนักงานคณะกรรมการกำกับหลักทรัพย์และตลาดหลักทรัพย์ (กลต.) 
+1. ประโยชน์สูงสุดจากการจัดสรรสัดส่วนการลงทุน (Asset  Allocation) ที่ดีที่สุด สอดคล้องกับวัย ระยะเวลาการลงทุน  และความคาดหวังในผลตอบแทนของสมาชิกแต่ละท่าน 
+2. การลงทุนเชิงรุก  (Active Management Style) + การปรับสัดส่วนการลงทุนให้อัตโนมัติ (Automatic Rebalancing) ซึ่งหมายความว่าสัดส่วนการลงทุนของสมาชิกจะไม่เบี่ยงเบนไปตามภาวะตลาดที่เปลี่ยนแปลง
+3. นโยบายการลงทุนแบ่งตามระดับผลตอบแทนและความเสี่ยง โดยมีการทดสอบผลการลงทุนด้วยการใช้แบบจำลองย้อนหลัง (Back-test  model) เพื่อให้การจัดสรรสัดส่วนการลงทุนมีประสิทธิภาพสูงสุด  (Optimal Portfolio) โดยใช้ข้อมูลย้อนหลัง 10 ปี 
+4. โอกาสในการเพิ่มการลงทุนในสินทรัพย์อื่น ๆ ที่สามารถสร้างผลตอบแทนที่ดีภายใต้โครงสร้างที่เหมาะสม</value>
+  </data>
+  <data name="Index_Message_13" xml:space="preserve">
+    <value>รายละเอียดกองทุนรวมปลายทางที่กองทุนลงทุน</value>
+  </data>
+  <data name="Index_Message_14" xml:space="preserve">
+    <value>การลงทุนในประเทศ</value>
+  </data>
+  <data name="Index_Message_15" xml:space="preserve">
+    <value>การลงทุนต่างประเทศ</value>
+  </data>
+  <data name="Index_Message_16" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพ ยูโอบี อินเวสเตอร์ ชอยส์
+                                        ซึ่งจดทะเบียนแล้ว</value>
+  </data>
+  <data name="Index_Message_17" xml:space="preserve">
+    <value>Defensive</value>
+  </data>
+  <data name="Index_Message_18" xml:space="preserve">
+    <value>Growth 10</value>
+  </data>
+  <data name="Index_Message_19" xml:space="preserve">
+    <value>Growth 20</value>
+  </data>
+  <data name="Index_Message_2" xml:space="preserve">
+    <value>บลจ. ยูโอบี (ประเทศไทย) จำกัด 
+มีลักษณะเป็น Master Pooled Fund</value>
+  </data>
+  <data name="Index_Message_20" xml:space="preserve">
+    <value>Growth 40</value>
+  </data>
+  <data name="Index_Message_21" xml:space="preserve">
+    <value>Growth 15</value>
+  </data>
+  <data name="Index_Message_22" xml:space="preserve">
+    <value>SustainableGrowth 60</value>
+  </data>
+  <data name="Index_Message_23" xml:space="preserve">
+    <value>Growth 60</value>
+  </data>
+  <data name="Index_Message_24" xml:space="preserve">
+    <value>Growth 80</value>
+  </data>
+  <data name="Index_Message_25" xml:space="preserve">
+    <value>Growth 100</value>
+  </data>
+  <data name="Index_Message_26" xml:space="preserve">
+    <value>Defensive</value>
+  </data>
+  <data name="Index_Message_27" xml:space="preserve">
+    <value>Growth 10</value>
+  </data>
+  <data name="Index_Message_28" xml:space="preserve">
+    <value>Growth 20</value>
+  </data>
+  <data name="Index_Message_29" xml:space="preserve">
+    <value>Growth 40</value>
+  </data>
+  <data name="Index_Message_3" xml:space="preserve">
+    <value>กล่าวคือ เป็นการเปิดโอกาสให้สมาชิกกองทุนสามารถเลือกนโยบายการลงทุนที่เหมาะสมกับตนเอง เนื่องจากสมาชิกแต่ละคนก็มีความแตกต่างกัน เช่น อายุ ระยะเวลาการลงทุน ความรู้ความเข้าใจในการลงทุน ผลตอบแทนที่คาดหวัง หรือระดับความเสี่ยงที่ยอมรับได้ ดังนั้น การเปิดโอกาสให้สมาชิกสามารถเลือกนโยบายการลงทุนได้เองจึงเป็นทางเลือกที่ดีสำหรับสมาชิก เพื่อมุ่งสู่เป้าหมายในการมีเงินใช้อย่างเพียงพอในยามเกษียณ</value>
+  </data>
+  <data name="Index_Message_30" xml:space="preserve">
+    <value>Growth 15</value>
+  </data>
+  <data name="Index_Message_31" xml:space="preserve">
+    <value>Sustainable Growth 60</value>
+  </data>
+  <data name="Index_Message_32" xml:space="preserve">
+    <value>Growth 60</value>
+  </data>
+  <data name="Index_Message_33" xml:space="preserve">
+    <value>Growth 80</value>
+  </data>
+  <data name="Index_Message_34" xml:space="preserve">
+    <value>Growth 100</value>
+  </data>
+  <data name="Index_Message_35" xml:space="preserve">
+    <value>ตลาดเงิน หมายถึง TCMFPVD*</value>
+  </data>
+  <data name="Index_Message_36" xml:space="preserve">
+    <value>ตราสารหนี้ หมายถึง TFIFPVD*</value>
+  </data>
+  <data name="Index_Message_37" xml:space="preserve">
+    <value>หุ้น หมายถึง TEF*</value>
+  </data>
+  <data name="Index_Message_38" xml:space="preserve">
+    <value>ตราสารหนี้ระยะสั้น ต่างประเทศ หมายถึง UFFF-I*</value>
+  </data>
+  <data name="Index_Message_39" xml:space="preserve">
+    <value>ตราสารต่างหนี้ต่างประเทศ หมายถึง USI*</value>
+  </data>
+  <data name="Index_Message_4" xml:space="preserve">
+    <value>บลจ. ยูโอบี (ประเทศไทย) จำกัด
+            ขอนำเสนอกองทุนสำรองเลี้ยงชีพประเภทกองทุนร่วม (Master Pooled Fund)
+            ในลักษณะ Employee’s Choice จำนวน 2 กองทุน ดังนี้</value>
+  </data>
+  <data name="Index_Message_40" xml:space="preserve">
+    <value>หุ้น ต่างประเทศ หมายถึง UESG*</value>
+  </data>
+  <data name="Index_Message_41" xml:space="preserve">
+    <value>ตราสารต่างประเทศ หมายถึง UGBF-N*</value>
+  </data>
+  <data name="Index_Message_42" xml:space="preserve">
+    <value>• นโยบายการลงทุนของกองทุนรวมต่างประเทศที่นําเงินไปลงทุน</value>
+  </data>
+  <data name="Index_Message_43" xml:space="preserve">
+    <value>UGBF-N:</value>
+  </data>
+  <data name="Index_Message_44" xml:space="preserve">
+    <value>วัตถุประสงค์ในการลงทุนเพื่อสร้างรายรับอย่างสม่ำเสมอให้แก่ผู้ลงทุนและการเติบโตของเงินลงทุนในระยะกลางและระยะยาวโดยกองทุนหลักจะลงทุนในทรัพย์สินที่หลากหลายซึ่งรวมถึงทรัพย์สินประเภทดั้งเดิม (เช่น ตราสารทุน และ ตราสารหนี้เป็นต้น ) และอาจมีการใช้ตราสารอนุพันธ์ตามความเหมาะสม</value>
+  </data>
+  <data name="Index_Message_45" xml:space="preserve">
+    <value>UFFF-I:</value>
+  </data>
+  <data name="Index_Message_46" xml:space="preserve">
+    <value>เป็นกองทุน Fund of Funds โดยกระจายการลงทุนในกองทุนตราสารหนี้ต่างประเทศโดยเฉลี่ย รอบปิดบัญชีไม่น้อยกวา่ 80% ของมูลค่าทรัพย์สินสุทธิของกองทุน เน้นลงทุนในตราสารหนี้ investment grade และอาจมีการลงทุนในตราสารหนี้ non-investment grade หรือ unrated ในสัดส่วนไม่เกิน 20% ของมูลค่าทรัพย์สินสุทธิ ขึ้นอยู่กับดุลยพินิจของผู้จัดการกองทุน</value>
+  </data>
+  <data name="Index_Message_47" xml:space="preserve">
+    <value>USI:</value>
+  </data>
+  <data name="Index_Message_48" xml:space="preserve">
+    <value>วัตถุประสงค์การลงทุนเพื่อเน้นรักษาระดับรายได้อย่างสม่ำเสมอโดยเน้นลงทุนในตราสารหนี้ที่มีความหลากหลายในกลุ่มอุตสาหกรรม และดำเนินกลยุทท์เพิ่ม ประสิทธิภาพของรายได้โดยจะเป็นตราสารหนี้ที่ออกโดยภาครัฐและ / หรือภาคเอกชนและกองทุนหลักจะพิจารณาลงทุนในบริษัทที่ผู้ออกหลักทรัพย์มีส่วนร่วมในหลักการ  UN Sustainable Development Goals (SDGs)</value>
+  </data>
+  <data name="Index_Message_49" xml:space="preserve">
+    <value>UESG:</value>
+  </data>
+  <data name="Index_Message_5" xml:space="preserve">
+    <value>1. กองทุนสำรองเลี้ยงชีพ ยูโอบี อินเวสเตอร์ ชอยส์ ซึ่งจดทะเบียนแล้ว (UOB Investor Choice)
+            2. กองทุนสำรองเลี้ยงชีพ ยูโอบี มาสเตอร์ฟันด์ ซึ่งจดทะเบียนแล้ว (UOB Master Fund)</value>
+  </data>
+  <data name="Index_Message_50" xml:space="preserve">
+    <value>ลงทุนในตราสารทุนของบริษัทต่างๆ ทั่วโลก ซึ่งเป็นบริษัทที่ดำเนินธุรกิจ ในประเทศที่พัฒนาแล้วเป็นหลักการเลือกตราสารทุนเพื่อลงทุนจะใช้หลักการวิเคราะห์ ปัจจัยพื้นฐานในหุ้นที่มีกระแสเงินสดในระดับสูงมีอัตราผลตอบแทนต่อเงินลงทุนเพื่อการดำเนินงานของบริษัท Return on Invested Capital (ROIC) ที่จูงใจ และมีแนวทางการพัฒนาอย่างยั่งยืนที่เหมาะสม</value>
+  </data>
+  <data name="Index_Message_51" xml:space="preserve">
+    <value>*TCMFPVD,TFIFPVD เป็นกองทุนรวมที่ได้รับยกเว้น การเก็บภาษีจากการลงทุนในตราสารหนี้
+                            *TEF,UGBF-N, UFFF-I, USI, UESG เป็นกองทุนรวมที่มีภาระภาษีจากการลงทุนตราสารหนี้เพื่อสภาพคล่องของกองทุน</value>
+  </data>
+  <data name="Index_Message_52" xml:space="preserve">
+    <value>2. กองทุนสำรองเลี้ยงชีพ ยูโอบี มาสเตอร์ ฟันด์ ซึ่งจดทะเบียนแล้ว
+                (UOB Master Fund)</value>
+  </data>
+  <data name="Index_Message_53" xml:space="preserve">
+    <value>ซึ่งมีหลายนโยบายการลงทุนด้วยกัน ทั้งแบบที่เป็นการลงทุนตรง (Direct
+                Investment) และผ่านกองทุนรวม (Mutual Fund)
+                ในสินทรัพย์การลงทุนหลากหลายประเภท
+                โดยมีคณะกรรมการกองทุนสามารถเป็นผู้กำหนดรูปแบบการลงทุน
+                (แผนการลงทุน) ให้แก่สมาชิก
+                หรือให้สมาชิกจัดสัดส่วนการลงทุนได้ด้วยตัวเอง (Do It Yourself: DIY)
+                ก็สามารถทำได้เช่นเดียวกัน</value>
+  </data>
+  <data name="Index_Message_54" xml:space="preserve">
+    <value>การลงทุนในประเทศ</value>
+  </data>
+  <data name="Index_Message_55" xml:space="preserve">
+    <value>การลงทุนต่างประเทศ</value>
+  </data>
+  <data name="Index_Message_56" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพ ยูโอบี มาสเตอร์ ฟันด์ ซึ่งจดทะเบียนแล้ว</value>
+  </data>
+  <data name="Index_Message_57" xml:space="preserve">
+    <value>หมายเหตุ *นโยบายที่ 1-4 เป็นการลงทุนตรงในนโยบายใดๆ ของกองทุนสำรองเลี้ยงชีพ นโยบายอื่นๆ เป็นการลงทุนผ่านกองทุนรวมของ บลจ.ยูโอบี  นโยบายที่มีการลงทุนตรงในกองทุนสำรองเลี้ยงชีพ</value>
+  </data>
+  <data name="Index_Message_58" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_59" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_6" xml:space="preserve">
+    <value>1. กองทุนสำรองเลี้ยงชีพยูโอบี อินเวสเตอร์ ชอยส์ 
+ซึ่งจดทะเบียนแล้ว (UOB Investor Choice)</value>
+  </data>
+  <data name="Index_Message_60" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Index_Message_61" xml:space="preserve">
+    <value>1. เป็นกองทุนที่มีความยืดหยุ่นสูง (Flexibility) โดยสมาชิกสามารถกำหนดสัดส่วนการลงทุนของตนเองได้อย่างอิสระ หรือเป็นไปตามกรอบที่คณะกรรมการกองทุนกำหนด
+                2. คณะกรรมการกองทุนสามารถปรับเปลี่ยนนโยบาย หรือแผนการลงทุนได้ตามที่เห็นสมควร
+                3. โอกาสในการเพิ่มการลงทุนในสินทรัพย์อื่น ๆ ที่สามารถสร้างผลตอบแทนที่ดีภายใต้โครงสร้างที่เหมาะสม
+                4. เนื่องจากบลจ. ยูโอบี (ประเทศไทย) จำกัด บริหารกองทุนและจัดทำระบบทะเบียนสมาชิกเอง จึงสามารถรองรับนโยบายการลงทุน และการปรับเปลี่ยนของสมาชิกได้โดยไม่มีข้อจำกัด</value>
+  </data>
+  <data name="Index_Message_7" xml:space="preserve">
+    <value>2. กองทุนสำรองเลี้ยงชีพ ยูโอบี มาสเตอร์ ฟันด์
+                    ซึ่งจดทะเบียนแล้ว (UOB Master Fund)</value>
+  </data>
+  <data name="Index_Message_8" xml:space="preserve">
+    <value>1. กองทุนสำรองเลี้ยงชีพยูโอบี อินเวสเตอร์ ชอยส์
+                ซึ่งจดทะเบียนแล้ว (UOB Investor Choice)</value>
+  </data>
+  <data name="Index_Message_9" xml:space="preserve">
+    <value>เป็นกองทุนร่วม (Pooled Fund) ซึ่งมีการจัดสรรการลงทุนผ่านกองทุนรวม (Mutual Fund)</value>
+  </data>
+  <data name="menu_item_1" xml:space="preserve">
+    <value>ความรู้เบื้องต้น</value>
+  </data>
+  <data name="menu_item_2" xml:space="preserve">
+    <value>การให้บริการ</value>
+  </data>
+  <data name="menu_item_3" xml:space="preserve">
+    <value>ข้อมูลผลิตภัณฑ์</value>
+  </data>
+  <data name="menu_item_4" xml:space="preserve">
+    <value>จุดเด่น บลจ. ยูโอบี</value>
+  </data>
+  <data name="menu_item_5" xml:space="preserve">
+    <value>PVD Fact Sheet</value>
+  </data>
+  <data name="menu_item_6" xml:space="preserve">
+    <value>แบบประเมินความเสี่ยง</value>
+  </data>
+  <data name="menu_item_7" xml:space="preserve">
+    <value>ดาวน์โหลดแบบฟอร์ม</value>
+  </data>
+  <data name="menu_item_8" xml:space="preserve">
+    <value>โปรแกรมคำนวณ</value>
+  </data>
+  <data name="menu_item_9" xml:space="preserve">
+    <value>ติดต่อ</value>
+  </data>
+  <data name="Sheet_Message_1" xml:space="preserve">
+    <value>PVD Fact Sheet</value>
+  </data>
+  <data name="Sheet_Message_10" xml:space="preserve">
+    <value>บริหารพอร์ตส่วนตัวด้วยกองทุนรวมแนะนำ</value>
+  </data>
+  <data name="Sheet_Message_11" xml:space="preserve">
+    <value>กองทุนแนะนำ :
+                        Megatrend SSF</value>
+  </data>
+  <data name="Sheet_Message_12" xml:space="preserve">
+    <value>กองทุนแนะนำ :
+                        Megatrend RMF</value>
+  </data>
+  <data name="Sheet_Message_13" xml:space="preserve">
+    <value>บริหารพอร์ตหลังเกษียณ</value>
+  </data>
+  <data name="Sheet_Message_14" xml:space="preserve">
+    <value>  มุมมองการลงทุนของบลจ.ยูโอบี
+                        และทางเลือกการลงทุนที่น่าสนใจหลังวัยเกษียณ</value>
+  </data>
+  <data name="Sheet_Message_15" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sheet_Message_16" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sheet_Message_2" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพยูโอบี อินเวสเตอร์ ชอยส์ ซึ่งจดทะเบียนแล้ว (UOB Investor Choice)</value>
+  </data>
+  <data name="Sheet_Message_3" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพ ยูโอบี มาสเตอร์ ฟันด์ ซึ่งจดทะเบียนแล้ว (UOB Master Fund)</value>
+  </data>
+  <data name="Sheet_Message_4" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพ ยูโอบี สวัสดิการมั่นคง 1 ซึ่งจดทะเบียนแล้ว (SMK1)</value>
+  </data>
+  <data name="Sheet_Message_5" xml:space="preserve">
+    <value>SMK1</value>
+  </data>
+  <data name="Sheet_Message_6" xml:space="preserve">
+    <value>กองทุนสำรองเลี้ยงชีพ ยูโอบี สวัสดิการมั่นคง 2 ซึ่งจดทะเบียนแล้ว (SMK2)</value>
+  </data>
+  <data name="Sheet_Message_7" xml:space="preserve">
+    <value>SMK2</value>
+  </data>
+  <data name="Sheet_Message_8" xml:space="preserve">
+    <value>สภาวะการลงทุน</value>
+  </data>
+  <data name="Sheet_Message_9" xml:space="preserve">
+    <value>แนวทางการลงทุนด้วย
+                        ESG</value>
+  </data>
+</root>

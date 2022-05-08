@@ -1,0 +1,409 @@
+﻿@model List<UOB.PVD.Model.SmkFileDTO>
+@{
+    ViewData["Title"] = "smk2";
+}
+
+<div>
+    <div class="row">
+        <div class="col-12">
+            <button class="btn btn-primary float-right space-10 " style="margin:15px;" onclick="openModel('NEW')">
+                <i class="fas fa-plus"></i> เพิ่ม
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card-datatable">
+                                <table class="dt-product table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+
+                                            <th>หัวข้อ (ภาษาไทย)</th>
+                                            <th>หัวข้อ (ภาษาอังกฤษ)</th>
+                                            <th width="180px"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.smk_title_th</td>
+                                                <td>@item.smk_title_en</td>
+
+                                                <td>
+                                                    <button type="button" class="btn btn-primary btn-sm " onclick="openModel('@item.smk_file_seq')">
+                                                        แก้ไข
+                                                    </button>
+                                                    <button type="button" class="btn btn-danger  btn-sm" onclick="deleteData('@item.smk_file_seq')"> <i class="fas fa-trash space-10"></i>  ลบ</button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="modal fade" id="modal_smk">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="title_company_image"> </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <input type="hidden" id="smk_file_seq">
+                    <input type="hidden" id="smk_file_name_th">
+                    <input type="hidden" id="smk_file_original_name_th">
+                    <input type="hidden" id="smk_file_name_th_url">
+                    <input type="hidden" id="smk_file_name_en">
+                    <input type="hidden" id="smk_file_original_name_en">
+                    <input type="hidden" id="smk_file_name_url">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>หัวข้อ (ภาษาไทย)</label>
+                                    <input type="text" class="form-control" id="smk_title_th">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>หัวข้อ (ภาษาอังกฤษ)</label>
+                                    <input type="text" class="form-control" id="smk_title_en">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <center>
+                                    <div style="border: 1px solid black; min-height: 90px; width: 50%">
+                                        <div style="height: 100%; width: 100%">
+                                            <div id="pdf_logo_th" class="hidden">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <label for="upload_pdf_th" class="btn btn-sm custom-file-upload" style="margin-top: 9px; width: 100%;">
+                                        <i class="fas fa-cloud-upload-alt space-10"></i>  อัพโหลด PDF ภาษาไทย
+                                    </label>
+                                    <input id="upload_pdf_th" type="file" accept="application/pdf" />
+                                </center>
+                            </div>
+                            <div class="col-md-6">
+                                <center>
+                                    <div style="border: 1px solid black; min-height: 90px; width: 50%">
+                                        <div style="height: 100%; width: 100%">
+                                            <div id="pdf_logo_en" class="hidden">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <label for="upload_pdf_en" class="btn btn-sm custom-file-upload" style="margin-top: 9px; width: 100%;">
+                                        <i class="fas fa-cloud-upload-alt space-10"></i>  อัพโหลด PDF ภาษาไทย
+                                    </label>
+                                    <input id="upload_pdf_en" type="file" accept="application/pdf" />
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer  ">
+
+                <button type="button" class="btn btn-primary" id="btn_save">บันทึก</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+
+@section Scripts{
+
+    <script>
+        function deleteData(param) {
+            if (param) {
+                Swal.fire({
+                    title: 'ระบบ',
+                    text: "คุณต้องการบันทึกรายการนี้ หรือไม่",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'ตกลง',
+                    cancelButtonText: "ยกเลิก",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        let data = {
+                            smk_file_seq: param,
+                        };
+
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("Delete", "Smk")',
+                            data: JSON.stringify(data),
+                            contentType: "application/json",
+                            dataType: "json",
+                            success: function (response) {
+                                if (response) {
+                                    if (response.result == "success") {
+                                        window.location.reload(true);
+                                    }
+                                    else {
+                                        Swal.fire({
+                                            icon: 'error',
+                                            text: response.message,
+                                        })
+                                    }
+                                }
+                                else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'ระบบ',
+                                        text: "ผิดพลาด 200",
+                                    })
+                                }
+                            },
+                            error: function (error) {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'ระบบ',
+                                    text: "ผิดพลาด",
+                                })
+                            }
+                        });
+                    }
+                })
+            }
+        }
+        function openModel(param) {
+            if (param != 'NEW') {
+                let data = {
+                    smk_file_seq: param,
+                    smk_type:''
+                };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetDetail", "Smk")',
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response) {
+                            console.log(response)
+                            let data = response.data;
+                            $('#smk_file_seq').val(data.smk_file_seq);
+                            $('#smk_title_th').val(data.smk_title_th);
+                            $('#smk_title_en').val(data.smk_title_en);
+                            $('#smk_file_name_th').val(data.smk_file_name_th);
+                            $('#smk_file_name_en').val(data.smk_file_name_en);
+                            $('#smk_file_original_name_en').val(data.smk_file_original_name_en);
+                            $('#smk_file_original_name_th').val(data.smk_file_original_name_th);
+
+                            $("#pdf_logo_th").removeClass("hidden").addClass("");
+                            var el = document.getElementById("pdf_logo_th");
+                            el.innerHTML = `<a href="${data.smk_file_name_en_url}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${data.smk_file_original_name_th}</a>`;
+
+                            $("#pdf_logo_en").removeClass("hidden").addClass("");
+                            var el = document.getElementById("pdf_logo_en");
+                            el.innerHTML = `<a href="${data.smk_file_name_th_url}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${data.smk_file_original_name_en}</a>`;
+                        }
+                    },
+                    error: function (error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'ระบบ',
+                            text: "ผิดพลาด",
+                        })
+                    }
+                });
+            }
+            else {
+                $('#smk_file_seq').val(null);
+                $('#smk_title_th').val(null);
+                $('#smk_title_en').val(null);
+                $('#smk_file_name_th').val(null);
+                $('#smk_file_name_en').val(null);
+                $('#smk_file_original_name_en').val(null);
+                $('#smk_file_original_name_th').val(null);
+                $("#pdf_logo_th").removeClass("").addClass("hidden");
+                $("#pdf_logo_en").removeClass("").addClass("hidden");
+
+            }
+            $('#modal_smk').modal('show');
+        }
+        $("#upload_pdf_th").change(function (event) {
+            uploadFile(event.target.id,event.target.files,"SMK2","TH");
+        });
+
+        $("#upload_pdf_en").change(function (event) {
+            uploadFile(event.target.id, event.target.files, "SMK2","EN");
+        });
+
+        function uploadFile(type, listFiles, SmkType, language) {
+            var data = new FormData();
+            for (let i = 0; i < listFiles.length; i++) {
+                data.append("files", listFiles[i]);
+            }
+
+            if (data) {
+                $.ajax({
+                    url: `@Url.Action("UploadFile", "Smk")?language=${language}`,
+                    type: "POST",
+                    dataType: "json",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    async: false,
+                    success: function (response) {
+                        console.log("response", response)
+                        if (response) {
+                            if (response.result == "Fail") {
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'ระบบ',
+                                    text: response.message,
+                                })
+                                return false;
+                            }
+
+                            switch (type) {
+                                case 'upload_pdf_th':
+                                    $("#pdf_logo_th").removeClass("hidden").addClass("");
+                                    var el = document.getElementById("pdf_logo_th");
+                                    el.innerHTML = `<a href="${response.url}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${response.fileOriginalName}</a>`;
+                                    $('#smk_file_name_th').val(response.name);
+                                    $('#smk_file_name_th_url').val(response.url);
+                                    $('#smk_file_original_name_th').val(response.fileOriginalName);
+                                    break;
+                                case 'upload_pdf_en':
+
+                                    $("#pdf_logo_en").removeClass("hidden").addClass("");
+                                    var el = document.getElementById("pdf_logo_en");
+                                    el.innerHTML = `<a href="${response.url}" target="_blank"> <img class="show-image-zoom" src="@Url.Content("~/assets/image/pdf-file.png")" />${response.fileOriginalName}</a>`;
+                                    $('#smk_file_name_en').val(response.name);
+                                    $('#smk_file_name_url').val(response.url);
+                                    $('#smk_file_original_name_en').val(response.fileOriginalName);
+                                    break;
+
+                            }
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    }
+                });
+            }
+        }
+
+        $("#btn_save").click(function () {
+            let errorMessage = "";
+            if (!$('#smk_title_th').val()) {
+                errorMessage += "<p> - กรุณากรอก หัวข้อ (ภาษาไทย) </p>"
+            }
+            if (!$('#smk_title_en').val()) {
+                errorMessage += "<p> - กรุณากรอก หัวข้อ (ภาษาอังกฤษ) </p>"
+            }
+            if (!$('#smk_file_name_th').val()) {
+                errorMessage += "<p> - กรุณาอัพโหลด PDF (ภาษาไทย) </p>"
+            }
+            if (!$('#smk_file_name_en').val()) {
+                errorMessage += "<p> - กรุณาอัพโหลด PDF (ภาษาอังกฤษ) </p>"
+            }
+            if (errorMessage) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'ระบบ',
+                    html: errorMessage,
+                })
+                return;
+            }
+
+            Swal.fire({
+                title: 'ระบบ',
+                text: "คุณต้องการบันทึกรายการนี้ หรือไม่",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'ตกลง',
+                cancelButtonText: "ยกเลิก",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    let data = {
+                        smk_file_seq: $('#smk_file_seq').val(),
+                        smk_title_th: $('#smk_title_th').val(),
+                        smk_title_en: $('#smk_title_en').val(),
+                        smk_file_name_th: $('#smk_file_name_th').val(),
+                        smk_file_name_en: $('#smk_file_name_en').val(),
+                        smk_file_original_name_th: $('#smk_file_original_name_th').val(),
+                        smk_file_original_name_en: $('#smk_file_original_name_en').val(),
+                        smk_type: 'SMK2',
+                    };
+
+                    let policy_seq = $("#smk_file_seq").val();
+                    let uri = '@Url.Action("Create", "Smk")'
+                    if (policy_seq) {
+                        uri = '@Url.Action("Update", "Smk")'
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: uri,
+                        data: JSON.stringify(data),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (response) {
+                            console.log("response", response)
+                            if (response.message == "success") {
+                                window.location.reload(true);
+                            }
+                            else {
+                                Swal.fire({
+                                    icon: 'error',
+                                    text: response.message,
+                                })
+                            }
+                        },
+                        error: function (error) {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'ระบบ',
+                                text: "ผิดพลาด",
+                            })
+                        }
+                    });
+                }
+            })
+        });
+
+    </script>
+
+
+}

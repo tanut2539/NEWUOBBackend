@@ -1,0 +1,373 @@
+﻿
+@model UOB.PVD.Model.ESG.FrontEnd.FrontEndHomeModel
+@using UOB.ESG.FRONT.Resources
+@using System.Text.Encodings.Web;
+@{
+    ViewData["Title"] = "";
+}
+<!-- Banner -->
+<section class="carousel-banner">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            @foreach (var item in Model.Banner)
+            {
+                <video id="my-player" class="video-js vjs-theme-forest vjs-fluid" data-setup='{}' muted autoplay loop playsinline preload="auto">
+                    <source src="@item.url_vdo" type="video/mp4" />
+                    <p class="vjs-no-js">To view this video please enable javascript</p>
+                </video>
+            }
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Carousel Menu -->
+<section class="carousel-menu">
+    <div class="container">
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+            <a class="item-menu" href="#section-1" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-1"></div>
+                    <h3 class="item-description">
+                        @Html.Raw(Message.section_menu_1)
+                    </h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-2" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-2"></div>
+                    <h3 class="item-description">@Html.Raw(Message.section_menu_2)</h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-3" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-3"></div>
+                    <h3 class="item-description">
+                        @Html.Raw(Message.section_menu_3)
+                    </h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-4" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-4"></div>
+                    <h3 class="item-description"> @Html.Raw(Message.section_menu_4)</h3>
+                </div>
+            </a>
+            <a class="item-menu" href="#section-5" target="_self">
+                <div class="d-flex flex-column align-items-center h-100">
+                    <div class="item-icon icon-5"></div>
+                    <h3 class="item-description">@Html.Raw(Message.section_menu_5)</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Sustainable -->
+<section id="section-1" class="sustainable" style="background-image: url('@Url.Content("~/assets/images/What_Sustainability.png")')">
+    <div class="sustainable-text d-flex flex-column">
+        <div class="sustainable-spacing">
+            <h1 class="title">
+                @Html.Raw(Message.section_1_title)
+            </h1>
+            <h3 class="description">
+                @Html.Raw(Message.section_1_text)
+            </h3>
+        </div>
+    </div>
+    <div class="sustainable-menu">
+        <div class="container">
+            <div class="d-flex flex-column flex-sm-row justify-content-center">
+                <a class="item-menu" href="#" target="_self">
+                    <div class="d-flex flex-column align-items-center h-100">
+                        <div class="item-icon d-flex justify-content-center align-items-center">
+                            <img src="@Url.Content("~/assets/images/save-money_W.png")" alt="icon" />
+                        </div>
+                        <h3 class="item-title"> @Html.Raw(Message.section_1_menu_1_title)</h3>
+                        <h3 class="item-description">
+                            @Html.Raw(Message.section_1_menu_1_text)
+                        </h3>
+                    </div>
+                </a>
+                <a class="item-menu" href="#" target="_self">
+                    <div class="d-flex flex-column align-items-center h-100">
+                        <div class="item-icon d-flex justify-content-center align-items-center">
+                            <img src="@Url.Content("~/assets/images/funds_W.png")" alt="icon" />
+                        </div>
+                        <h3 class="item-title">@Html.Raw(Message.section_1_menu_2_title)</h3>
+                        <h3 class="item-description">
+                            @Html.Raw(Message.section_1_menu_2_text)
+                        </h3>
+                    </div>
+                </a>
+                <a class="item-menu" href="#" target="_self">
+                    <div class="d-flex flex-column align-items-center h-100">
+                        <div class="item-icon d-flex justify-content-center align-items-center">
+                            <img src="@Url.Content("~/assets/images/return-of-investment_W.png")"
+                                 alt="icon" />
+                        </div>
+                        <h3 class="item-title">@Html.Raw(Message.section_1_menu_3_title)</h3>
+                        <h3 class="item-description">
+                            @Html.Raw(Message.section_1_menu_3_text)
+                        </h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CEO -->
+<section id="section-2" class="commitment">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12 col-md-6 order-2 order-md-1">
+                        <div class="commitment-spacing">
+                            <h1 class="name"> @Html.Raw(Message.section_2_ceo_name)</h1>
+                            <h3 class="position">@Html.Raw(Message.section_2_ceo_position)</h3>
+                        </div>
+                        <div class="commitment-brief-history-1">
+                            <p>
+                                @Html.Raw(Message.section_2_ceo_history)
+                            </p>
+                        </div>
+                        <a class="commitment-link" id="show-less-1">More than >></a>
+                    </div>
+                    <div class="col-12 col-md-6 order-1 order-md-2">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h3></h3>
+                            <img src="@Url.Content("~/assets/images/thino-boon-kiat.png")" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mt-5">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="d-flex justify-content-center align-items-center">
+                            <h3></h3>
+                            <img src="@Url.Content("~/assets/images/vana-bulbon.png")" alt="" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="commitment-spacing">
+                            <h1 class="name"> @Html.Raw(Message.section_2_ceo_name1) </h1>
+                            <h3 class="position">
+                                @Html.Raw(Message.section_2_ceo_position1)
+                            </h3>
+                        </div>
+                        <div class="commitment-brief-history-2">
+                            <p>
+                                @Html.Raw(Message.section_2_ceo_history1)
+                            </p>
+                        </div>
+                        <a class="commitment-link" id="show-less-2" style="display: block; margin-bottom: 80px;">More than >></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- UOBAM INVESTMENT -->
+<section id="section-3" class="investment-approach">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="investment-spacing">
+                    <h1 class="title">
+                        @Html.Raw(Message.section_3_title)
+                    </h1>
+                </div>
+                <div class="investment-details">
+                    <p>
+                        @Html.Raw(Message.section_3_text)
+                    </p>
+                    <div class="button-container">
+                        <a href="@Url.Action("redirectToAppoach" , new {lang=" "})">  @Html.Raw(Message.btn_read_more)  </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 position-reactive">
+                <div class="investment-image">
+                    <img src="@Url.Content("~/assets/images/article-activity.png")"
+                         alt="UOBAM’S Sustainable Investment Approach" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Articles -->
+<section id="section-4"
+         class="esg"
+         style="background-image: url('@Url.Content("~/assets/images/esg.png")')">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 col-md-5 offset-md-7">
+                    <div class="esg-spacing">
+                        <h1 class="title">   @Html.Raw(Message.section_4_title) </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row mt-5" id="article">
+                    @Html.HiddenFor(x => x.current_article_size)
+                    @foreach (var item in Model.Article)
+                    {
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="esg-card">
+                                <div class="esg-card-image" style="background-image: url('@item.url_image')"></div>
+                                <div class="esg-card-details">
+                                    <h1>@item.title</h1>
+
+                                    <h3 id="article_content">
+                                        @Html.Raw(item.text)
+                                    </h3>
+                                </div>
+                                <div class="esg-card-button">
+                                    <a href="@Url.Action("redirectToArticle" , new { id=item.article_seq,lang=" "})" target="_self">@Message.btn_read_more</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+            <div class="col-12 " id="btnLoadMore">
+                @{
+                    if (Convert.ToInt32(Model.Article[0].maxrow) > 3)
+                    {
+                        <div class="d-flex ">
+                            <div class="mx-auto">
+                                <div class="find-out-more-container  ">
+                                    <button onclick="loadMore()">Find Out More >></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Video -->
+<section id="section-5" class="sustainability">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xl-6">
+                <div class="sustainability-spacing">
+                    <h1 class="title">  @Html.Raw(Message.section_5_title)  </h1>
+
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="video-box">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JAiNASeVP04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                @*@<div class="video-box">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JAiNASeVP04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>*@
+            </div>
+        </div>
+</section>
+
+<!-- Port -->
+<section id="section-6" class="fund">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="fund-title">
+                    @Html.Raw(Message.port_title)
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row fund-grid">
+                    @foreach (var item in Model.Fund)
+                    {
+                        <div class="col-12 col-md-4">
+                            <div onclick="window.open('@item.link', '_blank');" class="fund-card" style="background-image: url('@item.url_image'); cursor:pointer;">
+                                <div class="fund-card-filter">
+                                    <div class="fund-card-text">
+                                        <h1>@item.title</h1>
+                                        <p style="font-size:24px;font-weight:400">@item.text</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="fund-grid-bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script>
+        function loadMore() {
+            let article_size = $('#current_article_size').val()
+            let uri = '@Url.Action("LoadArticleMore", "Home")';//default to function add
+            let data = {
+                current_article_size: article_size,
+            };
+            $.ajax({
+                type: "POST",
+                url: uri,
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    if (response) {
+                        if (response.data.startsWith("success")) {
+                            $('#current_article_size').val(response.current_article_size)
+                            response.data.forEach(item => {
+                                let html = `<div class="col-12 col-md-4" style="margin-top:15px">
+                                            <div class="esg-card">
+                                                <div class="esg-card-image" style="background-image: url('${item.url_image}')"></div>
+                                                <div class="esg-card-details">
+                                                    <h1>${item.title}</h1>
+                                                    <h3>
+                                                       ${item.text == null ? '' : item.text}
+                                                    </h3>
+                                                </div>
+                                                <div class="esg-card-button">
+                                                    <a href="/redirectToArticle/${item.article_seq}/%20" target="_self">@Message.btn_read_more</a>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                                $("#article").append(html);
+                                try {
+                                    if (($('#current_article_size').val() * 1) >= (response.data[0].maxrow * 1)) {
+                                        $("#btnLoadMore").html('');
+                                    }
+                                }
+                                catch (e) { }
+                            })
+                        }
+                        else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: response.data.message,
+                            })
+                        }
+                    }
+                },
+                error: function (error) {
+
+                }
+            });
+
+
+        }
+    </script>
+}

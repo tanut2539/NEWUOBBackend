@@ -1,0 +1,47 @@
+<span id="cal-slide-tick" style="display: none"></span>
+<div id="cal-slide-content" class="cal-event-list">
+  <% _.each(events, function(event) { %>
+  <a
+    href="<%= event.url ? event.url : 'javascript:void(0)' %>"
+    data-event-id="<%= event.id %>"
+    data-event-class="<%= event['class'] %>"
+    class="event-item"
+  >
+    <% if (event.event_status == "enabled") { %>
+    <div class="cal-box-event enabled">
+      <div class="d-flex">
+        <div class="me-3">
+          <div
+            class="cal-image"
+            style="
+              background-image: url('./assets/images/activities/uobaminvest_th.png');
+            "
+          ></div>
+        </div>
+        <div class="ms-3">
+          <h1 class="cal-title-h1"><%= event.title %></h1>
+          <h3 class="cal-title-h3"><%= event.event_date %></h3>
+        </div>
+      </div>
+    </div>
+    <% } %> <% if (event.event_status == "full") { %>
+    <div class="cal-box-event disabled">
+      <div class="d-flex">
+        <div class="me-3">
+          <div
+            class="cal-image"
+            style="
+              background-image: url('./assets/images/activities/uobaminvest_th.png');
+            "
+          ></div>
+        </div>
+        <div class="ms-3">
+          <h1 class="cal-title-h1"><%= event.title %></h1>
+          <h3 class="cal-title-h3"><%= event.event_date %></h3>
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </a>
+  <% }) %>
+</div>
